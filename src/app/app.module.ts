@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainViewComponent } from './main-view/main-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GameViewComponent } from './game-view/game-view.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainViewComponent
+    MainViewComponent,
+    GameViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
