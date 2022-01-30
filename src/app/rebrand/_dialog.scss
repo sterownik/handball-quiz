@@ -1,0 +1,12 @@
+mat-dialog-content.mat-dialog-content {
+  max-height: initial;
+  margin: 0;
+  padding: 0;
+}
+
+mat-dialog-container.mat-dialog-container {
+  height: auto;
+  padding: 0;
+  background-color: $background-layout-color;
+  min-height: 100vh;
+}

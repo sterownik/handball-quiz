@@ -1,0 +1,32 @@
+app-game-view {
+  .quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    @media(min-width: $tablet-size) {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    &__app-content {
+      display: flex;
+      flex-direction: column;
+      background-color: $secondary-color;
+      width: 100%;
+      min-height: 300px;
+      border-radius: 8px;
+      padding: 24px 64px;
+      gap: 24px;
+
+      @media(min-width: $tablet-size) {
+        min-height: 200px;
+        border-radius: 12px;
+        flex-direction: row;
+      }
+    }
+  }
+}
