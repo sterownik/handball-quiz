@@ -7,12 +7,14 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameViewComponent } from './game-view/game-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { QuestionPartComponent } from './question-part/question-part.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainViewComponent,
-    GameViewComponent
+    GameViewComponent,
+    QuestionPartComponent
   ],
   imports: [
     BrowserModule,
