@@ -1,0 +1,18 @@
+app-question-part {
+  .question-text {
+    color: $third-color;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-align: justify;
+
+    &::after {
+      content: '';
+      width: 80%;
+      height: 1px;
+      background-color: $third-color;
+      display: block;
+      margin: 16px auto;
+    }
+
+  }
+}
