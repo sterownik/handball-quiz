@@ -32,3 +32,15 @@ body {
   background-color: $background-layout-color;
   font-family: 'NoToSans';
 }
+
+@mixin after-element($width) {
+  &::after,
+  &::after {
+    content: '';
+    width: $width;
+    height: 1px;
+    background-color: $third-color;
+    display: block;
+    margin: 16px auto 24px;
+  }
+}

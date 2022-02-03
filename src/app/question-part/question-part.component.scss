@@ -5,14 +5,6 @@ app-question-part {
     line-height: 1.6rem;
     text-align: justify;
 
-    &::after {
-      content: '';
-      width: 80%;
-      height: 1px;
-      background-color: $third-color;
-      display: block;
-      margin: 16px auto;
-    }
-
+    @include after-element(80%);
   }
 }

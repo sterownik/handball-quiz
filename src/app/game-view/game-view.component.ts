@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
+export type Odp = 'A' & 'B' & 'C';
+export type Answers = Record<Odp, string>;
 
 @Component({
   selector: 'app-game-view',
@@ -6,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameViewComponent implements OnInit {
   textTest =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    "2.1 Bramkarz A1 broni rzut, piłka przekracza linię końcową boiska zaraz po automatycznym sygnale kończący grę. Sędziowie orientują się, że mecz zakończył się 5 minut za wcześnie. Zawodnicy wciąż pozostają na boisku. Jak należy wznowić grę?";
 
-  constructor() {}
+  answersRecord: Answers = {
+    A: 'Rzut od bramki dla drużyny A',
+    B: 'Rzut wolny dla drużyny A',
+    C: 'Bez sygnału gwizdka',
+    D: 'Po sygnale gwizdka',
+  }
+
+  formGroup: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.formGroup = fb.group({});
+  }
 
   ngOnInit(): void {}
 }
