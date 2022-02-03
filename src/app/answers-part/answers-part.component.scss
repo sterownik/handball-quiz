@@ -1,0 +1,14 @@
+app-answers-part {
+  .answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $third-color;
+
+    &__answer-text {
+      text-align: justify;
+    }
+
+    @include after-element(50%);
+  }
+}

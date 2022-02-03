@@ -1,0 +1,12 @@
+mat-checkbox {
+  .mat-checkbox-layout {
+    white-space: normal;
+
+    .mat-checkbox-label {
+      font-size: 1.2rem;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+  }
+}

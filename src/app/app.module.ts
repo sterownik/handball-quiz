@@ -8,20 +8,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameViewComponent } from './game-view/game-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { QuestionPartComponent } from './question-part/question-part.component';
+import { AnswersPartComponent } from './answers-part/answers-part.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainViewComponent,
     GameViewComponent,
-    QuestionPartComponent
+    QuestionPartComponent,
+    AnswersPartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
