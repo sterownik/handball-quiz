@@ -25,6 +25,7 @@ app-main-view {
     border-radius: 8px;
     padding: 24px 64px;
     gap: 24px;
+    margin: 0 12px;
 
     @media(min-width: $tablet-size) {
       height: 200px;

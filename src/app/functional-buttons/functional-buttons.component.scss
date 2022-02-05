@@ -1,0 +1,34 @@
+app-functional-buttons {
+  .functional-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__column {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &__single {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .functional-button {
+    &__icon {
+      width: 60px;
+      height: 60px;
+
+      &--back {
+        transform: rotate(-180deg);
+      }
+
+      &--shuffle {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+}

@@ -2,10 +2,10 @@
   <section class="quiz-container">
     <section class="quiz-container__app-content">
       <app-question-part [questionText]='textTest'></app-question-part>
-      <app-answers-part [inputsFormGroup]='formGroup' [answers]='answersRecord'></app-answers-part>
+      <app-answers-part [inputsFormGroup]='formGroup'
+                        [answers]='answersRecord'></app-answers-part>
+      <app-functional-buttons></app-functional-buttons>
     </section>
 
   </section>
-  <!-- <button mat-button mat-dialog-close>Cancel</button> -->
-
 </mat-dialog-content>
