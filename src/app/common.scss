@@ -8,6 +8,7 @@ $tablet-size: 768px;
 $desktop-size: 1280px;
 $text-color: #ADE8F4;
 $game-color: #0077B6;
+$buttons-color: #c1d3fe;
 
 @font-face {
   font-family: 'NoToSans';
@@ -34,6 +35,7 @@ body {
 }
 
 @mixin after-element($width) {
+
   &::after,
   &::after {
     content: '';

@@ -9,8 +9,10 @@ import { GameViewComponent } from './game-view/game-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { QuestionPartComponent } from './question-part/question-part.component';
 import { AnswersPartComponent } from './answers-part/answers-part.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FunctionalButtonsComponent } from './functional-buttons/functional-buttons.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainViewComponent,
     GameViewComponent,
     QuestionPartComponent,
-    AnswersPartComponent
+    AnswersPartComponent,
+    FunctionalButtonsComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatDialogModule,
     MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
