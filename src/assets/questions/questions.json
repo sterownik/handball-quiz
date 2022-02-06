@@ -1,0 +1,28 @@
+[
+  {
+    "question": "2.1 Bramkarz A1 broni rzut, piłka przekracza linię końcową boiska zaraz po automatycznym sygnale kończący grę. Sędziowie orientują się, że mecz zakończył się 5 minut za wcześnie. Zawodnicy wciąż pozostają na boisku. Jak należy wznowić grę?",
+    "answers": {
+      "A": "Rzut od bramki dla drużyny A",
+      "B": "Rzut wolny dla drużyny A",
+      "C": "Bez sygnału gwizdka",
+      "D": "Po sygnale gwizdka",
+      "E": "Bez sygnału gwizdka"
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "question":
+      "A11 rzuca na bramkę. Bramkarz B1 łapie piłkę w momencie automatycznego sygnału kończącego grę. Sędziowie zwracają uwagę mierzącemu czas, że pozostało do rozegrania 30 sekund II połowy meczu. Wszyscy zawodnicy wciąż pozostają na boisku. W jaki sposób gra powinna się rozpocząć?",
+    "answers": {
+      "A": "Rzut wolny dla drużyny B",
+      "B": "Rzut od bramki dla drużyny B",
+      "C": "Rzut wolny dla drużyny A",
+      "D": "Po sygnale gwizdka"
+    },
+    "correctAnswers": ["A"
+    ]
+  }
+]

@@ -1,11 +1,17 @@
 <mat-dialog-content class="mat-typography">
   <section class="quiz-container">
     <section class="quiz-container__app-content">
-      <app-question-part [questionText]='textTest'></app-question-part>
+      <div class="columned-container">
+        <app-question-counter [counter]="{
+          actualNumber: actualNumberQuestion,
+          allQuestionNumber: questions.length - 1
+        }"></app-question-counter>
+      </div>
+
+      <app-question-part [questionText]='actualQuestion.question'></app-question-part>
       <app-answers-part [inputsFormGroup]='formGroup'
-                        [answers]='answersRecord'></app-answers-part>
+                        [answers]='actualQuestion.answers'></app-answers-part>
       <app-functional-buttons></app-functional-buttons>
     </section>
-
   </section>
 </mat-dialog-content>

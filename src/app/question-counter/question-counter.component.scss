@@ -1,0 +1,9 @@
+app-question-counter {
+  .counter-container {
+    &__actual {
+      color: $orange-color;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+}
