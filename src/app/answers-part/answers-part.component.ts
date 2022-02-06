@@ -1,35 +1,31 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Answers, Odp } from '../game-view/game-view.component';
-
-interface AnswersPrepare {
-  id: Odp;
-  title: string;
-}
+import { AnswerMarked, Answers, PreparedAnswer } from '../defs/handball-web.defs';
 
 @Component({
   selector: 'app-answers-part',
   templateUrl: './answers-part.component.html',
 })
-export class AnswersPartComponent implements OnInit {
-  @Input() answers: Answers = [];
+export class AnswersPartComponent implements OnChanges {
+  @Input() answers: Answers;
   @Input() inputsFormGroup: FormGroup;
 
-  answersShow: AnswersPrepare[] = [];
-
-  ngOnInit(): void {
-    this.prepareInputs();
-  }
+  answersShow: PreparedAnswer[] = [];
 
   prepareInputs(): void {
     for (let single in this.answers) {
       this.answersShow.push({
-        id: single as Odp,
-        title: this.answers[single as Odp],
-      })
+        id: single as AnswerMarked,
+        title: this.answers[single as AnswerMarked],
+      });
     }
     this.answersShow.map((item) => {
-      this.inputsFormGroup.addControl(item.id, new FormControl(false))
-    })
+      this.inputsFormGroup.addControl(item.id, new FormControl(false));
+    });
+  }
+
+  ngOnChanges(): void {
+    this.answersShow = [];
+    this.prepareInputs();
   }
 }

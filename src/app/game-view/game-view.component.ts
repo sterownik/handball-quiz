@@ -1,29 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
-export type Odp = 'A' & 'B' & 'C';
-export type Answers = Record<Odp, string>;
+import { SingleQuestion, Counter } from '../defs/handball-web.defs';
+import * as QuestionsJson from '../../assets/questions/questions.json'
 
 @Component({
   selector: 'app-game-view',
   templateUrl: './game-view.component.html',
 })
-export class GameViewComponent implements OnInit {
-  textTest =
-    "2.1 Bramkarz A1 broni rzut, piłka przekracza linię końcową boiska zaraz po automatycznym sygnale kończący grę. Sędziowie orientują się, że mecz zakończył się 5 minut za wcześnie. Zawodnicy wciąż pozostają na boisku. Jak należy wznowić grę?";
+export class GameViewComponent {
+  questions: SingleQuestion[];
+  actualQuestion: SingleQuestion;
 
-  answersRecord: Answers = {
-    A: 'Rzut od bramki dla drużyny A',
-    B: 'Rzut wolny dla drużyny A',
-    C: 'Bez sygnału gwizdka',
-    D: 'Po sygnale gwizdka',
-  }
+  actualNumberQuestion: number;
+
+  dataCounter: Counter;
 
   formGroup: FormGroup;
 
   constructor(private fb: FormBuilder) {
+    this.actualNumberQuestion = 0;
     this.formGroup = fb.group({});
-  }
+    this.questions = QuestionsJson as SingleQuestion[];
 
-  ngOnInit(): void {}
+    this.actualQuestion = this.questions[this.actualNumberQuestion];
+  }
 }
