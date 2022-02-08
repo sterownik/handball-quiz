@@ -14,15 +14,51 @@
     ]
   },
   {
-    "question":
-      "A11 rzuca na bramkę. Bramkarz B1 łapie piłkę w momencie automatycznego sygnału kończącego grę. Sędziowie zwracają uwagę mierzącemu czas, że pozostało do rozegrania 30 sekund II połowy meczu. Wszyscy zawodnicy wciąż pozostają na boisku. W jaki sposób gra powinna się rozpocząć?",
+    "question": "A11 rzuca na bramkę. Bramkarz B1 łapie piłkę w momencie automatycznego sygnału kończącego grę. Sędziowie zwracają uwagę mierzącemu czas, że pozostało do rozegrania 30 sekund II połowy meczu. Wszyscy zawodnicy wciąż pozostają na boisku. W jaki sposób gra powinna się rozpocząć?",
     "answers": {
       "A": "Rzut wolny dla drużyny B",
       "B": "Rzut od bramki dla drużyny B",
       "C": "Rzut wolny dla drużyny A",
       "D": "Po sygnale gwizdka"
     },
-    "correctAnswers": ["A"
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "question": "Jak szeroka jest linia bramkowa pomiędzy słupkami?",
+    "answers": {
+      "A": "5 cm",
+      "B": "6 cm",
+      "C": "8 cm",
+      "D": "10 cm"
+    },
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "question": "Jakie są wymagane wymiary w świetle bramki?",
+    "answers": {
+      "A": "1.92 x 2.92",
+      "B": "2.00 x 3.00 m",
+      "C": "2.05 x 3.05 m",
+      "D": "2.08 x 3.08 m"
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "question": "Jakich wymiarów jest, według przepisów, boisko do gry?",
+    "answers": {
+      "A": "40x20 metrów",
+      "B": "42x20 metrów",
+      "C": "38x18 metrów",
+      "D": "Długość pomiędzy 38 a 42 m, szerokość pomiędzy 18 a 22 metry"
+    },
+    "correctAnswers": [
+      "A"
     ]
   }
 ]

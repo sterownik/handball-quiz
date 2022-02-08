@@ -14,6 +14,7 @@
             class="functional-button">
       <img src="assets/img/next.png"
            class="functional-button__icon functional-button__icon--back"
+           (click)="handlingButtonsEmmiter('down')"
            alt="">
     </button>
     <button mat-button
@@ -21,12 +22,14 @@
             class="functional-button">
       <img src="assets/img/shuffle.png"
            class="functional-button__icon functional-button__icon--shuffle"
+           (click)="handlingButtonsEmmiter('draw')"
            alt="">
     </button>
     <button mat-button
             class="functional-button">
       <img src="assets/img/next.png"
            class="functional-button__icon"
+           (click)="handlingButtonsEmmiter('up')"
            alt="">
     </button>
   </div>
