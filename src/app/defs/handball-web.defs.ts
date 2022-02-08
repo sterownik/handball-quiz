@@ -6,6 +6,8 @@ export interface PreparedAnswer {
 
 export type AnswerMarked = 'A' | 'B' | 'C' | 'D' | 'E';
 
+export type HandlingButtons = 'up' | 'down' | 'draw';
+
 export type Answers = Partial<Record<AnswerMarked, string>>;
 
 export interface SingleQuestion {
