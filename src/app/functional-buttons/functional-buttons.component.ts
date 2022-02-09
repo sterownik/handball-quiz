@@ -7,11 +7,16 @@ import { HandlingButtons } from '../defs/handball-web.defs';
 })
 export class FunctionalButtonsComponent implements OnInit {
   @Output() handlingButtons = new EventEmitter<HandlingButtons>();
+  @Output() handlingCheckButton = new EventEmitter<void>();
   constructor() {}
 
   ngOnInit(): void {}
 
   handlingButtonsEmmiter(type: HandlingButtons): void {
     this.handlingButtons.emit(type);
+  }
+
+  handlingCheckEmmiter(): void {
+    this.handlingCheckButton.emit();
   }
 }

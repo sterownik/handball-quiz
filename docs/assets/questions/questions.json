@@ -1,44 +1,18 @@
 [
   {
-    "question": "2.1 Bramkarz A1 broni rzut, piłka przekracza linię końcową boiska zaraz po automatycznym sygnale kończący grę. Sędziowie orientują się, że mecz zakończył się 5 minut za wcześnie. Zawodnicy wciąż pozostają na boisku. Jak należy wznowić grę?",
+    "question": "1.1 Jakich wymiarów jest, według przepisów, boisko do gry?",
     "answers": {
-      "A": "Rzut od bramki dla drużyny A",
-      "B": "Rzut wolny dla drużyny A",
-      "C": "Bez sygnału gwizdka",
-      "D": "Po sygnale gwizdka",
-      "E": "Bez sygnału gwizdka"
+      "A": "40x20 metrów",
+      "B": "42x20 metrów",
+      "C": "38x18 metrów",
+      "D": "Długość pomiędzy 38 a 42 m, szerokość pomiędzy 18 a 22 metry"
     },
     "correctAnswers": [
-      "A",
-      "B"
+      "a"
     ]
   },
   {
-    "question": "A11 rzuca na bramkę. Bramkarz B1 łapie piłkę w momencie automatycznego sygnału kończącego grę. Sędziowie zwracają uwagę mierzącemu czas, że pozostało do rozegrania 30 sekund II połowy meczu. Wszyscy zawodnicy wciąż pozostają na boisku. W jaki sposób gra powinna się rozpocząć?",
-    "answers": {
-      "A": "Rzut wolny dla drużyny B",
-      "B": "Rzut od bramki dla drużyny B",
-      "C": "Rzut wolny dla drużyny A",
-      "D": "Po sygnale gwizdka"
-    },
-    "correctAnswers": [
-      "A"
-    ]
-  },
-  {
-    "question": "Jak szeroka jest linia bramkowa pomiędzy słupkami?",
-    "answers": {
-      "A": "5 cm",
-      "B": "6 cm",
-      "C": "8 cm",
-      "D": "10 cm"
-    },
-    "correctAnswers": [
-      "C"
-    ]
-  },
-  {
-    "question": "Jakie są wymagane wymiary w świetle bramki?",
+    "question": "1.2 Jakie są wymagane wymiary w świetle bramki?",
     "answers": {
       "A": "1.92 x 2.92",
       "B": "2.00 x 3.00 m",
@@ -50,15 +24,54 @@
     ]
   },
   {
-    "question": "Jakich wymiarów jest, według przepisów, boisko do gry?",
+    "question": "1.3 Jak szeroka jest linia bramkowa pomiędzy słupkami?",
     "answers": {
-      "A": "40x20 metrów",
-      "B": "42x20 metrów",
-      "C": "38x18 metrów",
-      "D": "Długość pomiędzy 38 a 42 m, szerokość pomiędzy 18 a 22 metry"
+      "A": "5 cm",
+      "B": "6 cm",
+      "C": "8 cm",
+      "D": "10 cm"
     },
     "correctAnswers": [
-      "A"
+      "C"
+    ]
+  },
+  {
+    "question": "2.1 Bramkarz A1 broni rzut, piłka przekracza linię końcową boiska zaraz po automatycznym sygnale kończący grę. Sędziowie orientują się, że mecz zakończył się 5 minut za wcześnie. Zawodnicy wciąż pozostają na boisku. Jak należy wznowić grę?",
+    "answers": {
+      "A": "Rzut od bramki dla drużyny A",
+      "B": "Rzut wolny dla drużyny A",
+      "C": "Bez sygnału gwizdka",
+      "D": "Po sygnale gwizdka",
+      "E": "Bez sygnału gwizdka"
+    },
+    "correctAnswers": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "question": "2.2 Natychmiast po automatycznym sygnale kończącym grę na zakończenie I połowy meczu sędziowie orientują się, że I połowa zakończyła się 1 minutę za wcześnie. Prawidłowa decyzja?",
+    "answers": {
+      "A": "Przedłużyć II połowę o 1 minutę",
+      "B": "1 minuta nie jest rozgrywana",
+      "C": "Po przerwie w meczu, rozegrać 1 minutę na wybranych na początku meczu stronach boiska, następnie zmienić strony boiska i rozegrać II połowę meczu",
+      "D": "Zatrzymać drużyny na boisku i rozegrać brakującą minutę"
+    },
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "question": "2.3. A11 rzuca na bramkę. Bramkarz B1 łapie piłkę w momencie automatycznego sygnału kończącego grę. Sędziowie zwracają uwagę mierzącemu czas, że pozostało do rozegrania 30 sekund II połowy meczu. Wszyscy zawodnicy wciąż pozostają na boisku. W jaki sposób gra powinna się rozpocząć?",
+    "answers": {
+      "A": "Rzut wolny dla drużyny B",
+      "B": "Rzut od bramki dla drużyny B",
+      "C": "Rzut wolny dla drużyny A",
+      "D": "Po sygnale gwizdka"
+    },
+    "correctAnswers": [
+      "B",
+      "D"
     ]
   }
 ]
