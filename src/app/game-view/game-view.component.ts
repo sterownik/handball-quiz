@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { SingleQuestion, Counter, HandlingButtons } from '../defs/handball-web.defs';
+import {
+  SingleQuestion,
+  Counter,
+  HandlingButtons,
+  AnswerMarked,
+} from '../defs/handball-web.defs';
 import * as QuestionsJson from '../../assets/questions/questions.json';
 
 @Component({
@@ -41,7 +46,9 @@ export class GameViewComponent {
       default:
     }
 
-    this.actualNumberQuestion = this.validNumberQuestion(this.actualNumberQuestion);
+    this.actualNumberQuestion = this.validNumberQuestion(
+      this.actualNumberQuestion
+    );
     this.actualQuestion = this.questions[this.actualNumberQuestion];
   }
 
@@ -56,6 +63,29 @@ export class GameViewComponent {
   }
 
   drawNumberQuestion(): number {
-    return Math.floor(Math.random() * this.allQuestionNumber) + 0;
+    return Math.floor(Math.random() * (this.allQuestionNumber + 2) + 1);
+  }
+
+  handlingCheckButton(): void {
+    const parsingAnswers = this.parseAnswersToArray(this.formGroup.value);
+    this.formGroup.reset();
+
+    if (
+      JSON.stringify(parsingAnswers) ===
+      JSON.stringify(
+        this.actualQuestion.correctAnswers.map((single) =>
+          single.toLocaleUpperCase()
+        )
+      )
+    ) {
+      return this.handlingButtons('up');
+    }
+
+    console.log('niegit');
+  }
+
+  parseAnswersToArray(value: any): AnswerMarked[] {
+    const keys = Object.keys(value);
+    return keys.filter((key) => value[key]) as AnswerMarked[];
   }
 }
