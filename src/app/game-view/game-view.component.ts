@@ -7,6 +7,7 @@ import {
   AnswerMarked,
 } from '../defs/handball-web.defs';
 import * as QuestionsJson from '../../assets/questions/questions.json';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-game-view',
@@ -16,6 +17,7 @@ export class GameViewComponent {
   questions: SingleQuestion[];
   actualQuestion: SingleQuestion;
   allQuestionNumber: number;
+  passValidQuestions: AnswerMarked[];
 
   actualNumberQuestion: number;
 
@@ -23,13 +25,14 @@ export class GameViewComponent {
 
   formGroup: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {
     this.actualNumberQuestion = 0;
     this.formGroup = fb.group({});
     this.questions = QuestionsJson as SingleQuestion[];
 
     this.actualQuestion = this.questions[this.actualNumberQuestion];
     this.allQuestionNumber = this.questions.length - 1;
+    this.passValidQuestions = [];
   }
 
   handlingButtons(type: HandlingButtons): void {
@@ -78,10 +81,20 @@ export class GameViewComponent {
         )
       )
     ) {
+      this._snackBar.open('Dobra odpowiedź', undefined, {
+        duration: 3000,
+        panelClass: 'info-snackbar',
+      });
+      this.passValidQuestions = [];
       return this.handlingButtons('up');
     }
 
-    console.log('niegit');
+    this._snackBar.open('Zła odpowiedź!', undefined, {
+      duration: 3000,
+      panelClass: 'alert-snackbar',
+    });
+
+    this.passValidQuestions = this.actualQuestion.correctAnswers;
   }
 
   parseAnswersToArray(value: any): AnswerMarked[] {

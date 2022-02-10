@@ -11,4 +11,9 @@ app-answers-part {
 
     @include after-element(50%);
   }
+
+  .mark-answer {
+    color: $orange-color;
+    font-weight: 700;
+  }
 }

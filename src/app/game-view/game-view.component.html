@@ -9,9 +9,11 @@
       </div>
 
       <app-question-part [questionText]='actualQuestion.question'></app-question-part>
-      <app-answers-part [inputsFormGroup]='formGroup'
+      <app-answers-part [validAnswers]="passValidQuestions"
+                        [inputsFormGroup]='formGroup'
                         [answers]='actualQuestion.answers'></app-answers-part>
-      <app-functional-buttons (handlingCheckButton)=handlingCheckButton() (handlingButtons)=handlingButtons($event)></app-functional-buttons>
+      <app-functional-buttons (handlingCheckButton)=handlingCheckButton()
+                              (handlingButtons)=handlingButtons($event)></app-functional-buttons>
     </section>
   </section>
 </mat-dialog-content>

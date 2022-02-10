@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FunctionalButtonsComponent } from './functional-buttons/functional-buttons.component';
 import { MatButtonModule } from '@angular/material/button';
 import { QuestionCounterComponent } from './question-counter/question-counter.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { QuestionCounterComponent } from './question-counter/question-counter.co
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

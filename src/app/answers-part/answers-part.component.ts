@@ -1,6 +1,16 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { AnswerMarked, Answers, PreparedAnswer } from '../defs/handball-web.defs';
+import {
+  AnswerMarked,
+  Answers,
+  PreparedAnswer,
+} from '../defs/handball-web.defs';
 
 @Component({
   selector: 'app-answers-part',
@@ -9,6 +19,7 @@ import { AnswerMarked, Answers, PreparedAnswer } from '../defs/handball-web.defs
 export class AnswersPartComponent implements OnChanges {
   @Input() answers: Answers;
   @Input() inputsFormGroup: FormGroup;
+  @Input() validAnswers: AnswerMarked[];
 
   answersShow: PreparedAnswer[] = [];
 
@@ -26,6 +37,9 @@ export class AnswersPartComponent implements OnChanges {
 
   ngOnChanges(): void {
     this.answersShow = [];
+    this.validAnswers = this.validAnswers.map(
+      (item) => item.toLocaleUpperCase() as AnswerMarked
+    );
     this.prepareInputs();
   }
 }
