@@ -1,6 +1,7 @@
 <mat-dialog-content class="mat-typography">
   <section class="quiz-container">
-    <section class="quiz-container__app-content">
+    <section *ngIf="questions.length > 0; else empty_state"
+             class="quiz-container__app-content">
       <div class="columned-container">
         <app-question-counter [counter]="{
           actualNumber: actualNumberQuestion,
@@ -14,6 +15,33 @@
                         [answers]='actualQuestion.answers'></app-answers-part>
       <app-functional-buttons (handlingCheckButton)=handlingCheckButton()
                               (handlingButtons)=handlingButtons($event)></app-functional-buttons>
+      <div (click)="pushQuestion()"
+           *ngIf="gameMode === 'main'; else chosenAnswers"
+           class="quiz-container__handle-button-container">
+        <img class="quiz-container__handle-button"
+             src="assets/img/plus.png"
+             alt="">
+      </div>
     </section>
   </section>
 </mat-dialog-content>
+
+<ng-template #chosenAnswers>
+  <div (click)="popQuestion()"
+       class="quiz-container__handle-button-container quiz-container__handle-button-container--minus-sign">
+    <img class="quiz-container__handle-button"
+         src="assets/img/minus-sign.png"
+         alt="">
+  </div>
+</ng-template>
+
+<ng-template #empty_state>
+  <div routerLink=""
+       class="empty-state">
+    <img class="empty-state__image"
+         src="assets/img/back.png"
+         alt="">
+    <span class="empty-state__text">Wybierz pytanie z katalogu aby wyświetliły się w tym</span>
+
+  </div>
+</ng-template>

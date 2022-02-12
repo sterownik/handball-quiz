@@ -16,4 +16,13 @@ snack-bar-container {
   &.info-snackbar {
     background-color: green;
   }
+
+  &.warining-snackbar {
+    background-color: yellow;
+
+
+    .mat-simple-snack-bar-content {
+      color: black;
+    }
+  }
 }

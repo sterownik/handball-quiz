@@ -5,22 +5,24 @@
          alt="">
   </div>
   <section class="games-wrapper">
-    <div (click)="openGame()" class="games-wrapper__game single-game">
+    <div (click)="openGame('main')"
+         class="games-wrapper__game single-game">
       <img class="single-game__image"
            src="assets/img/online-learning.png"
            alt="">
       <div class="single-game__text">
         <p class="title-game">Katalog pytań</p>
-        <p class="game-scores">1 / 356</p>
+        <p class="game-scores">356</p>
       </div>
     </div>
-    <div (click)="openGame()" class="games-wrapper__game single-game">
+    <div (click)="openGame('chosenAnswers')"
+         class="games-wrapper__game single-game">
       <img class="single-game__image"
-           src="assets/img/exam.png"
+           src="assets/img/library.png"
            alt="">
       <div class="single-game__text">
-        <p class="title-game">Egzamin</p>
-        <p class="game-scores">1 / 40</p>
+        <p class="title-game">Ulubione pytania</p>
+        <p class="game-scores">{{ favouriteQuestions.length }} </p>
       </div>
 
     </div>
@@ -33,7 +35,7 @@
     <p class="footer-text footer-text--secondly">&#9751; Rzeszów</p>
   </div>
   <div class="footer-container__part">
-    <p class="footer-text">&#9993;: 4golda4@gmail.com</p>
-    <p class="footer-text footer-text--secondly">&#9990;: 731 604 761</p>
+    <p class="footer-text">&#9993; 4golda4@gmail.com</p>
+    <p class="footer-text footer-text--secondly">&#9990; 731 604 761</p>
   </div>
 </footer>

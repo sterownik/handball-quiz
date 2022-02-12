@@ -1,4 +1,3 @@
-
 export interface PreparedAnswer {
   id: AnswerMarked;
   title: string | undefined;
@@ -16,7 +15,9 @@ export interface SingleQuestion {
   correctAnswers: AnswerMarked[];
 }
 
-export interface Counter{
-  actualNumber: number,
+export interface Counter {
+  actualNumber: number;
   allQuestionNumber: number;
 }
+
+export type TypeGame = 'main' | 'chosenAnswers';
