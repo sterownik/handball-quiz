@@ -1,3 +1,15 @@
-<div class="counter-container">
-<span class="counter-container__actual">{{this.counter.actualNumber}}</span> / <span class="counter-container__sum">{{ this.counter.allQuestionNumber }}</span>
+<div class="counter-wrapper">
+  <div class="exit-button"
+       (click)="cancel()">
+    <img class="exit-button__image"
+         src="assets/img/cancel.png"
+         alt="">
+  </div>
+  <div class="points">
+    <span class="points__text"> {{ this.counter.points }} </span>
+  </div>
+  <div class="counter-container">
+    <span class="counter-container__actual">{{this.counter.actualNumber}}</span> / <span
+          class="counter-container__sum">{{ this.counter.allQuestionNumber }}</span>
+  </div>
 </div>

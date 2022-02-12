@@ -18,6 +18,7 @@ export interface SingleQuestion {
 export interface Counter {
   actualNumber: number;
   allQuestionNumber: number;
+  points: number;
 }
 
 export type TypeGame = 'main' | 'chosenAnswers';

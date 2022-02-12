@@ -2,12 +2,11 @@
   <section class="quiz-container">
     <section *ngIf="questions.length > 0; else empty_state"
              class="quiz-container__app-content">
-      <div class="columned-container">
-        <app-question-counter [counter]="{
+      <app-question-counter [counter]="{
+          points: points,
           actualNumber: actualNumberQuestion,
           allQuestionNumber: allQuestionNumber
         }"></app-question-counter>
-      </div>
 
       <app-question-part [questionText]='actualQuestion.question'></app-question-part>
       <app-answers-part [validAnswers]="passValidQuestions"
@@ -41,7 +40,7 @@
     <img class="empty-state__image"
          src="assets/img/back.png"
          alt="">
-    <span class="empty-state__text">Wybierz pytanie z katalogu aby wyświetliły się w tym</span>
+    <span class="empty-state__text">Wybierz pytanie z katalogu aby wyświetliły się w tym miejscu</span>
 
   </div>
 </ng-template>

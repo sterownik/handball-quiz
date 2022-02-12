@@ -1,13 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Counter } from '../defs/handball-web.defs';
 
 @Component({
   selector: 'app-question-counter',
   templateUrl: './question-counter.component.html',
 })
-export class QuestionCounterComponent implements OnInit {
+export class QuestionCounterComponent {
   @Input() counter: Counter;
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  cancel() {
+    this.router.navigate(['']);
+  }
 }

@@ -11,7 +11,7 @@ app-main-view {
     height: calc(100vh - 80px);
 
     @media(min-width: $tablet-size) {
-      width: 600px;
+      width: 700px;
       margin: 0 auto;
     }
   }
@@ -21,14 +21,14 @@ app-main-view {
     flex-direction: column;
     background-color: $secondary-color;
     width: 100%;
-    height: 60%;
+    height: 80%;
     border-radius: 8px;
     padding: 24px 64px;
     gap: 24px;
     margin: 0 12px;
 
     @media(min-width: $tablet-size) {
-      height: 200px;
+      height: 150px;
       border-radius: 12px;
       flex-direction: row;
     }
@@ -54,8 +54,8 @@ app-main-view {
     transition: .2s linear;
 
     &__image {
-      width: 90px;
-      height: 90px;
+      width: 70px;
+      height: 70px;
     }
 
     &__text {
@@ -81,25 +81,6 @@ app-main-view {
 
   .game-scores {
     font-size: 1rem;
-  }
-
-  .rules-container {
-    position: absolute;
-    top: 12px;
-    background-color: $third-color;
-    padding: 12px;
-    border-radius: 50%;
-    transition: .2s linear;
-
-    &__icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    &:hover {
-      transform: scale(1.1);
-      filter: blur(.8px);
-    }
   }
 
   .footer-container {

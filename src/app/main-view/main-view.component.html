@@ -1,9 +1,4 @@
 <div class="main-app-wrapper">
-  <div class="rules-container">
-    <img class="rules-container__icon"
-         src="assets/img/book.png"
-         alt="">
-  </div>
   <section class="games-wrapper">
     <div (click)="openGame('main')"
          class="games-wrapper__game single-game">
@@ -12,7 +7,7 @@
            alt="">
       <div class="single-game__text">
         <p class="title-game">Katalog pytań</p>
-        <p class="game-scores">356</p>
+        <p class="game-scores"> {{ allQuestionNumber }}</p>
       </div>
     </div>
     <div (click)="openGame('chosenAnswers')"
@@ -23,6 +18,17 @@
       <div class="single-game__text">
         <p class="title-game">Ulubione pytania</p>
         <p class="game-scores">{{ favouriteQuestions.length }} </p>
+      </div>
+
+    </div>
+    <div (click)="openExam()"
+         class="games-wrapper__game single-game">
+      <img class="single-game__image"
+           src="assets/img/exam.png"
+           alt="">
+      <div class="single-game__text">
+        <p class="title-game">Egzamin</p>
+        <p class="game-scores"> 40 </p>
       </div>
 
     </div>

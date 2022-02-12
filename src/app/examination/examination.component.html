@@ -1,0 +1,28 @@
+<mat-dialog-content class="mat-typography">
+  <section class="quiz-container">
+    <section class="quiz-container__app-content">
+      <app-question-counter [counter]="{
+          points: points,
+          actualNumber: orderNumberQuestion,
+          allQuestionNumber: 40
+        }"></app-question-counter>
+      <app-question-part [questionText]='actualQuestion.question'></app-question-part>
+      <app-answers-part [validAnswers]="passValidQuestions"
+                        [inputsFormGroup]='formGroup'
+                        [answers]='actualQuestion.answers'></app-answers-part>
+      <div class="button-container">
+        <button mat-button
+                [disabled]="!validButton"
+                [ngClass]="{'disabled-button': !validButton}"
+                color="primary"
+                (click)="handlingCheckButton()"
+                class="functional-button">
+          <img src="assets/img/next.png"
+               class="functional-button__icon"
+               alt="">
+        </button>
+      </div>
+
+    </section>
+  </section>
+</mat-dialog-content>

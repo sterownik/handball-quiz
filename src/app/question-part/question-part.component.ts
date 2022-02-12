@@ -1,15 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-question-part',
   templateUrl: './question-part.component.html',
 })
-export class QuestionPartComponent implements OnInit {
+export class QuestionPartComponent {
   @Input() questionText = '';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

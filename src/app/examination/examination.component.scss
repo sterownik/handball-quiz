@@ -1,0 +1,14 @@
+app-examination {
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .disabled-button {
+    filter: blur(2px);
+  }
+
+  .columned-container {
+    flex-direction: row;
+  }
+}

@@ -1,9 +1,37 @@
 app-question-counter {
+  .counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .counter-container {
     &__actual {
       color: $orange-color;
       font-weight: 700;
       font-size: 1rem;
     }
+  }
+
+  .exit-button {
+    cursor: pointer;
+    transition: .2s linear;
+
+    &__image {
+      width: 40px;
+      height: 40px;
+      margin: 8px 0;
+    }
+
+    &:hover {
+      filter: blur(1px);
+    }
+  }
+
+  .points__text {
+    color: $third-color;
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-family: 'Patrick';
   }
 }
