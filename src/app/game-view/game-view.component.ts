@@ -21,6 +21,7 @@ export class GameViewComponent implements OnInit {
   allQuestionNumber: number;
   passValidQuestions: AnswerMarked[];
   gameMode: TypeGame;
+  points: number;
 
   actualNumberQuestion: number;
 
@@ -55,15 +56,6 @@ export class GameViewComponent implements OnInit {
     this.prepareQuestion();
   }
 
-  prepareQuestion(): void {
-    this.actualNumberQuestion = 0;
-    this.formGroup = this.fb.group({});
-
-    this.actualQuestion = this.questions[this.actualNumberQuestion];
-    this.allQuestionNumber = this.questions.length - 1;
-    this.passValidQuestions = [];
-  }
-
   handlingButtons(type: HandlingButtons): void {
     switch (type) {
       case 'up':
@@ -85,20 +77,6 @@ export class GameViewComponent implements OnInit {
     this.actualQuestion = this.questions[this.actualNumberQuestion];
   }
 
-  validNumberQuestion(numberQuestion: number): number {
-    if (numberQuestion > this.allQuestionNumber) {
-      return 0;
-    }
-    if (numberQuestion < 0) {
-      return this.allQuestionNumber;
-    }
-    return numberQuestion;
-  }
-
-  drawNumberQuestion(): number {
-    return Math.floor(Math.random() * (this.allQuestionNumber + 2) + 1);
-  }
-
   handlingCheckButton(): void {
     const parsingAnswers = this.parseAnswersToArray(this.formGroup.value);
     this.formGroup.reset();
@@ -115,34 +93,6 @@ export class GameViewComponent implements OnInit {
     }
 
     this.inCaseInValidAnswer();
-  }
-
-  inCaseValidAnswer(): void {
-    this._snackBar.open('Dobra odpowiedź', undefined, {
-      duration: 3000,
-      panelClass: 'info-snackbar',
-    });
-    this.passValidQuestions = [];
-    return this.handlingButtons('up');
-  }
-
-  inCaseInValidAnswer() {
-    this._snackBar.open('Zła odpowiedź!', undefined, {
-      duration: 3000,
-      panelClass: 'alert-snackbar',
-    });
-
-    this.passValidQuestions = this.actualQuestion.correctAnswers;
-
-    const that = this;
-    setTimeout(() => {
-      that.passValidQuestions = [];
-    }, 5000);
-  }
-
-  parseAnswersToArray(value: any): AnswerMarked[] {
-    const keys = Object.keys(value);
-    return keys.filter((key) => value[key]) as AnswerMarked[];
   }
 
   popQuestion(): void {
@@ -165,13 +115,6 @@ export class GameViewComponent implements OnInit {
     this.passValidQuestions = [];
   }
 
-  getAndSaveArray(): SingleQuestion[] {
-    let array = [];
-    let items = JSON.parse(localStorage.getItem('answers') as string) || [];
-    array = items;
-    return array;
-  }
-
   pushQuestion(): void {
     let array = this.getAndSaveArray();
     if (
@@ -185,10 +128,70 @@ export class GameViewComponent implements OnInit {
     this.showInformation('Dodałeś pytanie!');
   }
 
-  showInformation(text: string): void {
+  private prepareQuestion(): void {
+    this.points = 0;
+    this.actualNumberQuestion = 0;
+    this.formGroup = this.fb.group({});
+
+    this.actualQuestion = this.questions[this.actualNumberQuestion];
+    this.allQuestionNumber = this.questions.length - 1;
+    this.passValidQuestions = [];
+  }
+
+  private validNumberQuestion(numberQuestion: number): number {
+    if (numberQuestion > this.allQuestionNumber) {
+      return 0;
+    }
+    if (numberQuestion < 0) {
+      return this.allQuestionNumber;
+    }
+    return numberQuestion;
+  }
+
+  private drawNumberQuestion(): number {
+    return Math.floor(Math.random() * (this.allQuestionNumber + 2) + 1);
+  }
+
+  private inCaseValidAnswer(): void {
+    this.points++;
+    this._snackBar.open('Dobra odpowiedź', undefined, {
+      duration: 3000,
+      panelClass: 'info-snackbar',
+    });
+    this.passValidQuestions = [];
+    return this.handlingButtons('up');
+  }
+
+  private inCaseInValidAnswer() {
+    this._snackBar.open('Zła odpowiedź!', undefined, {
+      duration: 3000,
+      panelClass: 'alert-snackbar',
+    });
+
+    this.passValidQuestions = this.actualQuestion.correctAnswers;
+
+    const that = this;
+    setTimeout(() => {
+      that.passValidQuestions = [];
+    }, 5000);
+  }
+
+  private parseAnswersToArray(value: any): AnswerMarked[] {
+    const keys = Object.keys(value);
+    return keys.filter((key) => value[key]) as AnswerMarked[];
+  }
+
+  private showInformation(text: string): void {
     this._snackBar.open(text, undefined, {
       duration: 3000,
       panelClass: 'warining-snackbar',
     });
+  }
+
+  private getAndSaveArray(): SingleQuestion[] {
+    let array = [];
+    let items = JSON.parse(localStorage.getItem('answers') as string) || [];
+    array = items;
+    return array;
   }
 }

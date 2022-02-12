@@ -15,6 +15,7 @@ import { FunctionalButtonsComponent } from './functional-buttons/functional-butt
 import { MatButtonModule } from '@angular/material/button';
 import { QuestionCounterComponent } from './question-counter/question-counter.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ExaminationComponent } from './examination/examination.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AnswersPartComponent,
     FunctionalButtonsComponent,
     QuestionCounterComponent,
+    ExaminationComponent,
   ],
   imports: [
     BrowserModule,

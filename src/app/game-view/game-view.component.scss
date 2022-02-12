@@ -1,35 +1,5 @@
 app-game-view {
   .quiz-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    min-height: 100vh;
-
-
-    @media(min-width: $tablet-size) {
-      width: 750px;
-      margin: 0 auto;
-    }
-
-    &__app-content {
-      display: flex;
-      flex-direction: column;
-      background-color: $secondary-color;
-      width: 100%;
-      min-height: 300px;
-      border-radius: 8px;
-      padding: 2px 12px 10px;
-      margin: 12px;
-
-      @media(min-width: $tablet-size) {
-        min-height: 200px;
-        border-radius: 12px;
-        padding: 2px 32px 10px;
-      }
-    }
-
     &__handle-button {
       width: 48px;
       height: 48px;
@@ -53,11 +23,6 @@ app-game-view {
     }
   }
 
-  .columned-container {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
   .empty-state {
     padding: 24px;
     background-color: $orange-color;
@@ -73,6 +38,7 @@ app-game-view {
     gap: 8px;
     cursor: pointer;
     transition: .2s linear;
+    width: 60%;
 
     &__image {
       width: 48px;
@@ -81,6 +47,10 @@ app-game-view {
 
     &:hover {
       filter: blur(.8px);
+    }
+
+    @media(min-width: $tablet-size) {
+      width: auto;
     }
   }
 }
