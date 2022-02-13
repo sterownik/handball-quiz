@@ -1,11 +1,16 @@
 <mat-dialog-content class="mat-typography">
   <section class="quiz-container">
     <section class="quiz-container__app-content">
-      <app-question-counter [counter]="{
+      <app-question-top-bar [topBarInformation]="{
           points: points,
           actualNumber: orderNumberQuestion,
           allQuestionNumber: 40
-        }"></app-question-counter>
+        }"></app-question-top-bar>
+      <div class="progress-bar-coontainer">
+        <mat-progress-bar mode="determinate"
+                          color="primary"
+                          [value]="counter"></mat-progress-bar>
+      </div>
       <app-question-part [questionText]='actualQuestion.question'></app-question-part>
       <app-answers-part [validAnswers]="passValidQuestions"
                         [inputsFormGroup]='formGroup'
@@ -22,7 +27,6 @@
                alt="">
         </button>
       </div>
-
     </section>
   </section>
 </mat-dialog-content>

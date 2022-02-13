@@ -2,11 +2,11 @@
   <section class="quiz-container">
     <section *ngIf="questions.length > 0; else empty_state"
              class="quiz-container__app-content">
-      <app-question-counter [counter]="{
+      <app-question-top-bar [topBarInformation]="{
           points: points,
           actualNumber: actualNumberQuestion,
           allQuestionNumber: allQuestionNumber
-        }"></app-question-counter>
+        }"></app-question-top-bar>
 
       <app-question-part [questionText]='actualQuestion.question'></app-question-part>
       <app-answers-part [validAnswers]="passValidQuestions"

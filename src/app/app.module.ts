@@ -13,9 +13,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FunctionalButtonsComponent } from './functional-buttons/functional-buttons.component';
 import { MatButtonModule } from '@angular/material/button';
-import { QuestionCounterComponent } from './question-counter/question-counter.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ExaminationComponent } from './examination/examination.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { QuestionTopBarComponent } from './question-top-bar/question-top-bar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ExaminationComponent } from './examination/examination.component';
     QuestionPartComponent,
     AnswersPartComponent,
     FunctionalButtonsComponent,
-    QuestionCounterComponent,
+    QuestionTopBarComponent,
     ExaminationComponent,
   ],
   imports: [
@@ -39,6 +40,7 @@ import { ExaminationComponent } from './examination/examination.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

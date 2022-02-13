@@ -1,0 +1,15 @@
+<div class="top-bar-wrapper">
+  <div class="exit-button"
+       (click)="cancel()">
+    <img class="exit-button__image"
+         src="assets/img/cancel.png"
+         alt="">
+  </div>
+  <div class="points">
+    <span class="points__text"> {{ this.topBarInformation.points }} </span>
+  </div>
+  <div class="top-bar-container">
+    <span class="top-bar-container__actual">{{this.topBarInformation.actualNumber}}</span> / <span
+          class="top-bar-container__sum">{{ this.topBarInformation.allQuestionNumber }}</span>
+  </div>
+</div>

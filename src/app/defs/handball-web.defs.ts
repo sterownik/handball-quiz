@@ -15,7 +15,7 @@ export interface SingleQuestion {
   correctAnswers: AnswerMarked[];
 }
 
-export interface Counter {
+export interface TopBarInformation {
   actualNumber: number;
   allQuestionNumber: number;
   points: number;
