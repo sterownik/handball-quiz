@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {
   SingleQuestion,
-  Counter,
   HandlingButtons,
   AnswerMarked,
   TypeGame,
@@ -15,19 +15,20 @@ import { Router, ActivatedRoute } from '@angular/router';
   selector: 'app-game-view',
   templateUrl: './game-view.component.html',
 })
-export class GameViewComponent implements OnInit {
+export class GameViewComponent implements OnInit, OnDestroy {
   questions: SingleQuestion[];
   actualQuestion: SingleQuestion;
-  allQuestionNumber: number;
+
   passValidQuestions: AnswerMarked[];
   gameMode: TypeGame;
-  points: number;
 
   actualNumberQuestion: number;
-
-  dataCounter: Counter;
+  allQuestionNumber: number;
+  points: number;
 
   formGroup: FormGroup;
+
+  routerSubscription: Subscription;
 
   constructor(
     private fb: FormBuilder,
@@ -36,7 +37,7 @@ export class GameViewComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.router.params.subscribe((params) => {
+    this.routerSubscription = this.router.params.subscribe((params) => {
       this.gameMode = params['name'];
     });
 
@@ -193,5 +194,9 @@ export class GameViewComponent implements OnInit {
     let items = JSON.parse(localStorage.getItem('answers') as string) || [];
     array = items;
     return array;
+  }
+
+  ngOnDestroy(): void {
+    this.routerSubscription.unsubscribe();
   }
 }

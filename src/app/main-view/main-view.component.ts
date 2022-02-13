@@ -11,6 +11,7 @@ import * as QuestionsJson from '../../assets/questions/questions.json';
 })
 export class MainViewComponent implements OnInit {
   favouriteQuestions: SingleQuestion[];
+
   allQuestionNumber: number;
 
   constructor(public dialog: MatDialog, private router: Router) {}

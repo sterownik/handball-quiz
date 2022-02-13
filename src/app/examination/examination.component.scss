@@ -11,4 +11,13 @@ app-examination {
   .columned-container {
     flex-direction: row;
   }
+
+  .progress-bar-coontainer {
+    width: 100%;
+    margin: 4px auto 20px auto;
+
+    @media(min-width: $tablet-size) {
+      width: 80%;
+    }
+  }
 }

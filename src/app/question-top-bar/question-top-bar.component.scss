@@ -1,11 +1,11 @@
-app-question-counter {
-  .counter-wrapper {
+app-question-top-bar {
+  .top-bar-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .counter-container {
+  .top-bar-container {
     &__actual {
       color: $orange-color;
       font-weight: 700;

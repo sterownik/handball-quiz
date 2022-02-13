@@ -1,35 +1,53 @@
 import { AnswerMarked, SingleQuestion } from './../defs/handball-web.defs';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import * as QuestionsJson from '../../assets/questions/questions.json';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { Observable, Subscription, tap, timer } from 'rxjs';
 
 @Component({
   selector: 'app-examination',
   templateUrl: './examination.component.html',
 })
-export class ExaminationComponent implements OnInit {
+export class ExaminationComponent implements OnInit, OnDestroy {
   questions: SingleQuestion[];
   actualQuestion: SingleQuestion;
-  allQuestionNumber: number;
+
   passValidQuestions: AnswerMarked[];
+
   actualNumberQuestion: number;
-  formGroup: FormGroup;
-  points: number;
-  validButton: boolean;
+  allQuestionNumber: number;
   orderNumberQuestion: number;
+  private delayTimer: number;
+  points: number;
+  counter: number;
+  tick: number;
+
+  validButton: boolean;
+
+  formGroup: FormGroup;
+
+  private countDownObservable: Observable<number>;
+
+  private countDownSubscription: Subscription;
 
   constructor(
     private fb: FormBuilder,
     private _snackBar: MatSnackBar,
     private router: Router
-  ) {}
+  ) {
+    this.counter = 100;
+    this.tick = 500;
+    this.validButton = true;
+  }
 
   ngOnInit(): void {
     this.questions = QuestionsJson as SingleQuestion[];
     this.prepareQuestion();
-    this.validButton = true;
+
+    this.countDownObservable = this.observableTimer();
+    this.countDownSubscription = this.countDownObservable.subscribe();
   }
 
   handlingCheckButton(): void {
@@ -48,9 +66,26 @@ export class ExaminationComponent implements OnInit {
     this.inCaseInValidAnswer();
   }
 
+  private observableTimer(): Observable<number> {
+    return timer(0, this.tick).pipe(
+      tap(() => {
+        --this.counter;
+
+        if (this.counter === 0) {
+          this.handlingCheckButton();
+
+          const that = this;
+          setTimeout(() => {
+            that.counter = 100;
+          }, this.delayTimer);
+        }
+      })
+    );
+  }
+
   private prepareQuestion(): void {
     this.points = 0;
-    this.orderNumberQuestion = 0;
+    this.orderNumberQuestion = 1;
     this.allQuestionNumber = this.questions.length - 1;
     this.actualNumberQuestion = this.drawNumberQuestion();
     this.formGroup = this.fb.group({});
@@ -90,6 +125,7 @@ export class ExaminationComponent implements OnInit {
 
   private calcuateResult(): void {
     const result = parseFloat(((this.points / 40) * 100).toFixed(2));
+    this.countDownSubscription.unsubscribe();
     if (result >= 70) {
       this._snackBar.open(`Zdałeś zdobywając ${result}%`, undefined, {
         duration: 5000,
@@ -110,41 +146,49 @@ export class ExaminationComponent implements OnInit {
 
   private inCaseValidAnswer(): void {
     this.points++;
+
     this._snackBar.open('Dobra odpowiedź', undefined, {
-      duration: 3000,
+      duration: 1800,
       panelClass: 'info-snackbar',
     });
+
     this.passValidQuestions = [];
-    this.timer(1000);
+    this.delayTimer = 2000;
+    this.timer(this.delayTimer);
   }
 
   private inCaseInValidAnswer() {
     this._snackBar.open('Zła odpowiedź!', undefined, {
-      duration: 3000,
+      duration: 2500,
       panelClass: 'alert-snackbar',
     });
 
     this.passValidQuestions = this.actualQuestion.correctAnswers;
-    this.timer(5000);
-
-    const that = this;
-    setTimeout(() => {
-      that.passValidQuestions = [];
-    }, 5000);
+    this.delayTimer = 3000;
+    this.timer(this.delayTimer);
   }
 
   private timer(timer: number): void {
     let that = this;
     this.validButton = false;
 
+    this.countDownSubscription.unsubscribe();
+
     setTimeout(() => {
+      this.countDownSubscription = this.countDownObservable.subscribe();
+      that.counter = 100;
       that.goNextQuestion();
       this.validButton = true;
+      that.passValidQuestions = [];
     }, timer);
   }
 
   private parseAnswersToArray(value: any): AnswerMarked[] {
     const keys = Object.keys(value);
     return keys.filter((key) => value[key]) as AnswerMarked[];
+  }
+
+  ngOnDestroy(): void {
+    this.countDownSubscription.unsubscribe();
   }
 }
