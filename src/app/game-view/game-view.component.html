@@ -1,6 +1,6 @@
 <mat-dialog-content class="mat-typography">
   <section class="quiz-container">
-    <section *ngIf="questions.length > 0; else empty_state"
+    <section *ngIf="questions && questions.length > 0; else empty_state"
              class="quiz-container__app-content">
       <app-question-top-bar [topBarInformation]="{
           points: points,
