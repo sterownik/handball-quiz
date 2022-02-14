@@ -1,5 +1,5 @@
 import { Subscription } from 'rxjs';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {
   SingleQuestion,
@@ -36,6 +36,11 @@ export class GameViewComponent implements OnInit, OnDestroy {
     private router: ActivatedRoute
   ) {}
 
+  @HostListener('window:popstate', ['$event'])
+  onPopState() {
+    this.saveNumberOfQuestion();
+  }
+
   ngOnInit(): void {
     this.routerSubscription = this.router.params.subscribe((params) => {
       this.gameMode = params['name'];
@@ -50,7 +55,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
         break;
     }
 
-    if (this.questions.length === 0) {
+    if (!this.questions || this.questions.length === 0) {
       return;
     }
 
@@ -131,7 +136,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
 
   private prepareQuestion(): void {
     this.points = 0;
-    this.actualNumberQuestion = 0;
+    this.actualNumberQuestion = this.getNumberOfQuestion();
     this.formGroup = this.fb.group({});
 
     this.actualQuestion = this.questions[this.actualNumberQuestion];
@@ -196,7 +201,36 @@ export class GameViewComponent implements OnInit, OnDestroy {
     return array;
   }
 
+  private saveNumberOfQuestion(): void {
+    if (!this.questions || this.questions.length === 0) {
+      localStorage.setItem('numberChosenQuestion', '0');
+      return;
+    }
+
+    if (this.gameMode === 'main') {
+      localStorage.setItem(
+        'numberCatalogQuestion',
+        this.actualNumberQuestion + ''
+      );
+      return;
+    }
+
+    localStorage.setItem(
+      'numberChosenQuestion',
+      this.actualNumberQuestion + ''
+    );
+  }
+
+  private getNumberOfQuestion(): number {
+    if (this.gameMode === 'main') {
+      return parseInt(localStorage.getItem('numberCatalogQuestion') ?? '0', 10);
+    }
+
+    return parseInt(localStorage.getItem('numberChosenQuestion') ?? '0', 10);
+  }
+
   ngOnDestroy(): void {
     this.routerSubscription.unsubscribe();
+    this.saveNumberOfQuestion();
   }
 }

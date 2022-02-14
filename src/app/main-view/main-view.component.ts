@@ -11,6 +11,8 @@ import * as QuestionsJson from '../../assets/questions/questions.json';
 })
 export class MainViewComponent implements OnInit {
   favouriteQuestions: SingleQuestion[];
+  saveNumberCatalogQuestion: string;
+  saveNumberChosenQuestion: string;
 
   allQuestionNumber: number;
 
@@ -20,8 +22,13 @@ export class MainViewComponent implements OnInit {
     this.favouriteQuestions = JSON.parse(
       localStorage.getItem('answers') as string
     );
+    this.saveNumberCatalogQuestion =
+      localStorage.getItem('numberCatalogQuestion') ?? '0';
+
+    this.saveNumberChosenQuestion =
+      localStorage.getItem('numberChosenQuestion') ?? '0';
     const question: SingleQuestion[] = QuestionsJson as SingleQuestion[];
-    this.allQuestionNumber = question.length;
+    this.allQuestionNumber = question.length - 1;
   }
 
   openGame(mode: TypeGame): void {
