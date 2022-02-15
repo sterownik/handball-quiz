@@ -18,7 +18,8 @@
            alt="">
       <div class="single-game__text">
         <p class="title-game">Ulubione pytania</p>
-        <p class="game-scores">{{saveNumberChosenQuestion >= 0 ? saveNumberChosenQuestion + 1 : 0}} /
+        <p class="game-scores">
+          {{ !favouriteQuestions?.length ? 0 : saveNumberChosenQuestion + 1  }} /
           {{ favouriteQuestions ? favouriteQuestions.length : 0 }} </p>
       </div>
 
