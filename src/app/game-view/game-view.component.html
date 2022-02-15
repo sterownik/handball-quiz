@@ -4,8 +4,8 @@
              class="quiz-container__app-content">
       <app-question-top-bar [topBarInformation]="{
           points: points,
-          actualNumber: actualNumberQuestion,
-          allQuestionNumber: allQuestionNumber
+          actualNumber: actualNumberQuestion + 1,
+          allQuestionNumber: allQuestionNumber + 1
         }"></app-question-top-bar>
 
       <app-question-part [questionText]='actualQuestion.question'></app-question-part>

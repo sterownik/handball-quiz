@@ -7,7 +7,8 @@
            alt="">
       <div class="single-game__text">
         <p class="title-game">Katalog pytań</p>
-        <p class="game-scores">{{saveNumberCatalogQuestion}} / {{ allQuestionNumber }}</p>
+        <p class="game-scores">{{saveNumberCatalogQuestion >= 0 ? saveNumberCatalogQuestion + 1 : 0}} /
+          {{ allQuestionNumber }}</p>
       </div>
     </div>
     <div (click)="openGame('chosenAnswers')"
@@ -17,8 +18,8 @@
            alt="">
       <div class="single-game__text">
         <p class="title-game">Ulubione pytania</p>
-        <p class="game-scores">{{saveNumberChosenQuestion}} /
-          {{ favouriteQuestions && favouriteQuestions.length > 0 ? favouriteQuestions.length - 1 : 0 }} </p>
+        <p class="game-scores">{{saveNumberChosenQuestion >= 0 ? saveNumberChosenQuestion + 1 : 0}} /
+          {{ favouriteQuestions ? favouriteQuestions.length : 0 }} </p>
       </div>
 
     </div>

@@ -103,8 +103,6 @@ export class GameViewComponent implements OnInit, OnDestroy {
 
   popQuestion(): void {
     let array = this.getAndSaveArray();
-    console.log(array);
-    console.log(this.actualNumberQuestion);
     const index = array.findIndex((question: SingleQuestion) =>
       question.question.match(this.actualQuestion.question)
     );
