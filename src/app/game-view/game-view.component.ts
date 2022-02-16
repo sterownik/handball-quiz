@@ -1,5 +1,22 @@
-import { Subscription } from 'rxjs';
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Toast } from './../defs/handball-web.defs';
+import {
+  Subject,
+  Subscription,
+  timer,
+  Observable,
+  takeUntil,
+  filter,
+  interval,
+  bufferWhen,
+  delay,
+} from 'rxjs';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  HostListener,
+  Inject,
+} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {
   SingleQuestion,
@@ -7,34 +24,32 @@ import {
   AnswerMarked,
   TypeGame,
 } from '../defs/handball-web.defs';
-import * as QuestionsJson from '../../assets/questions/questions.json';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router, ActivatedRoute } from '@angular/router';
+import { QUESTIONS } from '../tokens/token';
+import { ToastService } from '../common/toast.service';
+import { QuizCommonComponent } from '../common/quiz-common.component';
 
 @Component({
   selector: 'app-game-view',
   templateUrl: './game-view.component.html',
 })
-export class GameViewComponent implements OnInit, OnDestroy {
-  questions: SingleQuestion[];
-  actualQuestion: SingleQuestion;
-
-  passValidQuestions: AnswerMarked[];
+export class GameViewComponent
+  extends QuizCommonComponent
+  implements OnInit, OnDestroy
+{
   gameMode: TypeGame;
-
-  actualNumberQuestion: number;
-  allQuestionNumber: number;
-  points: number;
-
-  formGroup: FormGroup;
 
   routerSubscription: Subscription;
 
   constructor(
     private fb: FormBuilder,
-    private _snackBar: MatSnackBar,
-    private router: ActivatedRoute
-  ) {}
+    private router: ActivatedRoute,
+    @Inject(QUESTIONS) private questionsInject: SingleQuestion[],
+    protected override toast: ToastService
+  ) {
+    super(toast);
+  }
 
   @HostListener('window:popstate', ['$event'])
   onPopState() {
@@ -46,9 +61,17 @@ export class GameViewComponent implements OnInit, OnDestroy {
       this.gameMode = params['name'];
     });
 
+    this.timerSubject$
+      .pipe(
+        filter((value) => value),
+        delay(5000),
+        takeUntil(this.destory$)
+      )
+      .subscribe((value) => (this.passValidQuestions = []));
+
     switch (this.gameMode) {
       case 'main':
-        this.questions = QuestionsJson as SingleQuestion[];
+        this.questions = this.questionsInject;
         break;
       case 'chosenAnswers':
         this.questions = JSON.parse(localStorage.getItem('answers') as string);
@@ -76,6 +99,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
       default:
     }
     this.passValidQuestions = [];
+    this.formGroup.reset();
 
     this.actualNumberQuestion = this.validNumberQuestion(
       this.actualNumberQuestion
@@ -84,21 +108,8 @@ export class GameViewComponent implements OnInit, OnDestroy {
   }
 
   handlingCheckButton(): void {
-    const parsingAnswers = this.parseAnswersToArray(this.formGroup.value);
-    this.formGroup.reset();
-
-    if (
-      JSON.stringify(parsingAnswers) ===
-      JSON.stringify(
-        this.actualQuestion.correctAnswers.map((single) =>
-          single.toLocaleUpperCase()
-        )
-      )
-    ) {
-      return this.inCaseValidAnswer();
-    }
-
-    this.inCaseInValidAnswer();
+    if (this.prepareToCheckButton()) return;
+    this.inCaseValidAnswer();
   }
 
   popQuestion(): void {
@@ -125,8 +136,15 @@ export class GameViewComponent implements OnInit, OnDestroy {
       array.some((question: SingleQuestion) =>
         question.question.match(this.actualQuestion.question)
       )
-    )
+    ) {
+      this.toast.displayToast({
+        text: 'To pytanie zostało już dodane!',
+        class: 'alert-snackbar',
+        time: 3000,
+        positionTop: true,
+      });
       return;
+    }
     array.push(this.actualQuestion);
     localStorage.setItem('answers', JSON.stringify(array));
     this.showInformation('Dodałeś pytanie!');
@@ -142,53 +160,17 @@ export class GameViewComponent implements OnInit, OnDestroy {
     this.passValidQuestions = [];
   }
 
-  private validNumberQuestion(numberQuestion: number): number {
-    if (numberQuestion > this.allQuestionNumber) {
-      return 0;
-    }
-    if (numberQuestion < 0) {
-      return this.allQuestionNumber;
-    }
-    return numberQuestion;
-  }
-
-  private drawNumberQuestion(): number {
-    return Math.floor(Math.random() * (this.allQuestionNumber + 2) + 1);
-  }
-
   private inCaseValidAnswer(): void {
-    this.points++;
-    this._snackBar.open('Dobra odpowiedź', undefined, {
-      duration: 3000,
-      panelClass: 'info-snackbar',
-    });
-    this.passValidQuestions = [];
+    this.prepareInCaseValidAnswer();
     return this.handlingButtons('up');
   }
 
-  private inCaseInValidAnswer() {
-    this._snackBar.open('Zła odpowiedź!', undefined, {
-      duration: 3000,
-      panelClass: 'alert-snackbar',
-    });
-
-    this.passValidQuestions = this.actualQuestion.correctAnswers;
-
-    const that = this;
-    setTimeout(() => {
-      that.passValidQuestions = [];
-    }, 5000);
-  }
-
-  private parseAnswersToArray(value: any): AnswerMarked[] {
-    const keys = Object.keys(value);
-    return keys.filter((key) => value[key]) as AnswerMarked[];
-  }
-
   private showInformation(text: string): void {
-    this._snackBar.open(text, undefined, {
-      duration: 3000,
-      panelClass: 'warining-snackbar',
+    this.toast.displayToast({
+      text: text,
+      class: 'warining-snackbar',
+      time: 3000,
+      positionTop: true,
     });
   }
 
@@ -228,6 +210,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.destory$.next(true);
     this.routerSubscription.unsubscribe();
     this.saveNumberOfQuestion();
   }

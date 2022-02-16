@@ -3,7 +3,7 @@ export interface PreparedAnswer {
   title: string | undefined;
 }
 
-export type AnswerMarked = 'A' | 'B' | 'C' | 'D' | 'E';
+export type AnswerMarked = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I';
 
 export type HandlingButtons = 'up' | 'down' | 'draw';
 
@@ -22,3 +22,10 @@ export interface TopBarInformation {
 }
 
 export type TypeGame = 'main' | 'chosenAnswers';
+
+export interface Toast {
+  text: string;
+  class: string;
+  positionTop?: boolean;
+  time?: number;
+}

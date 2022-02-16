@@ -17,6 +17,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ExaminationComponent } from './examination/examination.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { QuestionTopBarComponent } from './question-top-bar/question-top-bar.component';
+import { QUESTIONS } from './tokens/token';
+import * as QuestionsJson from '../assets/questions/questions.json';
+import { ToastService } from './common/toast.service';
+import { QuizCommonComponent } from './common/quiz-common.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ import { QuestionTopBarComponent } from './question-top-bar/question-top-bar.com
     FunctionalButtonsComponent,
     QuestionTopBarComponent,
     ExaminationComponent,
+    QuizCommonComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,7 @@ import { QuestionTopBarComponent } from './question-top-bar/question-top-bar.com
     MatSnackBarModule,
     MatProgressBarModule,
   ],
-  providers: [],
+  providers: [{ provide: QUESTIONS, useValue: QuestionsJson }, ToastService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

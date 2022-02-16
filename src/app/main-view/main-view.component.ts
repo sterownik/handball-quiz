@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SingleQuestion, TypeGame } from '../defs/handball-web.defs';
 import { GameViewComponent } from '../game-view/game-view.component';
-import * as QuestionsJson from '../../assets/questions/questions.json';
+import { QUESTIONS } from '../tokens/token';
 
 @Component({
   selector: 'app-main-view',
@@ -16,7 +16,11 @@ export class MainViewComponent implements OnInit {
 
   allQuestionNumber: number;
 
-  constructor(public dialog: MatDialog, private router: Router) {}
+  constructor(
+    public dialog: MatDialog,
+    private router: Router,
+    @Inject(QUESTIONS) private questionsInject: SingleQuestion[]
+  ) {}
 
   ngOnInit(): void {
     this.favouriteQuestions = JSON.parse(
@@ -29,8 +33,7 @@ export class MainViewComponent implements OnInit {
     this.saveNumberChosenQuestion = parseInt(
       localStorage.getItem('numberChosenQuestion') ?? '-1'
     );
-    const question: SingleQuestion[] = QuestionsJson as SingleQuestion[];
-    this.allQuestionNumber = question.length;
+    this.allQuestionNumber = this.questionsInject.length;
   }
 
   openGame(mode: TypeGame): void {
