@@ -1,0 +1,32 @@
+app-upload-questions {
+  .cart-container {
+    &__content--thiner {
+      min-height: auto;
+
+      @media(min-width: $tablet-size) {
+        width: 300px;
+        min-height: auto;
+      }
+    }
+
+    &__upload-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+
+  .upload-content {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 32px;
+
+    &__submit-btn {
+      width: 100%;
+    }
+  }
+}

@@ -48,7 +48,7 @@ body {
   }
 }
 
-.quiz-container {
+.cart-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ body {
     margin: 0 auto;
   }
 
-  &__app-content {
+  &__content {
     display: flex;
     flex-direction: column;
     background-color: $secondary-color;

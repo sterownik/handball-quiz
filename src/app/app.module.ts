@@ -1,3 +1,4 @@
+import { UploadQuestionsService } from './upload-questions/upload-questions.service';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +22,10 @@ import { QUESTIONS } from './tokens/token';
 import * as QuestionsJson from '../assets/questions/questions.json';
 import { ToastService } from './common/toast.service';
 import { QuizCommonComponent } from './common/quiz-common.component';
+import { UploadQuestionsComponent } from './upload-questions/upload-questions.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,7 @@ import { QuizCommonComponent } from './common/quiz-common.component';
     QuestionTopBarComponent,
     ExaminationComponent,
     QuizCommonComponent,
+    UploadQuestionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,8 +52,15 @@ import { QuizCommonComponent } from './common/quiz-common.component';
     MatButtonModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatRadioModule,
   ],
-  providers: [{ provide: QUESTIONS, useValue: QuestionsJson }, ToastService],
+  providers: [
+    { provide: QUESTIONS, useValue: QuestionsJson },
+    ToastService,
+    UploadQuestionsService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

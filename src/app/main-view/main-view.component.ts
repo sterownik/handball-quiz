@@ -1,8 +1,11 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute, Router } from '@angular/router';
-import { SingleQuestion, TypeGame } from '../defs/handball-web.defs';
-import { GameViewComponent } from '../game-view/game-view.component';
+import { Router } from '@angular/router';
+import {
+  CustomQuestions,
+  SingleQuestion,
+  TypeGame,
+} from '../defs/handball-web.defs';
 import { QUESTIONS } from '../tokens/token';
 
 @Component({
@@ -33,7 +36,20 @@ export class MainViewComponent implements OnInit {
     this.saveNumberChosenQuestion = parseInt(
       localStorage.getItem('numberChosenQuestion') ?? '-1'
     );
-    this.allQuestionNumber = this.questionsInject.length;
+    this.allQuestionNumber =
+      this.getUploadedQuestions() || this.questionsInject.length;
+  }
+
+  private getUploadedQuestions(): number | false {
+    if (localStorage.getItem('customQuestions') === null) return false;
+
+    const customQuestions: CustomQuestions = JSON.parse(
+      localStorage.getItem('customQuestions') as string
+    );
+    if (customQuestions.defaultMode === 'custom')
+      return customQuestions.file.questions.length;
+
+    return false;
   }
 
   openGame(mode: TypeGame): void {
@@ -42,5 +58,9 @@ export class MainViewComponent implements OnInit {
 
   openExam(): void {
     this.router.navigate(['/examination']);
+  }
+
+  openUploadComponent(): void {
+    this.router.navigate(['/upload-question']);
   }
 }
