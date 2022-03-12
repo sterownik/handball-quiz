@@ -1,7 +1,7 @@
 <mat-dialog-content class="mat-typography">
-  <section class="quiz-container">
+  <section class="cart-container">
     <section *ngIf="questions && questions.length > 0; else empty_state"
-             class="quiz-container__app-content">
+             class="cart-container__content">
       <app-question-top-bar [topBarInformation]="{
           points: points,
           actualNumber: actualNumberQuestion + 1,
@@ -16,8 +16,8 @@
                               (handlingButtons)=handlingButtons($event)></app-functional-buttons>
       <div (click)="pushQuestion()"
            *ngIf="gameMode === 'main'; else chosenAnswers"
-           class="quiz-container__handle-button-container">
-        <img class="quiz-container__handle-button"
+           class="cart-container__handle-button-container">
+        <img class="cart-container__handle-button"
              src="assets/img/plus.png"
              alt="">
       </div>
@@ -27,8 +27,8 @@
 
 <ng-template #chosenAnswers>
   <div (click)="popQuestion()"
-       class="quiz-container__handle-button-container quiz-container__handle-button-container--minus-sign">
-    <img class="quiz-container__handle-button"
+       class="cart-container__handle-button-container cart-container__handle-button-container--minus-sign">
+    <img class="cart-container__handle-button"
          src="assets/img/minus-sign.png"
          alt="">
   </div>

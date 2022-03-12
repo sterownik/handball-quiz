@@ -16,6 +16,12 @@ app-main-view {
     }
   }
 
+  .menu {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+  }
+
   .games-wrapper {
     display: flex;
     flex-direction: column;
@@ -25,6 +31,7 @@ app-main-view {
     padding: 24px 64px;
     gap: 24px;
     margin: 0 12px;
+    position: relative;
 
     @media(min-width: $tablet-size) {
       height: 150px;
@@ -110,4 +117,8 @@ app-main-view {
       padding-top: 16px;
     }
   }
+}
+
+.menu__item {
+  font-family: 'NoToSans';
 }

@@ -1,0 +1,36 @@
+<mat-dialog-content class="mat-typography">
+  <section class="cart-container">
+    <section class="cart-container__content cart-container__content--thiner">
+      <div [formGroup]="form"
+           class="cart-container__upload-form">
+
+        <mat-radio-group class="upload-content"
+                         formControlName="questions">
+          <mat-radio-button color="primary"
+                            value="default">
+            KATALOG PYTAŃ
+            Z PRZEPISÓW
+          </mat-radio-button>
+          <mat-radio-button color="primary"
+                            *ngIf="customQuestions"
+                            value="custom">
+            {{customQuestions.file?.name}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <input #jsonInput
+               hidden="true"
+               type="file"
+               onclick="this.value=null"
+               (change)="jsonInputChange($event)"
+               accept=".json" />
+        <button mat-button
+                (click)="jsonInput.click()"
+                color="primary">Kliknij aby dodać włane pytania</button>
+        <button mat-raised-button
+                (click)="onSubmit()"
+                class="upload-content__submit-btn"
+                color="primary">Zmień</button>
+      </div>
+    </section>
+  </section>
+</mat-dialog-content>

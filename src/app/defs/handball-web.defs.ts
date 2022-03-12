@@ -29,3 +29,17 @@ export interface Toast {
   positionTop?: boolean;
   time?: number;
 }
+
+export type defaultMode = 'default' | 'custom';
+
+export interface CustomQuestions {
+  defaultMode: defaultMode;
+  file: FileQuestion;
+}
+
+export interface FileQuestion {
+  name: string;
+  questions: SingleQuestion[];
+}
+
+export type StateOfUpload = 'errorUpload' | 'badFormat' | FileQuestion;

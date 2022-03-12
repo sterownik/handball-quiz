@@ -1,5 +1,11 @@
 <div class="main-app-wrapper">
   <section class="games-wrapper">
+    <button mat-icon-button
+            [matMenuTriggerFor]="menu"
+            class="menu"
+            aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
     <div (click)="openGame('main')"
          class="games-wrapper__game single-game">
       <img class="single-game__image"
@@ -37,6 +43,12 @@
     </div>
   </section>
 </div>
+<mat-menu #menu="matMenu">
+  <button (click)="openUploadComponent()"
+          mat-menu-item>
+    <span class="menu__item">Dodaj własne pytania</span>
+  </button>
+</mat-menu>
 
 <footer class="footer-container">
   <div class="footer-container__part">

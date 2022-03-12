@@ -1,15 +1,5 @@
-import { Toast } from './../defs/handball-web.defs';
-import {
-  Subject,
-  Subscription,
-  timer,
-  Observable,
-  takeUntil,
-  filter,
-  interval,
-  bufferWhen,
-  delay,
-} from 'rxjs';
+import { CustomQuestions } from './../defs/handball-web.defs';
+import { Subscription, takeUntil, filter, delay } from 'rxjs';
 import {
   Component,
   OnInit,
@@ -17,11 +7,10 @@ import {
   HostListener,
   Inject,
 } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import {
   SingleQuestion,
   HandlingButtons,
-  AnswerMarked,
   TypeGame,
 } from '../defs/handball-web.defs';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -67,11 +56,11 @@ export class GameViewComponent
         delay(5000),
         takeUntil(this.destory$)
       )
-      .subscribe((value) => (this.passValidQuestions = []));
+      .subscribe(() => (this.passValidQuestions = []));
 
     switch (this.gameMode) {
       case 'main':
-        this.questions = this.questionsInject;
+        this.questions = this.getUploadedQuestions() || this.questionsInject;
         break;
       case 'chosenAnswers':
         this.questions = JSON.parse(localStorage.getItem('answers') as string);
@@ -83,6 +72,18 @@ export class GameViewComponent
     }
 
     this.prepareQuestion();
+  }
+
+  private getUploadedQuestions(): SingleQuestion[] | false {
+    if (localStorage.getItem('customQuestions') === null) return false;
+
+    const customQuestions: CustomQuestions = JSON.parse(
+      localStorage.getItem('customQuestions') as string
+    );
+    if (customQuestions.defaultMode === 'custom')
+      return customQuestions.file.questions;
+
+    return false;
   }
 
   handlingButtons(type: HandlingButtons): void {
