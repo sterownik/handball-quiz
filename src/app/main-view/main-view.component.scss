@@ -39,6 +39,9 @@ app-main-view {
       color: $text-color;
       display: flex;
       flex-direction: column;
+      gap: 8px;
+      padding: 8px 0;
+
       align-items: center;
       justify-content: space-around;
 
@@ -53,8 +56,13 @@ app-main-view {
     transition: .2s linear;
 
     &__image {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
+
+      @media(min-width: $tablet-size) {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     &__text {
