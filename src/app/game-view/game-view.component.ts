@@ -93,6 +93,12 @@ export class GameViewComponent
       case 'down':
         this.actualNumberQuestion--;
         break;
+      case 'skipDown':
+        this.actualNumberQuestion -= 50;
+        break;
+      case 'skipUp':
+        this.actualNumberQuestion += 50;
+        break;
       case 'draw':
         this.actualNumberQuestion = this.drawNumberQuestion();
         break;

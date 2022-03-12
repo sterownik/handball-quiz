@@ -7,7 +7,11 @@ app-functional-buttons {
     &__column {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 12px;
+
+      @media(min-width: $tablet-size) {
+        gap: 24px;
+      }
     }
 
     &__single {
@@ -18,14 +22,22 @@ app-functional-buttons {
 
   .functional-button {
     &__icon {
+
       &--back {
         transform: rotate(-180deg);
       }
 
       &--shuffle {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
+        padding: 0 8px;
       }
+    }
+
+    &__icon--fast-forward {
+      width: 40px;
+      height: 40px;
+      padding: 0 8px;
     }
   }
 }
