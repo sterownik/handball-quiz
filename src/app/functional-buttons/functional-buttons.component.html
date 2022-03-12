@@ -12,11 +12,20 @@
 
   <div class="functional-buttons-container__column">
     <button mat-button
+            (click)="handlingButtonsEmmiter('skipDown')"
+            class="functional-button">
+      <img src="assets/img/fast-forward.png"
+           class="functional-button__icon functional-button__icon--back functional-button__icon--fast-forward"
+           alt="">
+
+    </button>
+    <button mat-button
             class="functional-button">
       <img src="assets/img/next.png"
            class="functional-button__icon functional-button__icon--back"
            (click)="handlingButtonsEmmiter('down')"
            alt="">
+
     </button>
     <button mat-button
             color="primary"
@@ -31,6 +40,13 @@
       <img src="assets/img/next.png"
            class="functional-button__icon"
            (click)="handlingButtonsEmmiter('up')"
+           alt="">
+    </button>
+    <button mat-button
+            (click)="handlingButtonsEmmiter('skipUp')"
+            class="functional-button">
+      <img src="assets/img/fast-forward.png"
+           class="functional-button__icon functional-button__icon--fast-forward "
            alt="">
     </button>
   </div>

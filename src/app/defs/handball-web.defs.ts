@@ -5,7 +5,7 @@ export interface PreparedAnswer {
 
 export type AnswerMarked = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I';
 
-export type HandlingButtons = 'up' | 'down' | 'draw';
+export type HandlingButtons = 'up' | 'down' | 'draw' | 'skipUp' | 'skipDown';
 
 export type Answers = Partial<Record<AnswerMarked, string>>;
 
