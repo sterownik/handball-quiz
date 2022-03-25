@@ -1,7 +1,11 @@
 import { Directive } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { AnswerMarked, SingleQuestion } from '../defs/handball-web.defs';
+import {
+  AnswerMarked,
+  CustomQuestions,
+  SingleQuestion,
+} from '../defs/handball-web.defs';
 import { ToastService } from './toast.service';
 
 @Directive({
@@ -28,6 +32,18 @@ export class QuizCommonComponent {
       return this.allQuestionNumber;
     }
     return numberQuestion;
+  }
+
+  protected getUploadedQuestions(): SingleQuestion[] | false {
+    if (localStorage.getItem('customQuestions') === null) return false;
+
+    const customQuestions: CustomQuestions = JSON.parse(
+      localStorage.getItem('customQuestions') as string
+    );
+    if (customQuestions.defaultMode === 'custom')
+      return customQuestions.file.questions;
+
+    return false;
   }
 
   protected drawNumberQuestion(): number {

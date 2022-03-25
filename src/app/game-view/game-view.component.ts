@@ -74,18 +74,6 @@ export class GameViewComponent
     this.prepareQuestion();
   }
 
-  private getUploadedQuestions(): SingleQuestion[] | false {
-    if (localStorage.getItem('customQuestions') === null) return false;
-
-    const customQuestions: CustomQuestions = JSON.parse(
-      localStorage.getItem('customQuestions') as string
-    );
-    if (customQuestions.defaultMode === 'custom')
-      return customQuestions.file.questions;
-
-    return false;
-  }
-
   handlingButtons(type: HandlingButtons): void {
     switch (type) {
       case 'up':
