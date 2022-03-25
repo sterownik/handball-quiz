@@ -1,28 +1,18 @@
-import { AnswerMarked, SingleQuestion } from './../defs/handball-web.defs';
+import { SingleQuestion } from './../defs/handball-web.defs';
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
-  debounceTime,
   delay,
-  delayWhen,
-  distinctUntilChanged,
   filter,
-  from,
-  interval,
   merge,
   Observable,
   of,
-  pipe,
-  Subject,
-  Subscription,
   switchMap,
   take,
   takeUntil,
   tap,
   timer,
-  zip,
 } from 'rxjs';
 import { QUESTIONS } from '../tokens/token';
 import { ToastService } from '../common/toast.service';
@@ -46,7 +36,6 @@ export class ExaminationComponent
 
   constructor(
     private fb: FormBuilder,
-    private _snackBar: MatSnackBar,
     private router: Router,
     @Inject(QUESTIONS) questionsInject: SingleQuestion[],
     protected override toast: ToastService
@@ -55,7 +44,7 @@ export class ExaminationComponent
     this.counter = 100;
     this.tick = 500;
     this.validButton = true;
-    this.questions = questionsInject;
+    this.questions = this.getUploadedQuestions() || questionsInject;
     this.startCounter = true;
   }
 
