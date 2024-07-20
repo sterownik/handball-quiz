@@ -8,11 +8,11 @@
     </button> -->
     <div class="nation-flag"
          (click)="changeLanguage()">
-      <img *ngIf="!(sharedService.isPl$ | async)"
+      <img *ngIf="(sharedService.isPl$ | async)"
            class="nation-flag__img"
            src="assets/img/eng_flag.png"
            alt="">
-      <img *ngIf="sharedService.isPl$ | async"
+      <img *ngIf="!(sharedService.isPl$ | async)"
            class="nation-flag__img"
            src="assets/img/pl_flag.png"
            alt="">
