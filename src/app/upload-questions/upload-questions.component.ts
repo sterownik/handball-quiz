@@ -43,7 +43,7 @@ export class UploadQuestionsComponent implements OnInit {
   }
 
   private clearQuestions(): void {
-    localStorage.removeItem('answers');
+    localStorage.removeItem('answersNew');
     localStorage.removeItem('numberCatalogQuestion');
     localStorage.removeItem('numberChosenQuestion');
   }

@@ -1,23 +1,20 @@
-import { CustomQuestions } from './../defs/handball-web.defs';
-import { Subscription, takeUntil, filter, delay } from 'rxjs';
+import { AllQuestion, NewQuestions } from './../defs/handball-web.defs';
+import { Subscription, takeUntil, filter, delay, tap, take } from 'rxjs';
 import {
   Component,
   OnInit,
   OnDestroy,
   HostListener,
   Inject,
+  inject,
 } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import {
-  SingleQuestion,
-  HandlingButtons,
-  TypeGame,
-} from '../defs/handball-web.defs';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router, ActivatedRoute } from '@angular/router';
-import { QUESTIONS } from '../tokens/token';
+import { HandlingButtons, TypeGame } from '../defs/handball-web.defs';
+import { ActivatedRoute } from '@angular/router';
+import { QUESTIONS, QUESTIONS_ENG } from '../tokens/token';
 import { ToastService } from '../common/toast.service';
 import { QuizCommonComponent } from '../common/quiz-common.component';
+import { SharedService } from '../common/shared.service';
 
 @Component({
   selector: 'app-game-view',
@@ -34,10 +31,12 @@ export class GameViewComponent
   constructor(
     private fb: FormBuilder,
     private router: ActivatedRoute,
-    @Inject(QUESTIONS) private questionsInject: SingleQuestion[],
-    protected override toast: ToastService
+    @Inject(QUESTIONS) private questionsInject: NewQuestions,
+    protected override toast: ToastService,
+    public sharedService: SharedService,
+    @Inject(QUESTIONS_ENG) private questionsEngInject: NewQuestions
   ) {
-    super(toast);
+    super(toast, sharedService);
   }
 
   @HostListener('window:popstate', ['$event'])
@@ -56,22 +55,36 @@ export class GameViewComponent
         delay(5000),
         takeUntil(this.destory$)
       )
-      .subscribe(() => (this.passValidQuestions = []));
+      .subscribe(() => {
+        this.showCorrectAnswers = false;
+      });
 
-    switch (this.gameMode) {
-      case 'main':
-        this.questions = this.getUploadedQuestions() || this.questionsInject;
-        break;
-      case 'chosenAnswers':
-        this.questions = JSON.parse(localStorage.getItem('answers') as string);
-        break;
-    }
+    this.sharedService.isPl$
+      .pipe(
+        tap((value) => {
+          switch (this.gameMode) {
+            case 'main':
+              if (value) {
+                this.questions = this.questionsInject;
+              } else {
+                this.questions = this.questionsEngInject;
+              }
+              break;
+            case 'chosenAnswers':
+              this.questions = JSON.parse(
+                localStorage.getItem('answersNew') as string
+              );
+              break;
+          }
+        })
+      )
+      .subscribe(() => {
+        this.prepareQuestion();
+      });
 
-    if (!this.questions || this.questions.length === 0) {
+    if (!this.questions || this.questions?.all_questions.length === 0) {
       return;
     }
-
-    this.prepareQuestion();
   }
 
   handlingButtons(type: HandlingButtons): void {
@@ -93,13 +106,13 @@ export class GameViewComponent
         break;
       default:
     }
-    this.passValidQuestions = [];
     this.formGroup.reset();
 
     this.actualNumberQuestion = this.validNumberQuestion(
       this.actualNumberQuestion
     );
-    this.actualQuestion = this.questions[this.actualNumberQuestion];
+    this.actualQuestion =
+      this.questions.all_questions[this.actualNumberQuestion];
   }
 
   handlingCheckButton(): void {
@@ -109,40 +122,52 @@ export class GameViewComponent
 
   popQuestion(): void {
     let array = this.getAndSaveArray();
-    const index = array.findIndex((question: SingleQuestion) =>
-      question.question.match(this.actualQuestion.question)
+    const index = array.all_questions.findIndex((question: AllQuestion) =>
+      question.text.match(this.actualQuestion.text)
     );
-    array.splice(index, 1);
-    localStorage.setItem('answers', JSON.stringify(array));
+    array.all_questions.splice(index, 1);
+    localStorage.setItem('answersNew', JSON.stringify(array));
     this.questions = array;
-    if (this.actualNumberQuestion >= array.length) {
+    if (this.actualNumberQuestion >= array.all_questions.length) {
       this.actualNumberQuestion--;
     }
-    this.allQuestionNumber = array.length - 1;
+    this.allQuestionNumber = array.all_questions.length - 1;
 
-    this.actualQuestion = array[this.actualNumberQuestion];
-    this.showInformation('Usunąłeś pytanie');
-    this.passValidQuestions = [];
+    this.actualQuestion = array.all_questions[this.actualNumberQuestion];
+    this.sharedService.isPl$.pipe(take(1)).subscribe((value) => {
+      this.showInformation(
+        value ? 'Usunąłeś pytanie!' : 'You delete question!'
+      );
+    });
+    this.showCorrectAnswers = false;
   }
 
   pushQuestion(): void {
     let array = this.getAndSaveArray();
     if (
-      array.some((question: SingleQuestion) =>
-        question.question.match(this.actualQuestion.question)
+      array.all_questions.some((question: AllQuestion) =>
+        question.text.match(this.actualQuestion.text)
       )
     ) {
-      this.toast.displayToast({
-        text: 'To pytanie zostało już dodane!',
-        class: 'alert-snackbar',
-        time: 3000,
-        positionTop: true,
+      this.sharedService.isPl$.pipe(take(1)).subscribe((value) => {
+        const text = value
+          ? 'To pytanie zostało już dodane!'
+          : 'You already added this question';
+
+        this.toast.displayToast({
+          text: text,
+          class: 'alert-snackbar',
+          time: 3000,
+          positionTop: true,
+        });
       });
       return;
     }
-    array.push(this.actualQuestion);
-    localStorage.setItem('answers', JSON.stringify(array));
-    this.showInformation('Dodałeś pytanie!');
+    this.sharedService.isPl$.pipe(take(1)).subscribe((value) => {
+      array.all_questions.push(this.actualQuestion);
+      localStorage.setItem('answersNew', JSON.stringify(array));
+      this.showInformation(value ? 'Dodałeś pytanie!' : 'You add question!');
+    });
   }
 
   private prepareQuestion(): void {
@@ -150,9 +175,10 @@ export class GameViewComponent
     this.actualNumberQuestion = this.getNumberOfQuestion();
     this.formGroup = this.fb.group({});
 
-    this.actualQuestion = this.questions[this.actualNumberQuestion];
-    this.allQuestionNumber = this.questions.length - 1;
-    this.passValidQuestions = [];
+    this.actualQuestion =
+      this.questions.all_questions[this.actualNumberQuestion];
+    this.allQuestionNumber = this.questions.all_questions.length - 1;
+    // this.passValidQuestions = [];
   }
 
   private inCaseValidAnswer(): void {
@@ -169,15 +195,17 @@ export class GameViewComponent
     });
   }
 
-  private getAndSaveArray(): SingleQuestion[] {
+  private getAndSaveArray(): NewQuestions {
     let array = [];
-    let items = JSON.parse(localStorage.getItem('answers') as string) || [];
+    let items = JSON.parse(localStorage.getItem('answersNew') as string) || {
+      all_questions: [],
+    };
     array = items;
     return array;
   }
 
   private saveNumberOfQuestion(): void {
-    if (!this.questions || this.questions.length === 0) {
+    if (!this.questions || this.questions.all_questions.length === 0) {
       localStorage.setItem('numberChosenQuestion', '0');
       return;
     }

@@ -11,15 +11,21 @@ app-main-view {
     height: calc(100vh - 80px);
 
     @media(min-width: $tablet-size) {
-      width: 700px;
+      width: 800px;
       margin: 0 auto;
     }
   }
 
-  .menu {
+  .nation-flag {
     position: absolute;
-    right: 4px;
-    top: 4px;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+  }
+
+  .nation-flag__img {
+    width: 30px;
+    height: 30px;
   }
 
   .games-wrapper {

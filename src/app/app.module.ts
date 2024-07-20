@@ -8,7 +8,10 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameViewComponent } from './game-view/game-view.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { QuestionPartComponent } from './question-part/question-part.component';
+import {
+  IdQuestionTranslate,
+  QuestionPartComponent,
+} from './question-part/question-part.component';
 import { AnswersPartComponent } from './answers-part/answers-part.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +22,9 @@ import { ExaminationComponent } from './examination/examination.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { QuestionTopBarComponent } from './question-top-bar/question-top-bar.component';
 import { QUESTIONS } from './tokens/token';
-import * as QuestionsJson from '../assets/questions/questions.json';
+import { QUESTIONS_ENG } from './tokens/token';
+import * as QuestionsJson from '../assets/questions/questions_new.json';
+import * as QuestionsJsonEng from '../assets/questions/questions_new_eng.json';
 import { ToastService } from './common/toast.service';
 import { QuizCommonComponent } from './common/quiz-common.component';
 import { UploadQuestionsComponent } from './upload-questions/upload-questions.component';
@@ -39,6 +44,7 @@ import { MatRadioModule } from '@angular/material/radio';
     ExaminationComponent,
     QuizCommonComponent,
     UploadQuestionsComponent,
+    IdQuestionTranslate,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +64,7 @@ import { MatRadioModule } from '@angular/material/radio';
   ],
   providers: [
     { provide: QUESTIONS, useValue: QuestionsJson },
+    { provide: QUESTIONS_ENG, useValue: QuestionsJsonEng },
     ToastService,
     UploadQuestionsService,
   ],

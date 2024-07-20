@@ -1,18 +1,29 @@
 export interface PreparedAnswer {
-  id: AnswerMarked;
+  id: string;
   title: string | undefined;
+  correctness: number;
 }
-
-export type AnswerMarked = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I';
 
 export type HandlingButtons = 'up' | 'down' | 'draw' | 'skipUp' | 'skipDown';
 
-export type Answers = Partial<Record<AnswerMarked, string>>;
+export type Answers = Partial<Record<string, string>>;
 
-export interface SingleQuestion {
-  question: string;
-  answers: Answers;
-  correctAnswers: AnswerMarked[];
+export interface NewQuestions {
+  all_questions: AllQuestion[];
+}
+
+export interface AllQuestion {
+  id: number;
+  orig_id: string;
+  text: string;
+  rules: string;
+  subanswers: Subanswer[];
+}
+
+export interface Subanswer {
+  orig_id: string;
+  text: string;
+  correctness: number;
 }
 
 export interface TopBarInformation {
@@ -39,7 +50,7 @@ export interface CustomQuestions {
 
 export interface FileQuestion {
   name: string;
-  questions: SingleQuestion[];
+  questions: NewQuestions[];
 }
 
 export type StateOfUpload = 'errorUpload' | 'badFormat' | FileQuestion;

@@ -1,18 +1,29 @@
 <div class="main-app-wrapper">
   <section class="games-wrapper">
-    <button mat-icon-button
+    <!-- <button mat-icon-button
             [matMenuTriggerFor]="menu"
             class="menu"
             aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
-    </button>
+    </button> -->
+    <div class="nation-flag"
+         (click)="changeLanguage()">
+      <img *ngIf="!(sharedService.isPl$ | async)"
+           class="nation-flag__img"
+           src="assets/img/eng_flag.png"
+           alt="">
+      <img *ngIf="sharedService.isPl$ | async"
+           class="nation-flag__img"
+           src="assets/img/pl_flag.png"
+           alt="">
+    </div>
     <div (click)="openGame('main')"
          class="games-wrapper__game single-game">
       <img class="single-game__image"
            src="assets/img/online-learning.png"
            alt="">
       <div class="single-game__text">
-        <p class="title-game">Katalog pytań</p>
+        <p class="title-game">{{(sharedService.isPl$ | async) ? 'Katalog pytań' : 'Catalog of Questions'}} </p>
         <p class="game-scores">{{saveNumberCatalogQuestion >= 0 ? saveNumberCatalogQuestion + 1 : 0}} /
           {{ allQuestionNumber }}</p>
       </div>
@@ -23,10 +34,17 @@
            src="assets/img/library.png"
            alt="">
       <div class="single-game__text">
-        <p class="title-game">Ulubione pytania</p>
-        <p class="game-scores">
-          {{ !favouriteQuestions?.length ? 0 : saveNumberChosenQuestion + 1  }} /
-          {{ favouriteQuestions ? favouriteQuestions.length : 0 }} </p>
+        <p class="title-game">{{(sharedService.isPl$ | async) ? 'Ulubione pytania' : 'Favorite Questions'}}</p>
+        <p *ngIf="favouriteQuestionsExist"
+           class="game-scores">
+
+
+          {{ favouriteQuestions.all_questions.length  }} /
+          {{  favouriteQuestions.all_questions.length  }} </p>
+        <p class="game-scores"
+           *ngIf="!favouriteQuestionsExist">
+          -
+        </p>
       </div>
 
     </div>
@@ -36,7 +54,7 @@
            src="assets/img/exam.png"
            alt="">
       <div class="single-game__text">
-        <p class="title-game">Egzamin</p>
+        <p class="title-game">{{(sharedService.isPl$ | async) ? 'Egzamin' : 'Exam'}}</p>
         <p class="game-scores"> 40 </p>
       </div>
 
@@ -53,10 +71,8 @@
 <footer class="footer-container">
   <div class="footer-container__part">
     <p class="footer-text ">&#169; Wojciech Gołda</p>
-    <p class="footer-text footer-text--secondly">&#9751; Rzeszów</p>
   </div>
   <div class="footer-container__part">
     <p class="footer-text">&#9993; 4golda4@gmail.com</p>
-    <p class="footer-text footer-text--secondly">&#9990; 731 604 761</p>
   </div>
 </footer>

@@ -1,4 +1,4 @@
-import { SingleQuestion, StateOfUpload } from './../defs/handball-web.defs';
+import { AllQuestion, StateOfUpload } from './../defs/handball-web.defs';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -17,19 +17,19 @@ export class UploadQuestionsService {
           observer.complete();
         }
 
-        const questions = JSON.parse(
-          fileReader.result as string
-        ) as SingleQuestion[];
+        // const questions = JSON.parse(
+        //   fileReader.result as string
+        // ) as SingleQuestion[];
 
-        if (!that.checkValidationOfQustions(questions)) {
-          observer.next('badFormat');
-          observer.complete();
-        }
+        // if (!that.checkValidationOfQustions(questions)) {
+        //   observer.next('badFormat');
+        //   observer.complete();
+        // }
 
-        observer.next({
-          name: uploadedFile.name,
-          questions: questions,
-        });
+        // observer.next({
+        //   name: uploadedFile.name,
+        //   questions: questions,
+        // });
         observer.complete();
       });
       fileReader.addEventListener('error', () => {
@@ -39,34 +39,34 @@ export class UploadQuestionsService {
     });
   }
 
-  private checkValidationOfQustions(questions: SingleQuestion[]): boolean {
-    return questions.every((question) => {
-      return (
-        this.checkIfQuestionExist(question) &&
-        this.checkIfAnwersExist(question) &&
-        this.checkIfCorrectAnswersEsist(question)
-      );
-    });
-  }
+  // private checkValidationOfQustions(questions: SingleQuestion[]): boolean {
+  //   return questions.every((question) => {
+  //     return (
+  //       this.checkIfQuestionExist(question) &&
+  //       this.checkIfAnwersExist(question) &&
+  //       this.checkIfCorrectAnswersEsist(question)
+  //     );
+  //   });
+  // }
 
-  private checkIfCorrectAnswersEsist(question: SingleQuestion): boolean {
-    return (
-      'correctAnswers' in question &&
-      typeof question?.correctAnswers === 'object' &&
-      question?.correctAnswers.every((answer) => this.checkIfValidKey(answer))
-    );
-  }
+  // private checkIfCorrectAnswersEsist(question: NewQuestions): boolean {
+  //   return (
+  //     'correctAnswers' in question &&
+  //     typeof question?.correctAnswers === 'object' &&
+  //     question?.correctAnswers.every((answer) => this.checkIfValidKey(answer))
+  //   );
+  // }
 
-  private checkIfAnwersExist(question: SingleQuestion): boolean {
+  private checkIfAnwersExist(question: AllQuestion): boolean {
     return (
       'answers' in question &&
-      typeof question?.answers === 'object' &&
-      Object.keys(question?.answers).every((key) => this.checkIfValidKey(key))
+      typeof question?.subanswers === 'object' &&
+      Object.keys(question?.text).every((key) => this.checkIfValidKey(key))
     );
   }
 
-  private checkIfQuestionExist(question: SingleQuestion): boolean {
-    return 'question' in question && typeof question?.question === 'string';
+  private checkIfQuestionExist(question: AllQuestion): boolean {
+    return 'question' in question && typeof question?.text === 'string';
   }
 
   private checkIfValidKey(key: unknown): boolean {

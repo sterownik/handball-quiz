@@ -3,17 +3,18 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import {
   CustomQuestions,
-  SingleQuestion,
+  NewQuestions,
   TypeGame,
 } from '../defs/handball-web.defs';
 import { QUESTIONS } from '../tokens/token';
+import { SharedService } from '../common/shared.service';
 
 @Component({
   selector: 'app-main-view',
   templateUrl: './main-view.component.html',
 })
 export class MainViewComponent implements OnInit {
-  favouriteQuestions: SingleQuestion[];
+  favouriteQuestions: NewQuestions;
   saveNumberCatalogQuestion: number;
   saveNumberChosenQuestion: number;
 
@@ -22,12 +23,13 @@ export class MainViewComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private router: Router,
-    @Inject(QUESTIONS) private questionsInject: SingleQuestion[]
+    @Inject(QUESTIONS) private questionsInject: NewQuestions,
+    public sharedService: SharedService
   ) {}
 
   ngOnInit(): void {
     this.favouriteQuestions = JSON.parse(
-      localStorage.getItem('answers') as string
+      localStorage.getItem('answersNew') as string
     );
     this.saveNumberCatalogQuestion = parseInt(
       localStorage.getItem('numberCatalogQuestion') ?? '-1'
@@ -37,7 +39,13 @@ export class MainViewComponent implements OnInit {
       localStorage.getItem('numberChosenQuestion') ?? '-1'
     );
     this.allQuestionNumber =
-      this.getUploadedQuestions() || this.questionsInject.length;
+      this.getUploadedQuestions() || this.questionsInject.all_questions.length;
+  }
+
+  changeLanguage() {
+    this.sharedService.language.next(
+      this.sharedService.language.value === 'eng' ? 'pl' : 'eng'
+    );
   }
 
   private getUploadedQuestions(): number | false {
@@ -54,6 +62,10 @@ export class MainViewComponent implements OnInit {
 
   openGame(mode: TypeGame): void {
     this.router.navigate(['/game-view', { name: mode }]);
+  }
+
+  get favouriteQuestionsExist() {
+    return !!this.favouriteQuestions;
   }
 
   openExam(): void {

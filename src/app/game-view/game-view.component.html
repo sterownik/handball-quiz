@@ -1,6 +1,6 @@
 <mat-dialog-content class="mat-typography">
   <section class="cart-container">
-    <section *ngIf="questions && questions.length > 0; else empty_state"
+    <section *ngIf="questions && questions.all_questions.length > 0; else empty_state"
              class="cart-container__content">
       <app-question-top-bar [topBarInformation]="{
           points: points,
@@ -8,13 +8,15 @@
           allQuestionNumber: allQuestionNumber + 1
         }"></app-question-top-bar>
 
-      <app-question-part [questionText]='actualQuestion.question'></app-question-part>
-      <app-answers-part [validAnswers]="passValidQuestions"
-                        [inputsFormGroup]='formGroup'
-                        [answers]='actualQuestion.answers'></app-answers-part>
+      <app-question-part [id]="actualQuestion.orig_id"
+                         [questionText]='actualQuestion.text'></app-question-part>
+      <app-answers-part [inputsFormGroup]='formGroup'
+                        [showCorrectAnswers]="showCorrectAnswers"
+                        [answers]='actualQuestion.subanswers'></app-answers-part>
       <app-functional-buttons (handlingCheckButton)=handlingCheckButton()
                               (handlingButtons)=handlingButtons($event)></app-functional-buttons>
-      <div (click)="pushQuestion()"
+      <div (click)="
+                        pushQuestion()"
            *ngIf="gameMode === 'main'; else chosenAnswers"
            class="cart-container__handle-button-container">
         <img class="cart-container__handle-button"
@@ -40,7 +42,8 @@
     <img class="empty-state__image"
          src="assets/img/back.png"
          alt="">
-    <span class="empty-state__text">Wybierz pytanie z katalogu aby wyświetliły się w tym miejscu</span>
+    <span
+          class="empty-state__text">{{(sharedService.isPl$ | async) ? 'Wybierz pytanie z katalogu aby wyświetliły się w tym miejscu' : 'Select a question from the catalog to have it displayed here'}}</span>
 
   </div>
 </ng-template>

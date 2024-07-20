@@ -1,3 +1,4 @@
 import { InjectionToken } from '@angular/core';
-import { SingleQuestion } from '../defs/handball-web.defs';
-export const QUESTIONS = new InjectionToken<SingleQuestion[]>('');
+import { NewQuestions } from '../defs/handball-web.defs';
+export const QUESTIONS = new InjectionToken<NewQuestions>('');
+export const QUESTIONS_ENG = new InjectionToken<NewQuestions>('');

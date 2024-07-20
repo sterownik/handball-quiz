@@ -1,4 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'idQuestionTranslate',
+})
+export class IdQuestionTranslate implements PipeTransform {
+  transform(value: string): string {
+    return value.substring(1);
+  }
+}
 
 @Component({
   selector: 'app-question-part',
@@ -6,4 +15,5 @@ import { Component, Input } from '@angular/core';
 })
 export class QuestionPartComponent {
   @Input() questionText = '';
+  @Input() id = '';
 }

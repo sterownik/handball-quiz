@@ -11,10 +11,11 @@
                           color="primary"
                           [value]="counter"></mat-progress-bar>
       </div>
-      <app-question-part [questionText]='actualQuestion.question'></app-question-part>
-      <app-answers-part [validAnswers]="passValidQuestions"
+      <app-question-part [id]="actualQuestion.orig_id"
+                         [questionText]='actualQuestion.text'></app-question-part>
+      <app-answers-part [showCorrectAnswers]="showCorrectAnswers"
                         [inputsFormGroup]='formGroup'
-                        [answers]='actualQuestion.answers'></app-answers-part>
+                        [answers]='actualQuestion.subanswers'></app-answers-part>
       <div class="button-container">
         <button mat-button
                 [disabled]="!validButton"

@@ -2,9 +2,9 @@
      class="answers-container">
   <ng-container *ngFor="let item of answersShow;">
     <mat-checkbox color="primary"
-                  [ngClass]="{'mark-answer': validAnswers.includes(item.id)}"
+                  [ngClass]="{'mark-answer': item.correctness && showCorrectAnswers }"
                   [formControlName]="item.id">
-      <span> {{ item.id | lowercase }})</span><span class="answers-container__answer-text">{{ item.title }}</span>
+      <span> {{ item.id | lowercase }}</span><span class="answers-container__answer-text">{{ item.title }}</span>
     </mat-checkbox>
   </ng-container>
 </div>
