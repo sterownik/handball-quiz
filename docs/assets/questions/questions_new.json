@@ -275,7 +275,7 @@
     {
       "id": 10,
       "orig_id": "_2.6",
-      "text": "Na krótko przed końcem meczu B2 otrzymuje piłkę na linii pola bramkowego drużyny A i ma sytuację pewną do zdobycia bramki. Próbuje zdobyć bramkę, lecz jest faulowany. Przed tym jak piłka opuszcza rękę B2 rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
+      "text": "Na krótko przed końcem meczu B2 otrzymuje piłkę przy linii pola bramkowego drużyny A i ma sytuację pewną do zdobycia bramki. Próbuje zdobyć bramkę, lecz jest faulowany. Przed tym jak piłka opuszcza rękę B2 rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "2:4; 14:1a",
       "subanswers": [
         {
@@ -2256,7 +2256,7 @@
         },
         {
           "orig_id": "e)",
-          "text": "Drużyna A będzie grała na boisku w składzie pomniejszonym o 1 zawodnika przez 2 minuty",
+          "text": "Drużyna A będzie grała na boisku w składzie pomniejszonym o dodatkowego zawodnika przez 2 minuty",
           "correctness": 1
         }
       ]
@@ -2625,7 +2625,7 @@
     {
       "id": 85,
       "orig_id": "_4.23",
-      "text": "30 sekund przed końcem otrzymanej kary wykluczenia A2 wchodzi na boisku nie wpływając na przebieg meczu. Drużyny A jest w posiadaniu piłki. Prawidłowa decyzja?",
+      "text": "30 sekund przed końcem otrzymanej kary wykluczenia A3 wchodzi na boisku nie wpływając na przebieg meczu. Drużyny A jest w posiadaniu piłki. Prawidłowa decyzja?",
       "rules": "4:6; 13:1a; 16:3a",
       "subanswers": [
         {
@@ -4121,7 +4121,7 @@
     {
       "id": 137,
       "orig_id": "_6.1",
-      "text": "Piłka leży przy linii pola bramkowego. Atakujący A7 podnosi piłkę i próbuje zdobyć bramkę. A7 ma sytuację pewną do zdobycia bramki, kiedy jest nieprzepisowo zaatakowany. Prawidłowa decyzja?",
+      "text": "Piłka leży na linii pola bramkowego. Atakujący A7 podnosi piłkę i próbuje zdobyć bramkę. A7 ma sytuację pewną do zdobycia bramki, kiedy jest nieprzepisowo zaatakowany. Prawidłowa decyzja?",
       "rules": "1:3; 6:5; 12:1",
       "subanswers": [
         {
@@ -4905,7 +4905,7 @@
     {
       "id": 165,
       "orig_id": "_7.5",
-      "text": "Zawodnik A4 wyskakuje, żeby złapać piłkę podaną przez zawodnika ze swojej drużyny. Następnie stawia najpierw lewą nogę, a następnie staje na prawej, aby oddać rzut. Ile kroków wykonał A4?",
+      "text": "Zawodnik A4 wyskakuje, żeby złapać piłkę podaną przez zawodnika ze swojej drużyny. Ląduje na prawej nodze. Następnie stawia najpierw lewą nogę, a następnie staje na prawej, aby oddać rzut. Ile kroków wykonał A4?",
       "rules": "7:3",
       "subanswers": [
         {
@@ -5455,7 +5455,7 @@
         },
         {
           "orig_id": "d)",
-          "text": "Po pokazaniu sygnału ostrzegawczego o grze pasywnej, sędziowie powinni zarządzić rzut wolny z powodu gry pasywnej najpóźniej po wykonaniu przez drużynę czterech podań",
+          "text": "Po pokazaniu sygnału ostrzegawczego o grze pasywnej sędziowie powinni zarządzić rzut wolny, z powodu gry pasywnej, najpóźniej po wykonaniu przez tę drużynę czterech podań, o ile nie próbuje ona wykonać rzutu na bramkę",
           "correctness": 1
         }
       ]
@@ -6068,7 +6068,7 @@
     {
       "id": 206,
       "orig_id": "_8.10",
-      "text": "Zawodnik kołowy A9 dostaje podanie kiedy znajduje się sam na linii pola bramkowego drużyny B. W momencie rzutu jest pociągnięty z tyłu za rękę przez B2. Prawidłowa decyzja?",
+      "text": "Zawodnik kołowy A9 dostaje podanie kiedy znajduje się sam przy linii pola bramkowego drużyny B. W momencie rzutu jest pociągnięty z tyłu za rękę przez B2. Prawidłowa decyzja?",
       "rules": "8:5; 14:1a; 16:6a",
       "subanswers": [
         {
@@ -6810,7 +6810,7 @@
     {
       "id": 230,
       "orig_id": "_8.34",
-      "text": "W ostatnich 30 sekundach meczu drużyna A wykonuje rzut rozpoczynający grę. Sędzia dał sygnał gwizdkiem, ale piłka nie opuściła jeszcze ręki wykonującego rzut A9. Po sygnale gwizdkiem, A3 przebiega przez linię środkową boiska i jest gotowy do przyjęcia podania od A9, ale zostaje przewrócony przez B5, który chce zapobiec szybkiemu wznowieniu gry. Prawidłowa decyzja?",
+      "text": "Drużyna A wykonuje rzut rozpoczynający grę. Sędzia dał sygnał gwizdkiem, ale piłka nie opuściła jeszcze ręki wykonującego rzut A9. Po sygnale gwizdkiem, A3 przebiega przez linię środkową boiska i jest gotowy do przyjęcia podania od A9, ale zostaje przewrócony przez B5, który chce zapobiec szybkiemu wznowieniu gry. Prawidłowa decyzja?",
       "rules": "8:5; 13:1b; 15:9, 16:6a",
       "subanswers": [
         {
@@ -7071,9 +7071,17 @@
         },
         {
           "orig_id": "d)",
-          "text": "Upomnienie dla A7, ponieważ kary progresywne w strefie zmian są niezależne od karania na boisku 8.42 B3 popchnął A6, w reakcji na to A6 spluwa na parkiet pod nogi B3. Jaką karę należy nałożyć na A6?",
+          "text": "Upomnienie dla A7, ponieważ kary progresywne w strefie zmian są niezależne od karania na boisku",
           "correctness": 0
-        },
+        }
+      ]
+    },
+    {
+      "id": 238,
+      "orig_id": "_8.42",
+      "text": "B3 popchnął A6, w reakcji na to A6 spluwa na parkiet pod nogi B3. Jaką karę należy nałożyć na A6?",
+      "rules": "8:9; 16:6b",
+      "subanswers": [
         {
           "orig_id": "a)",
           "text": "Kara progresywna",
@@ -7097,7 +7105,7 @@
       ]
     },
     {
-      "id": 238,
+      "id": 239,
       "orig_id": "_8.43",
       "text": "Bramkarz A12 wybiega naprzeciw B10, który biegnie w kontrataku. A12 dobiega z boku do B10 i przytrzymuje go, ale mimo to B10 udaje się złapać piłkę i rzucić do pustej bramki. Prawidłowa decyzja?",
       "rules": "2:8; 8:4b; 9:1; 10:2; 16:3c",
@@ -7130,7 +7138,7 @@
       ]
     },
     {
-      "id": 239,
+      "id": 240,
       "orig_id": "_8.44",
       "text": "Bramkarz A12 wykonuje rzut od bramki, rozpoczyna kontratak długim podaniem do biegnącego A4. A4 wyskakuje i łapie piłkę w powietrzu, zaraz po tym jak spada na parkiet zderza się z bramkarzem B1, który w międzyczasie opuścił pole bramkowe w celu przechwycenia podania. W momencie zderzenia B1 stał nieruchomo na linii rzutów wolnych drużyny B. Po zderzeniu A4 stracił panowanie nad ciałem i upadł na parkiet. Prawidłowa decyzja?",
       "rules": "8:5 komentarz; 14:1a; 16:6a; Objaśnienia 6c",
@@ -7163,7 +7171,7 @@
       ]
     },
     {
-      "id": 240,
+      "id": 241,
       "orig_id": "_8.45",
       "text": "Które zachowania muszą być ukarane dyskwalifikacją z opisem w protokole (czerwona i niebieska kartka pokazane przez sędziów)?",
       "rules": "8:9a; 8:9d; 8:10a",
@@ -7201,7 +7209,7 @@
       ]
     },
     {
-      "id": 241,
+      "id": 242,
       "orig_id": "_8.46",
       "text": "Czas gry 59:26. B10 biegnie w kontrataku sam na sam z bramkarzem A1. Po odebraniu podania od B12, B10 zderza się z bramkarzem A1, który opuścił pole bramkowe. Tuż przed upadkiem B10 udaje się podać piłkę do B7, który rzuca na pustą bramkę. Piłka nie trafia do bramki. Kiedy sędziowie przerywają grę na zegarze jest 59:31. Prawidłowa decyzja?",
       "rules": "8:5 komentarz drugi akapit; 14:1; 14:2; Wytyczne",
@@ -7234,7 +7242,7 @@
       ]
     },
     {
-      "id": 242,
+      "id": 243,
       "orig_id": "_8.47",
       "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka), B5 przechwytuje podanie i w pełni panuje nad piłką. Natychmiast rzuca na bramkę przeciwnika. A2 próbuje powstrzymać B5 wygarniając mu piłkę z ręki, a robiąc to uderza B5 w przedramię w efekcie czego rzut jest niecelny i piłka nie trafia do bramki. Drużyny A była już trzykrotnie upomniana w tym meczu. Prawidłowa decyzja?",
       "rules": "4:1; 8:1; 8:2; 14:1a; Objaśnienia 6c",
@@ -7267,7 +7275,7 @@
       ]
     },
     {
-      "id": 243,
+      "id": 244,
       "orig_id": "_8.48",
       "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka), B5 przechwytuje podanie i w pełni panuje nad piłką. Natychmiast rzuca na bramkę przeciwnika. A2 próbuje powstrzymać B5 powalając go na ziemię. Zawodnik B5 nie trafia do bramki. Prawidłowa decyzja?",
       "rules": "2:8; 4:1; 8:4b; 14:1a; 16:3c; Objaśnienia 6c",
@@ -7300,7 +7308,7 @@
       ]
     },
     {
-      "id": 244,
+      "id": 245,
       "orig_id": "_8.49",
       "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka). A4 rzuca na bramkę, ale bramkarz B1 broni ten rzut. B1 podaje do B11. W momencie, kiedy bramkarz A12 wbiega do pola bramkowego B9 próbuje rzucić na bramkę, ale jest zatrzymany faulem przez A2. Zawodnik B9 nie trafia do bramki. Prawidłowa decyzja?",
       "rules": "4:1; 8:2; 13:1b",
@@ -7323,7 +7331,7 @@
       ]
     },
     {
-      "id": 245,
+      "id": 246,
       "orig_id": "_8.50",
       "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka). A4 rzuca na bramkę, ale bramkarz B1 broni. B1 w pełni panuje nad piłką i jest gotowy do oddania rzutu na bramkę. W tym momencie delegat przerywa grę z powodu złej zmiany w drużynie A bo bramkarz A1 wbiegł na boisko zanim A7 je opuścił. Prawidłowa decyzja?",
       "rules": "2:8; 4:1; 4:4-6; 12:1 (II)",
@@ -7361,9 +7369,9 @@
       ]
     },
     {
-      "id": 246,
+      "id": 247,
       "orig_id": "_8.51",
-      "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka). B6 rzuca na bramkę, ale bramkarz B12 broni. B12 podaje do B9. B9 rzuca na bramkę. Zawodnik z pola gry A10 wchodzi do pola bramkowego i skutecznie broni. Piła wychodzi poza linię końcową boiska. Prawidłowa decyzja?",
+      "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka). A6 rzuca na bramkę, ale bramkarz B12 broni. B12 podaje do B9. B9 rzuca na bramkę. Zawodnik z pola gry A10 wchodzi do pola bramkowego i skutecznie broni. Piła wychodzi poza linię końcową boiska. Prawidłowa decyzja?",
       "rules": "4:1; 8:8h; 14:1a; 16:1b; 16:3d",
       "subanswers": [
         {
@@ -7394,7 +7402,7 @@
       ]
     },
     {
-      "id": 247,
+      "id": 248,
       "orig_id": "_8.52",
       "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka). A6 rzuca na bramkę, ale bramkarz B1 broni ten rzut. B1 próbuje rzucić bezpośrednio na pustą bramkę przeciwnika. Piłka nie trafia do bramki i wychodzi poza linię końcową boiska. Prawidłowa decyzja?",
       "rules": "2:8; 4:1; 12:1; 12:2",
@@ -7422,7 +7430,7 @@
       ]
     },
     {
-      "id": 248,
+      "id": 249,
       "orig_id": "_8.53",
       "text": "Drużyna B gra siedmioma zawodnikami w polu gry (pusta bramka). B5 rzuca na bramkę, ale bramkarz A1 broni ten rzut. A1 próbuje rzucić bezpośrednio na pustą bramkę przeciwnika. W tym samym momencie bramkarz B12 popełnia błąd zmiany, wbiega na boisko zanim B7 je opuścił. Delegat natychmiast przerywa grę sygnałem gwizdka. Zaraz po sygnale gwizdkiem piłka wychodzi poza linię końcową boiska. Prawidłowa decyzja?",
       "rules": "4:1; 4:4-5; 13:1b",
@@ -7455,7 +7463,7 @@
       ]
     },
     {
-      "id": 249,
+      "id": 250,
       "orig_id": "_8.54",
       "text": "Drużyna B gra siedmioma zawodnikami w polu gry (pusta bramka). B6 rzuca na bramkę, ale bramkarz A1 broni ten rzut. A1 próbuje rzucić bezpośrednio na pustą bramkę przeciwnika. W tym samym momencie bramkarz B12 popełnia błąd zmiany, wbiega na boisko zanim B7 je opuścił. Delegat natychmiast przerywa grę sygnałem gwizdka. Zaraz po sygnale gwizdkiem piłka wpada do bramki drużyny B. Prawidłowa decyzja?",
       "rules": "4:1; 4:4-5; 14:1",
@@ -7488,7 +7496,7 @@
       ]
     },
     {
-      "id": 250,
+      "id": 251,
       "orig_id": "_8.55",
       "text": "Drużyna B gra siedmioma zawodnikami w polu gry. A9 rzuca bezpośrednio na pustą bramkę i trafia do niej. Piłka leży w polu bramkowym. Prawidłowa decyzja?",
       "rules": "4:1",
@@ -7516,7 +7524,7 @@
       ]
     },
     {
-      "id": 251,
+      "id": 252,
       "orig_id": "_8.56",
       "text": "Na 6 sekund przed końcem spotkania jest remis 27-27. Drużyny A jest w ataku. A7 podaje do kołowego A3. B7 przechwytuje podanie. W tym momencie B7 zostaje przewrócony przez A3. Sekundę później rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "8:4b; 13:1b; 16:3c",
@@ -7554,7 +7562,7 @@
       ]
     },
     {
-      "id": 252,
+      "id": 253,
       "orig_id": "_8.57",
       "text": "Na 10 sekund przed końcem spotkania jest remis 27-27. Drużyny A jest w ataku. B5 przechwytuje piłkę i rozpoczyna kontratak. W tym momencie zostaje zaatakowany z tyłu przez A11, który pcha go w niebezpieczny sposób tak, że B5 traci kontrolę nad ciałem. Zanim sędziowie mogą zareagować rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "2:4; 8:5a; 8:11b; 16:6a",
@@ -7592,7 +7600,7 @@
       ]
     },
     {
-      "id": 253,
+      "id": 254,
       "orig_id": "_8.58",
       "text": "Czas gry 59:27. B10 jest w posiadaniu piłki i wykonuje rzut z wyskoku. A2 pcha go w klatkę piersiową tak, że B10 traci kontrolę nad ciałem. Upada z piłką na parkiet. Sędziowie zatrzymują grę, kiedy na zegarze jest 59:31. Prawidłowa decyzja?",
       "rules": "2:8; 8:5a; 13:1b; 16:6a",
@@ -7625,7 +7633,7 @@
       ]
     },
     {
-      "id": 254,
+      "id": 255,
       "orig_id": "_8.59",
       "text": "15 sekund przed końcem meczu drużyna B jest w posiadaniu piłki. Sędziowie decydują o rzucie wolnym dla drużyny B przy linii środkowej boiska. B7 ma możliwość oddania rzutu, ale jest blokowany przez A2. Prawidłowa decyzja?",
       "rules": "2:8; 8:11a",
@@ -7663,7 +7671,7 @@
       ]
     },
     {
-      "id": 255,
+      "id": 256,
       "orig_id": "_8.60",
       "text": "Drużyny A jest w ataku. 3 sekundy przed końcem meczu, sędziowie decydują o rzucie wolnym dla drużyny B przy linii rzutów wolnych przeciwnika. B10 jest poprawnie ustawiony i gotowy wykonać rzut wolny jako bezpośredni rzut na bramkę. B10 rzuca, ale piłka jest zablokowana przez zawodnika A5, który stoi 1 metr od zawodnika wykonującego rzut. Rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "2:8; 8:7; 15:7; 15:9; 16:3d",
@@ -7691,7 +7699,7 @@
       ]
     },
     {
-      "id": 256,
+      "id": 257,
       "orig_id": "_8.61",
       "text": "Drużyna B jest w ataku. 3 sekundy przed końcem meczu, sędziowie decydują o rzucie wolnym dla drużyny B przy linii rzutów wolnych przeciwnika. B10 jest poprawnie ustawiony i gotowy wykonać rzut wolny jako bezpośredni rzut na bramkę. Zanim B10 rzuca, A5 podbiega na odległość 1 metra od niego i skacze przed nim z rękami w górze. Rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "2:8; 8:11a",
@@ -7719,7 +7727,7 @@
       ]
     },
     {
-      "id": 257,
+      "id": 258,
       "orig_id": "_8.62",
       "text": "Na 3 sekundy przed końcem meczu A2 próbuje ominąć obrońcę, ale sędziowie decydują, że popełnił błąd kroków. Pomimo wyraźnego sygnału gwizdkiem A2 oddaje rzut na bramkę. Piłkę łapie bramkarz B12 i jest gotowy do rozpoczęcia kontrataku. Prawidłowa decyzja?",
       "rules": "2:8; 8:11a",
@@ -7757,7 +7765,7 @@
       ]
     },
     {
-      "id": 258,
+      "id": 259,
       "orig_id": "_8.63",
       "text": "Przy wyniku 28:26 dla drużyny A, 25 sekund przed końcem meczu, drużyna B zdobywa bramkę. Bramkarz A12 celowo wykopuje piłkę daleko w trybuny. Ewidentnie zamiarem bramkarza A12 jest opóźnienie wykonania rzutu rozpoczynającego grę. Prawidłowa decyzja?",
       "rules": "2:8; 8:9; 10:2",
@@ -7800,7 +7808,7 @@
       ]
     },
     {
-      "id": 259,
+      "id": 260,
       "orig_id": "_8.64",
       "text": "Na 3 sekundy przed końcem meczu jest remis 25:25. Drużyna A jest w ataku. B5 fauluje przy linii rzutów wolnych B, czego efektem jest rzut wolny dla A2. Zaraz potem rozlega się automatyczny sygnał kończący grę. Sędziowie dają sygnał na wykonanie rzutu wolnego bezpośredniego po zakończeniu czasu gry. Zanim piłka opuściła rękę zawodnika rzucającego B6 wychodzi w przód i będąc za blisko blokuje rzut. Prawidłowa decyzja?",
       "rules": "2:4; 2:5; 2:6; 15:2; 15:4; 15:9; 16:3",
@@ -7833,7 +7841,7 @@
       ]
     },
     {
-      "id": 260,
+      "id": 261,
       "orig_id": "_8.65",
       "text": "Drużyny A gra siedmioma zawodnikami w polu gry (pusta bramka). B5 przechwytuje podanie i biegnie w kontrataku w kierunku pustej bramki drużyny A. Bramkarz A12 wchodzi na boisko po prawidłowej zmianie i biegnie w tym samym kierunku co B5. W momencie kiedy B5 rzuca na bramkę, bramkarz A12 popycha go z boku tak, że ten częściowo traci kontrolę nad ciałem i nie trafia do bramki. Prawidłowa decyzja?",
       "rules": "2:8; 8:5 komentarz i Wytyczne; 14:1a",
@@ -7866,7 +7874,7 @@
       ]
     },
     {
-      "id": 261,
+      "id": 262,
       "orig_id": "_8.66",
       "text": "Na 4 sekundy przed końcem meczu jest remis 26:26. Drużyna A jest w ataku. Sędziowie decydują o rzucie wolnym dla drużyny A. A4 natychmiast wykonuje rzut wolny. B5 aktywnie blokuje rzut nie zachowując przy tym wymaganej odległości 3m od rzucającego. W tym momencie rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "8:11a i Wytyczne",
@@ -7894,7 +7902,7 @@
       ]
     },
     {
-      "id": 262,
+      "id": 263,
       "orig_id": "_8.67",
       "text": "Na 4 sekundy przed końcem meczu jest remis 26:26. Drużyna A jest w ataku. Sędziowie decydują o rzucie wolnym dla drużyny A. Zawodnicy drużyny B natychmiast odsuwają się na przepisową odległość 3m od wykonującego rzut A6. A6 wykonuje rzut wolny tak, że piłka trafia w B5, który nie wykonuje żadnego ruchu. Piłka odbija się od B5 i wraca do A6. W tym momencie rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "2:3; 2:4; Wytyczne 8:11a",
@@ -7927,7 +7935,7 @@
       ]
     },
     {
-      "id": 263,
+      "id": 264,
       "orig_id": "_8.68",
       "text": "Na 20 sekund przed końcem meczu jest remis 29:29. Bramkarz A12 broni rzut na bramkę i piłka wychodzi poza linię końcową boiska. Sędziowie decydują o rzucie od bramki dla drużyny A. A12 chce szybko wykonać ten rzut. B2 wbiega do pola bramkowego i przeszkadza w wykonaniu rzutu. Prawidłowa decyzja?",
       "rules": "2:8; 8:11a; Nowe Wytyczne",
@@ -7970,7 +7978,7 @@
       ]
     },
     {
-      "id": 264,
+      "id": 265,
       "orig_id": "_8.69",
       "text": "Na 20 sekund przed końcem meczu jest remis 29:29. Bramkarz A12 broni rzut na bramkę i piłka wychodzi poza linię końcową boiska. Sędziowie decydują o rzucie od bramki dla drużyny A. A12 jest gotowy do wykonania rzutu od bramki. Zanim piłka opuściła jego rękę, mierzący czas przerywa grę gwizdkiem i informuje o błędzie zmiany w drużynie B. B3 wszedł na boisko, zanim opuścił je B11. Prawidłowa decyzja?",
       "rules": "2:8; 8:11a; Nowe Wytyczne",
@@ -8008,7 +8016,7 @@
       ]
     },
     {
-      "id": 265,
+      "id": 266,
       "orig_id": "_8.70",
       "text": "Na 20 sekund przed końcem meczu jest remis 29:29. Bramkarz A12 broni rzut na bramkę i piłka wychodzi poza linię końcową boiska. Sędziowie decydują o rzucie od bramki dla drużyny A. A12 wykonuje rzut, podaje do A9, który stoi przy linii pola bramkowego. Kiedy piłka jest w powietrzu, ale zanim przekroczyła linię pola bramkowego, mierzący czas przerywa grę gwizdkiem i informuje o błędzie zmiany w drużynie B. B3 wszedł na boisko zanim opuścił je B11. Prawidłowa decyzja?",
       "rules": "2:8; 8:11a; Nowe Wytyczne",
@@ -8041,7 +8049,7 @@
       ]
     },
     {
-      "id": 266,
+      "id": 267,
       "orig_id": "_8.71",
       "text": "Na 10 sekund przed końcem meczu jest remis 29:29. Drużyny A jest w kontrataku. B10 atakuje A9 w sposób zagrażający jego zdrowiu. Zanim A9 upada, udaje mu się podać do A11, który rzuca na bramkę. Bramkarz B12 broni rzut. Prawidłowa decyzja?",
       "rules": "2:8; 8:5; 8:11b; 14:2; Nowe Wytyczne",
@@ -8079,7 +8087,7 @@
       ]
     },
     {
-      "id": 267,
+      "id": 268,
       "orig_id": "_8.72",
       "text": "Na 10 sekund przed końcem meczu jest remis 29:29. Drużyny A jest w kontrataku. B10 atakuje A9 w sposób zagrażający jego zdrowiu. Zanim A9 upada, udaje mu się podać do A11, który zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "2:8; 8:5; 8:11b; 14:2; Nowe Wytyczne",
@@ -8117,7 +8125,7 @@
       ]
     },
     {
-      "id": 268,
+      "id": 269,
       "orig_id": "_8.73",
       "text": "Na 10 sekund przed końcem meczu jest remis 29:29. Drużyny A jest w kontrataku. B10 atakuje A9 w sposób zagrażający jego zdrowiu. Zanim A9 upada udaje mu się podać do A11. Następnie A11 podaje do A4. Prawidłowa decyzja?",
       "rules": "2:8; 8:11b; Wytyczne 8:10d; 14:2",
@@ -8155,7 +8163,7 @@
       ]
     },
     {
-      "id": 269,
+      "id": 270,
       "orig_id": "_8.74",
       "text": "Zawodnik B7 jest w kontrataku. Jest w sytuacji pewniej do zdobycia bramki i bez przeszkód rzuca na bramkę. Piłka uderza bramkarza A12 w głowę, a ten upada na podłogę. Odbijającą się piłkę odzyskuje B9, który ma pewną szansę na zdobycie bramki przy linii pola bramkowego drużyny A. W tym momencie sędziowie gwiżdżą i wzywają pomoc medyczną dla bramkarza A12. Jaka jest prawidłowa decyzja?",
       "rules": "2:8; 4:11, 13:1a, Objaśnienie 8",
@@ -8203,7 +8211,7 @@
       ]
     },
     {
-      "id": 270,
+      "id": 271,
       "orig_id": "_8.75",
       "text": "Na 7 sekund przed końcem meczu drużyna BIAŁYCH prowadzi różnicą jednej bramki. Drużyna BIAŁYCH jest gotowa do wykonania rzutu rozpoczynającego grę z pola wznowienia, a sędziowie dają sygnał gwizdkiem na wykonanie rzutu. Zamiast podać piłkę współpartnerowi, BIAŁY 7 kładzie piłkę na podłogę w polu wznowienia i odchodzi. Żaden z członków drużyny nie jest zainteresowany wejściem do pola wznowienia gry, aby zagrać piłkę. Jaka jest właściwa decyzja?",
       "rules": "2:8; 8:8; 13:1a",
@@ -8236,7 +8244,7 @@
       ]
     },
     {
-      "id": 271,
+      "id": 272,
       "orig_id": "_8.76",
       "text": "Zawodnik B8 mija obrońców drużyny A i nie ma żadnych zawodników pomiędzy nim a bramkarzem A1. Kiedy ma już oddać rzut na bramkę, zostaje odepchnięty z boku przez A7. B8 częściowo straci kontrolę nad ciałem, ale potrafi oddać mocny rzut na bramkę. Piłka uderza w głowę bramkarza A1, zmienia kierunek i wpada do bramki. Jaka jest właściwa decyzja?",
       "rules": "2:8; 8:4, 8:8d, 13:2",
@@ -8274,7 +8282,7 @@
       ]
     },
     {
-      "id": 272,
+      "id": 273,
       "orig_id": "_8.77",
       "text": "Zawodnik obrotowy B8 otrzymuje piłkę. Kiedy próbuje odwrócić się w stronę bramki, jest mocno trzymany i ciągnięty przez A7. Jednak uwalnia się i ma pełną kontrolę nad ciałem. Bez żadnych zawodników pomiędzy nim a bramkarzem, wyskakuje nad pole bramkowe i rzuca mocno, zachowując pełną kontrolę nad ciałem. Piłka uderza bramkarza A1 w głowę. Głowa jest pierwszym punktem kontaktu z piłką. Piłka zmienia kierunek i wpada do bramki. Jaka jest właściwa decyzja?",
       "rules": "2:8; 8:4; 8:8d; 13:1a",
@@ -8317,7 +8325,7 @@
       ]
     },
     {
-      "id": 273,
+      "id": 274,
       "orig_id": "_8.78",
       "text": "Skrzydłowy B3 jest w sytuacji pewnej do zdobycia bramki i rzuca na bramkę. Piłka dotyka boku głowy bramkarza A1, nie zmieniając kierunku. Piłka wpada do bramki. Jaka jest właściwa decyzja?",
       "rules": "2:8; 4:11; Objaśnienie 8; 8:8d",
@@ -8345,7 +8353,7 @@
       ]
     },
     {
-      "id": 274,
+      "id": 275,
       "orig_id": "_8.79",
       "text": "Skrzydłowy B3 jest w sytuacji pewnej do zdobycia bramki i rzut na bramkę. Piłka uderza w bok głowy bramkarza A1 i zmienia kierunek. Głowa jest pierwszym punktem kontaktu z piłką. Piłka wpada do bramki. A1 upada na podłogę, kładzie rękę na głowie i wyraźnie potrzebuje pomocy medycznej. Jaka jest właściwa decyzja?",
       "rules": "2:8; 4:11; Objaśnienie 8; 13:1a",
@@ -8388,7 +8396,7 @@
       ]
     },
     {
-      "id": 275,
+      "id": 276,
       "orig_id": "_9.1",
       "text": "Zawodnik A7 jest środkowym obrońcą, kiedy B3 próbuje podać piłkę kozłem obok niego, A7 stara się zatrzymać piłkę stopą. Nie jest to pierwszy raz w tym meczu, kiedy tak robi. Piłka odbija się od jego stopy i wpada do bramki drużyny A. Prawidłowa decyzja?",
       "rules": "7:8; 8:8e; 9:1; 13:2; 16:1b",
@@ -8416,7 +8424,7 @@
       ]
     },
     {
-      "id": 276,
+      "id": 277,
       "orig_id": "_9.2",
       "text": "Zawodnik A5 rzuca na bramkę, piłka odbija się od poprzeczki drużyny B, a następnie uderza w stopę B3, który stoi w polu gry i wpada do bramki drużyny B. Prawidłowa decyzja?",
       "rules": "7:8; 9:1; 13:2",
@@ -8444,7 +8452,7 @@
       ]
     },
     {
-      "id": 277,
+      "id": 278,
       "orig_id": "_9.3",
       "text": "Bramkarz A1 obronił rzut na bramkę i wybił piłkę w kierunku pola gry. Piłka uderza obrońcę A3, który stoi 3 metry w polu bramkowym i wpada do bramki drużyny A. Prawidłowa decyzja?",
       "rules": "6:3b; 9:1; 13:2",
@@ -8472,7 +8480,7 @@
       ]
     },
     {
-      "id": 278,
+      "id": 279,
       "orig_id": "_9.4",
       "text": "Bramkarz A1 przytrzymuje piłkę przez 4 sekundy w taki sposób, że 3/4 jej obwodu jest poza linią bramkową. Prawidłowa decyzja?",
       "rules": "6:4; 9:1; 12:1",
@@ -8495,7 +8503,7 @@
       ]
     },
     {
-      "id": 279,
+      "id": 280,
       "orig_id": "_9.5",
       "text": "Zawodnik A3 wchodzi do pola bramkowego swojej drużyny i stara się obronić rzut drużyny B nogą. Piłka odbija się od jego stopy i wpada do bramki drużyny A. Prawidłowa decyzja?",
       "rules": "9:1; 14:2",
@@ -8523,7 +8531,7 @@
       ]
     },
     {
-      "id": 280,
+      "id": 281,
       "orig_id": "_9.6",
       "text": "Zawodnik A11 stara się zdobyć bramkę rzucając piłkę wysoko ponad głową bramkarza B1, który stoi daleko przed swoją bramką. Tuż przed tym jak piłka wpada do pustej bramki wybija ją menadżer drużyny B, który zajmował miejsce na trybunach i nie jest wpisany do protokołu. Piłka wychodzi poza linię końcową boiska. Prawidłowa decyzja?",
       "rules": "9:1 komentarz",
@@ -8551,7 +8559,7 @@
       ]
     },
     {
-      "id": 281,
+      "id": 282,
       "orig_id": "_9.7",
       "text": "Na 2 sekundy przed końcem meczu jest remis 25:25. Menadżer zespołu A, który nie jest wpisany do protokołu, przechwytuje piłkę, która po rzucie B3 zmierzała do pustej bramki drużyny A. Natychmiast po tym rozlega się automatyczny sygnał kończący grę. Prawidłowa decyzja?",
       "rules": "9:1 komentarz",
@@ -8584,7 +8592,7 @@
       ]
     },
     {
-      "id": 282,
+      "id": 283,
       "orig_id": "_9.8",
       "text": "Zawodnik B9 zdobywa bramkę z rzutu karnego. Drużyny A szybko wykonuje rzut rozpoczynający grę. Po dwóch podaniach A4 zdobywa bramkę. W tym momencie mierzący czas przerywa grę gwizdkiem i informuje, że B9, który w międzyczasie wrócił do strefy zmian, w momencie wykonywania rzutu karnego, miał do odbycia jeszcze 20 sekund kary 2-minutowego wykluczenia. Prawidłowa decyzja?",
       "rules": "4:6; 9:1; 9:2; 16:3a",
@@ -8612,7 +8620,7 @@
       ]
     },
     {
-      "id": 283,
+      "id": 284,
       "orig_id": "_9.9",
       "text": "Zaraz przed końcem meczu, przy wyniku 22:21, A5 poprawnie wykonuje rzut rozpoczynający grę. Zawodnik podaje piłkę w kierunku własnej bramki. Bramkarz A1 nie dotyka piłki, która mija go i wpada do bramki. Zawodnicy drużyny A przekroczyli linię środkową boiska po gwizdku sędziego, ale zanim piłka opuściła rękę A5. Prawidłowa decyzja?",
       "rules": "9:1; 15:2",
@@ -8645,7 +8653,7 @@
       ]
     },
     {
-      "id": 284,
+      "id": 285,
       "orig_id": "_9.10",
       "text": "Zawodnik A9 próbuje zatrzymać piłkę stopą. Robiąc to odbija piłkę w taki sposób, że wpada ona do bramki drużyny A. Jest to drugi raz w tym meczu, kiedy A9 zagrywa w ten sposób. Prawidłowa decyzja?",
       "rules": "7:8; 8:8e; 9:1; 16:1b",
@@ -8668,7 +8676,7 @@
       ]
     },
     {
-      "id": 285,
+      "id": 286,
       "orig_id": "_10.1",
       "text": "Drużyny A wygrała losowanie i wybrała rozpoczęcie meczu. Osoba reprezentująca drużynę B chce zmienić strony boiska. Prawidłowa decyzja?",
       "rules": "10:1",
@@ -8696,7 +8704,7 @@
       ]
     },
     {
-      "id": 286,
+      "id": 287,
       "orig_id": "_10.2",
       "text": "Drużyny A wygrała losowanie i chce zmienić strony boiska. Drużyna B chce, aby drużyna A rozpoczynała mecz. Prawidłowa decyzja?",
       "rules": "10:1",
@@ -8724,7 +8732,7 @@
       ]
     },
     {
-      "id": 287,
+      "id": 288,
       "orig_id": "_10.3",
       "text": "(Bez pola wznowienia gry.) Z którego miejsca można wykonać rzut rozpoczynający grę?",
       "rules": "10:3a",
@@ -8747,7 +8755,7 @@
       ]
     },
     {
-      "id": 288,
+      "id": 289,
       "orig_id": "_10.4",
       "text": "(Bez pola wznowienia gry.) Na krótko przed końcem meczu jest remis 15:15. Drużyna B zdobywa bramkę i jest 15:16. Drużyny A chce szybko wykonać rzut rozpoczynający grę. Zawodnik drużyny A stoi z piłką przy linii środkowej boiska z jedną stopą przed linią i drugą stopą za tą linią. Prawidłowa decyzja?",
       "rules": "10:3a; 15:1; 15:6",
@@ -8770,7 +8778,7 @@
       ]
     },
     {
-      "id": 289,
+      "id": 290,
       "orig_id": "_10.5",
       "text": "Drużyny A wykonuje rzut rozpoczynający grę. Bramkarz B15 nie zajął jeszcze miejsca w swojej bramce. Sędzia z pola gry gwiżdże na rozpoczęcie meczu, A9 natychmiast rzuca i zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "9:1; 10:4; 15:2",
@@ -8798,7 +8806,7 @@
       ]
     },
     {
-      "id": 290,
+      "id": 291,
       "orig_id": "_10.6",
       "text": "(Bez pola wznowienia gry.) Które z poniższych stwierdzeń odnośnie rzutu rozpoczynającego grę są prawdziwe?",
       "rules": "10:3a; 15:2; 15:3; 15:4",
@@ -8831,7 +8839,7 @@
       ]
     },
     {
-      "id": 291,
+      "id": 292,
       "orig_id": "_10.7",
       "text": "(Bez pola wznowienia gry.) B6 jest gotowy do wykonania rzutu rozpoczynającego grę stojąc jedną nogą na linii środkowej boiska, a drugą na własnej połowie. Sędzia daje sygnał gwizdkiem na wykonanie rzutu. B6 przekracza linię środkową, zanim piłka opuszcza jego rękę. W chwili gwizdka sędziego niektórzy zawodnicy drużyny A nadal znajdują się na połowie drużyny B. Prawidłowa decyzja?",
       "rules": "10:3a; 15:7",
@@ -8859,7 +8867,7 @@
       ]
     },
     {
-      "id": 292,
+      "id": 293,
       "orig_id": "_10.8",
       "text": "(Z polem wznowienia gry.) Drużyna A zdobyła bramkę. Drużyna B chce szybko rozpocząć grę. B9 zajmuje prawidłową pozycję w polu wznowienia gry. Po tym, jak sędziowie gwizdnęli na wykonanie rzutu, B9 wykonuje 6 kroków z piłką w polu wznowienia gry. W ciągu 3 sekund po sygnale gwizdkiem na wykonanie rzutu rozpoczynającego, B9 wrzuca piłkę do pustej bramki drużyny A. Prawidłowa decyzja?",
       "rules": "10:3b; 15:5b",
@@ -8882,7 +8890,7 @@
       ]
     },
     {
-      "id": 293,
+      "id": 294,
       "orig_id": "_10.9",
       "text": "(Z polem wznowienia gry) Drużyna A zdobyła bramkę. Drużyna B chce szybko rozpocząć grę. B9 otrzymuje piłkę. Trzyma piłkę i jedną nogę całkowicie w polu rzutu. Druga noga znajduje się poza polem wznowienia gry. Sędziowie gwiżdżą na wykonanie rzutu. Zanim B9 przestawił drugą nogę do pola wznowienia gry, wrzuca piłkę do pustej bramki drużyny A. Prawidłowa decyzja?",
       "rules": "10:3b",
@@ -8910,7 +8918,7 @@
       ]
     },
     {
-      "id": 294,
+      "id": 295,
       "orig_id": "_10.10",
       "text": "(Z polem wznowienia gry.) Drużyna B chce wykonać szybki rzut rozpoczynający grę z pola wznowienia gry. W tym samym czasie, gdy B8 ma jedną nogę w polu wznowienia, a piłka również znajduje się całkowicie w polu wznowienia gry, zawodnik A7 również znajduje się w polu rzutu, biegnąc w kierunku własnej bramki. Ponieważ w kierunku A7 nie ma żadnych zawodników, B8 rzuca piłkę w tył BIAŁY 7. BIAŁY 7 znajduje się w polu rzutu, gdy piłka go uderza. Jaka jest właściwa decyzja?",
       "rules": "8:8; 10:3b; 13:1a",
@@ -8948,7 +8956,7 @@
       ]
     },
     {
-      "id": 295,
+      "id": 296,
       "orig_id": "_10.11",
       "text": "(Z polem wznowienia gry) Które z poniższych stwierdzeń dotyczących pola wznowienia gry są nieprawidłowe?",
       "rules": "10:3b",
@@ -8981,7 +8989,7 @@
       ]
     },
     {
-      "id": 296,
+      "id": 297,
       "orig_id": "_10.12",
       "text": "(Z polem wznowienia gry.) Drużyna A gra z 7-ma zawodnikami na boisku i zdobywa bramkę. Drużyna B chce szybko rozpocząć grę. Zawodnik B6 stoi jedną nogą w polu wznowienia gry i trzyma piłkę, która również znajduje się w tym polu. Sędziowie gwiżdżą na wykonanie rzutu. Zawodnia A8 wyraźnie wchodzi do pola wznowienia gry i aktywnie przeszkadza rękami próbując zablokować wykonanie rzutu rozpoczynającego grę. Mimo to zawodnik B6, który całym ciałem wraz z piłką znajduje się w polu wznowienia gry, wykonuje rzut rozpoczynający grę jako rzut na pustą bramkę. Piłka przekracza zewnętrzną linię końcową. Prawidłowa decyzja?",
       "rules": "2:8; 8:8f; 10:3b; Objaśnienie 6",
@@ -9029,7 +9037,7 @@
       ]
     },
     {
-      "id": 297,
+      "id": 298,
       "orig_id": "_10.13",
       "text": "(Z polem wznowienia gry.) Które z poniższych stwierdzeń dotyczących pola wznowienia gry są prawidłowe?",
       "rules": "10:3b; 15:2",
@@ -9062,7 +9070,7 @@
       ]
     },
     {
-      "id": 298,
+      "id": 299,
       "orig_id": "_10.14",
       "text": "(Z polem wznowienia gry.) Kiedy sędzia może dać sygnał gwizdkiem na wykonanie rzutu rozpoczynającego grę?",
       "rules": "10:3b",
@@ -9090,7 +9098,7 @@
       ]
     },
     {
-      "id": 299,
+      "id": 300,
       "orig_id": "_11.1",
       "text": "Zawodnik A3 wykonuje rzut z linii bocznej stojąc 2 metry poza linią boczną boiska. Prawidłowa decyzja?",
       "rules": "11:4; 15:1; 15:5",
@@ -9118,7 +9126,7 @@
       ]
     },
     {
-      "id": 300,
+      "id": 301,
       "orig_id": "_11.2",
       "text": "Zawodnik B4 stoi jedną stopą na linii bocznej boiska, a drugą w polu gry. W tej pozycji wykonuje rzut z linii bocznej w kierunku bramki przeciwnika i udaje mu się zdobyć bramkę. Prawidłowa decyzja?",
       "rules": "11:4; 15:2",
@@ -9146,7 +9154,7 @@
       ]
     },
     {
-      "id": 301,
+      "id": 302,
       "orig_id": "_11.3",
       "text": "Zawodnik A6 wykonuje rzut z linii bocznej boiska stojąc jedną stopą w polu gry, a drugą 1 metr poza linią boczną boiska. W tej pozycji wykonuje rzut w kierunku bramki przeciwnika i udaje mu się zdobyć bramkę. Prawidłowa decyzja?",
       "rules": "11:4; 15:1; 15:5",
@@ -9174,7 +9182,7 @@
       ]
     },
     {
-      "id": 302,
+      "id": 303,
       "orig_id": "_11.4",
       "text": "Zawodnik A11 rzuca na bramkę. Piłka odbija się od poprzeczki i dotyka urządzeń przy suficie nad polem bramkowym drużyny B. Następnie spada prosto w ręce bramkarza B1. Prawidłowa decyzja?",
       "rules": "11:1",
@@ -9207,7 +9215,7 @@
       ]
     },
     {
-      "id": 303,
+      "id": 304,
       "orig_id": "_11.5",
       "text": "W jakich przypadkach zawodnicy drużyny, przeciwko której podyktowano rzut wolny, mogą znajdować się bliżej niż 3 metry od piłki?",
       "rules": "10:3b, 11:5; 12:2; 13:8; 15:4",
@@ -9235,7 +9243,7 @@
       ]
     },
     {
-      "id": 304,
+      "id": 305,
       "orig_id": "_11.6",
       "text": "Zawodnikowi A5 nie udaje się złapać piłki. Biegnie za nią i zatrzymuje ją przed linią boczną boiska, ale on sam zaraz potem wypada poza linię boczną boiska. Prawidłowa decyzja?",
       "rules": "11:1",
@@ -9258,7 +9266,7 @@
       ]
     },
     {
-      "id": 305,
+      "id": 306,
       "orig_id": "_12.1",
       "text": "W trakcie wykonywania rzutu od bramki bramkarz A1 dotyka jedną stopą linii pola bramkowego. Prawidłowa decyzja?",
       "rules": "1:3; 12:2",
@@ -9281,7 +9289,7 @@
       ]
     },
     {
-      "id": 306,
+      "id": 307,
       "orig_id": "_12.2",
       "text": "Po gwizdku na wykonanie rzutu karnego, bramkarz A12 staje jedną stopą na linii ograniczającej jego wyjście (4m). Rzut jest niecelny. Prawidłowa decyzja?",
       "rules": "1:3; 12:1; 14:9",
@@ -9304,7 +9312,7 @@
       ]
     },
     {
-      "id": 307,
+      "id": 308,
       "orig_id": "_12.3",
       "text": "Bramkarz A1 broni rzut na bramkę i rzuca się na piłkę, która toczy się w polu bramkowym w kierunku pola gry. B7 stoi samotnie gotowy do przechwycenia piłki. W ostatniej chwili A1 używa otwartej dłoni, aby wybić piłkę poza linię końcową boiska. Prawidłowa decyzja?",
       "rules": "12:1",
@@ -9332,7 +9340,7 @@
       ]
     },
     {
-      "id": 308,
+      "id": 309,
       "orig_id": "_12.4",
       "text": "W trakcie wykonywania rzutu od bramki, bramkarz A12 upuszcza piłkę. Piłka odbija się od jego stopy i toczy się poza pole bramkowe. A12 wybiega za nią z pola bramkowego w pole gry, podnosi ją i wraca do pola bramkowego, aby ponownie wykonać rzut od bramki. Prawidłowa decyzja?",
       "rules": "12:2; 15:5b",
@@ -9360,7 +9368,7 @@
       ]
     },
     {
-      "id": 309,
+      "id": 310,
       "orig_id": "_12.5",
       "text": "Kiedy rzut od bramki uznaje się za wykonany tak, że piłkę mogą zagrywać zawodnicy z pola gry?",
       "rules": "12:2",
@@ -9388,7 +9396,7 @@
       ]
     },
     {
-      "id": 310,
+      "id": 311,
       "orig_id": "_12.6",
       "text": "Bramkarz A3 wykonuje rzut od bramki. B10, który zajmuje pozycję poza polem bramkowym, próbuje w przepisowy sposób wejść w posiadanie piłki. Udaje mu się to i zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "12:2",
@@ -9416,7 +9424,7 @@
       ]
     },
     {
-      "id": 311,
+      "id": 312,
       "orig_id": "_12.7",
       "text": "Bramkarz A12 broni rzut na bramkę, a odbita przez niego piłka wychodzi poza linię końcową boiska obok bramki. Którą z sygnalizacji powinien zastosować sędzia bramkowy?",
       "rules": "12:1 – Sygnalizacja ręczna sędziów",
@@ -9444,7 +9452,7 @@
       ]
     },
     {
-      "id": 312,
+      "id": 313,
       "orig_id": "_12.8",
       "text": "Bramkarz A1 upuścił piłkę w trakcie wykonywania rzutu od bramki. Piłka toczy się w kierunku pola gry, gdzie B6 czeka żeby ją złapać. A8 rzuca się w kierunku piłki, która jest w powietrzu i wybija ją poza linię boczną boiska. Prawidłowa decyzja?",
       "rules": "12:2",
@@ -9472,7 +9480,7 @@
       ]
     },
     {
-      "id": 313,
+      "id": 314,
       "orig_id": "_12.9",
       "text": "Które z poniższych stwierdzeń odnośnie rzutu od bramki są prawdziwe?",
       "rules": "12:2",
@@ -9500,7 +9508,7 @@
       ]
     },
     {
-      "id": 314,
+      "id": 315,
       "orig_id": "_12.10",
       "text": "Rzut od bramki dla drużyny B. Bramkarz B1 spieszy się, ponieważ jego drużyna przegrywa. W trakcie wykonywania rzutu od bramki piłka wyślizguje mu się z rąk i trafia do B6, który ciągle zajmuje miejsce w polu bramkowym. B6 zagrywa piłkę stopą z powrotem do B1. Prawidłowa decyzja?",
       "rules": "12:2",
@@ -9523,7 +9531,7 @@
       ]
     },
     {
-      "id": 315,
+      "id": 316,
       "orig_id": "_12.11",
       "text": "Które z poniższych stwierdzeń odnośnie rzutu od bramki są prawdziwe?",
       "rules": "9:1; 12:2; 15:2",
@@ -9561,7 +9569,7 @@
       ]
     },
     {
-      "id": 316,
+      "id": 317,
       "orig_id": "_13.1",
       "text": "Rzut wolny dla drużyny A. Zanim A5 udaje się zebrać piłkę, B6 podnosi ją z ziemi i trzymając ją pod pachą biegnie w stronę swojej bramki. Po kilku krokach toczy ją z powrotem w stronę A5. Prawidłowa decyzja?",
       "rules": "8:8b; 13:5; 15:5b; 16:3f",
@@ -9573,7 +9581,7 @@
         },
         {
           "orig_id": "b)",
-          "text": "Powtórzyć rzut wolny dla drużyny A po sygnale gwizdkiem.",
+          "text": "Rzut wolny dla drużyny A po sygnale gwizdkiem.",
           "correctness": 1
         },
         {
@@ -9594,7 +9602,7 @@
       ]
     },
     {
-      "id": 317,
+      "id": 318,
       "orig_id": "_13.2",
       "text": "Zawodnik B7 jest w posiadaniu piłki i próbuje rozpocząć kontratak, ale jest przytrzymywany przez A17. Sędziowie nie przerywają gry, bo widzą szansę na prawo korzyści. B8 otrzymuje podanie i rzuca na bramkę drużyny A. Bramkarz A12 broni rzut na bramkę i chce rozpocząć kontratak. Obie drużyny były już w tym meczu trzykrotnie ukarane upomnieniem. Prawidłowa decyzja?",
       "rules": "2:8a; 8:3; 13:2; 16:3b",
@@ -9627,7 +9635,7 @@
       ]
     },
     {
-      "id": 318,
+      "id": 319,
       "orig_id": "_13.3",
       "text": "Po przyznaniu rzutu wolnego dla drużyny A, drużyna B wciąż jest w posiadaniu piłki. B6 zabiera piłkę ze sobą i oddala się trzy metry od miejsca, z którego ma być wykonany rzut wolny. Prawidłowa decyzja?",
       "rules": "8:8b; 13:5; 13:6 komentarz; 16:3f",
@@ -9660,7 +9668,7 @@
       ]
     },
     {
-      "id": 319,
+      "id": 320,
       "orig_id": "_13.4",
       "text": "Po przyznaniu rzutu wolnego przeciwko drużynie A, zawodnik A4 bierze piłkę, przekracza linię pola bramkowego i odkłada ją na parkiet. Prawidłowa decyzja?",
       "rules": "8:8b; 13:5; 16:3f",
@@ -9688,7 +9696,7 @@
       ]
     },
     {
-      "id": 320,
+      "id": 321,
       "orig_id": "_13.5",
       "text": "Zawodnik A5 jest w posiadaniu piłki, kiedy osoba towarzysząca „C” z drużyny A komentuje decyzje sędziów. Sędziowie gwiżdżą i zatrzymują czas gry. Sędziowie karzą upomnieniem osobę towarzyszącą „C” z drużyny A. W jaki sposób gra powinna być kontynuowana?",
       "rules": "8:7a; 13:1a; 13:6; 16:1b",
@@ -9716,7 +9724,7 @@
       ]
     },
     {
-      "id": 321,
+      "id": 322,
       "orig_id": "_13.6",
       "text": "Gra zostaje przerwana gwizdkiem sędziego z pola gry, mimo że nie nastąpiło naruszenie przepisów przez żadną z drużyn. Nie była sygnalizowana przerwa dla drużyny. B13 rzucił piłkę w kierunku bramki drużyny A sekundę przed niefortunnym gwizdkiem sędziego. Zaraz po gwizdku piłka wpada do bramki. Bramkarz A1 nie miał żadnych szans, żeby ją obronić. W jaki sposób gra powinna być kontynuowana?",
       "rules": "13:4a",
@@ -9744,7 +9752,7 @@
       ]
     },
     {
-      "id": 322,
+      "id": 323,
       "orig_id": "_13.7",
       "text": "Zawodnik A7 biegnie w kontrataku. Między nim, a bramkarzem jest jeden zawodnik drużyny B. A7 rzuca na bramkę i trafia bramkarza B12 w głowę. B12 upada. Piłka wraca do A9, który stoi przy linii pola bramkowego. A9 rzuca piłkę w kierunku pustej bramki przeciwnika. Tuż przed tym, jak piłka przekracza linię bramkową, sędzia przerywa grę gwizdkiem. Bramkarz B12 wymaga opieki medycznej na boisku. Prawidłowa decyzja?",
       "rules": "4:11; 8:8d; 13:4b; Objaśnienia 2 i 8",
@@ -9777,7 +9785,7 @@
       ]
     },
     {
-      "id": 323,
+      "id": 324,
       "orig_id": "_13.8",
       "text": "Z powodu faulu sędziowie przyznali rzut wolny dla B9, ale A5 jest ciągle w posiadaniu piłki. A5 podchodzi do sędziów i „uprzejmie” oddaje im piłkę w ręce. Prawidłowa decyzja?",
       "rules": "8:8b; 13:5; 13:6 komentarz; 16:3f",
@@ -9805,7 +9813,7 @@
       ]
     },
     {
-      "id": 324,
+      "id": 325,
       "orig_id": "_13.9",
       "text": "Sędziowie zadecydowali o rzucie karnym dla drużyny A, zaraz po tym A5 popełnia błąd zmiany. Prawidłowa decyzja?",
       "rules": "4:5; 13:3; 16:3a",
@@ -9833,7 +9841,7 @@
       ]
     },
     {
-      "id": 325,
+      "id": 326,
       "orig_id": "_13.10",
       "text": "Które z poniższych stwierdzeń odnośnie rzutu wolnego są prawdziwe?",
       "rules": "7:11; 13:6; 13:6 komentarz",
@@ -9861,7 +9869,7 @@
       ]
     },
     {
-      "id": 326,
+      "id": 327,
       "orig_id": "_13.11",
       "text": "Zawodnik B11 jest w posiadaniu piłki i próbuje ominąć A2. Z powodu sygnału gwizdkiem z trybun, A2 nie próbuje bronić B11. B11 jest teraz sam na sam z bramkarzem. Prawidłowa decyzja?",
       "rules": "13:4a",
@@ -9889,7 +9897,7 @@
       ]
     },
     {
-      "id": 327,
+      "id": 328,
       "orig_id": "_13.12",
       "text": "Drużyna A gra piłką przy linii rzutów wolnych drużyny B. Osoba towarzysząca „C” z drużyny B głośno protestuje przeciwko decyzjom sędziów tak, że przerywają oni grę. Prawidłowa decyzja?",
       "rules": "8:7; 13:6; Regulamin strefy zmian 5 + 6",
@@ -9912,7 +9920,7 @@
       ]
     },
     {
-      "id": 328,
+      "id": 329,
       "orig_id": "_13.13",
       "text": "Po karze upomnienia dla B6 sędzia z pola gwiżdże na wykonanie rzutu wolnego dla drużyny A. Nie zauważa on A11, który stoi między linią rzutów wolnych a linią pola bramkowego. A11 otrzymuje podanie i jest w sytuacji pewnej do zdobycia bramki. Całą sytuację obserwuje sędzia bramkowy. Prawidłowa decyzja?",
       "rules": "13:7; 15:1; 15:5b",
@@ -9945,7 +9953,7 @@
       ]
     },
     {
-      "id": 329,
+      "id": 330,
       "orig_id": "_13.14",
       "text": "Drużyna A jest w posiadaniu piłki. Drużyna B zajęła pozycje w obronie. A8 przebiega w pobliżu linii bocznej boiska. A4 podaje do A8. A8 zderza się z fotografem, który spaceruje pomiędzy boiskiem a trybunami, po linii bocznej boiska. A8 traci kontrolę nad ciałem i nie udaje mu się złapać piłki. Zanim sędziowie przerywają grę piłka opuszcza boisko przez linię boczną. Prawidłowa decyzja?",
       "rules": "13:4",
@@ -9973,7 +9981,7 @@
       ]
     },
     {
-      "id": 330,
+      "id": 331,
       "orig_id": "_13.15",
       "text": "Drużyny A była w ataku. Sędziowie zadecydowali o rzucie wolnym dla drużyny B. Zanim B2 zdążył wykonać rzut wolny, B11 przewraca A8. Prawidłowa decyzja?",
       "rules": "8:3; 8:4; 13:3",
@@ -10011,7 +10019,7 @@
       ]
     },
     {
-      "id": 331,
+      "id": 332,
       "orig_id": "_14.1",
       "text": "Przy wyniku 20:20 B7 przechwytuje podanie między przeciwnikami i rozpoczyna kontratak. Żaden z zawodników z pola gry drużyny A nie może go zatrzymać. Kibic wbiega na boisko i przewraca B7 na ziemię. Prowadzi to do bójki na boisku z udziałem większej liczby kibiców. Osoba towarzysząca „A” z drużyny B nokautuje kibica, który zatrzymał B7. Prawidłowa decyzja?",
       "rules": "2:8a; 8:10a; 14:1c; 16:6b",
@@ -10039,7 +10047,7 @@
       ]
     },
     {
-      "id": 332,
+      "id": 333,
       "orig_id": "_14.2",
       "text": "Rzut z linii bocznej dla drużyny A. B7 poprawnie wykonuje rzut i zauważa, że bramkarz A12 stoi daleko przed swoją bramką. B7 rzuca bezpośrednio do pustej bramki drużyny A. Zawodnik z pola gry A3 wchodzi do pola bramkowego i zatrzymuje piłkę zanim wpada ona do bramki. Prawidłowa decyzja?",
       "rules": "8:8h; 14:1a; 15:2",
@@ -10072,7 +10080,7 @@
       ]
     },
     {
-      "id": 333,
+      "id": 334,
       "orig_id": "_14.3",
       "text": "Zawodnik A4 wykonuje rzut karny i trafia w poprzeczkę. Piłka wraca do A4 nie dotykając nikogo po drodze. A4 rzuca ponownie i zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "14:6",
@@ -10095,7 +10103,7 @@
       ]
     },
     {
-      "id": 334,
+      "id": 335,
       "orig_id": "_14.4",
       "text": "Zawodnik A3 mija B4 przy linii rzutów wolnych drużyny B. Po trzech krokach jest gotowy do oddania rzutu, ale jest pchnięty przez B4. Natychmiast po tym robi czwarty krok i zdobywa widowiskową bramkę. Żaden inny zawodnik z drużyny B nie mógł go zatrzymać zgodnie z przepisami. Prawidłowa decyzja?",
       "rules": "8:3c; 14:1a; 16:1a",
@@ -10123,7 +10131,7 @@
       ]
     },
     {
-      "id": 335,
+      "id": 336,
       "orig_id": "_14.5",
       "text": "Zawodnik A9 wykonuje rzut karny i zdobywa bramkę. Jednak zanim piłka opuszcza jego rękę, A4 przekracza linię rzutów wolnych drużyny B. Prawidłowa decyzja?",
       "rules": "13:1a; 14:7; 15:7",
@@ -10151,7 +10159,7 @@
       ]
     },
     {
-      "id": 336,
+      "id": 337,
       "orig_id": "_14.6",
       "text": "Zawodnik B2 jest gotowy do wykonania rzutu karnego. Sędzia daje sygnał gwizdkiem. Następnie A5 przekracza linię rzutów wolnych drużyny B. Pomimo zachowania zawodnika drużyny A, B2 zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "14:8",
@@ -10179,7 +10187,7 @@
       ]
     },
     {
-      "id": 337,
+      "id": 338,
       "orig_id": "_14.7",
       "text": "Zawodnik A6 jest gotowy do wykonania rzutu karnego. Osoba towarzysząca „A” z drużyny B chce dokonać zmiany bramkarza B12 i woła go do strefy zmian. B12 rusza w stronę strefy zmian swojej drużyny. Prawidłowa decyzja?",
       "rules": "14:10; 16:1b",
@@ -10207,7 +10215,7 @@
       ]
     },
     {
-      "id": 338,
+      "id": 339,
       "orig_id": "_14.8",
       "text": "Zawodnik A4 rzucił na bramkę drużyny B. Piłka odbiła się od poprzeczki i wraca w kierunku pola gry. A6 stoi przy linii pola bramkowego gotowy do przechwycenia piłki. B4 wyraźnie narusza pole bramkowe, żeby wybić piłkę poza linię końcową boiska. Prawidłowa decyzja?",
       "rules": "6:2c; 14:1a; Objaśnienia 6",
@@ -10235,7 +10243,7 @@
       ]
     },
     {
-      "id": 339,
+      "id": 340,
       "orig_id": "_14.9",
       "text": "Zawodnik A3 wykonuje rzut karny. A5 przekracza linię rzutów wolnych po tym, jak sędziowie dają sygnał gwizdkiem na wykonanie rzutu, ale zanim piłka opuściła rękę A3. Prawidłowa decyzja?",
       "rules": "13:1a; 14:7; 15:7",
@@ -10263,7 +10271,7 @@
       ]
     },
     {
-      "id": 340,
+      "id": 341,
       "orig_id": "_14.10",
       "text": "Zawodnik A9 stoi niezauważony przy linii pola bramkowego drużyny przeciwnej i jest gotowy do złapania piłki. Zauważa go A10 i zagrywa do niego piłkę kozłem przez pole bramkowe. B3 orientuje się w sytuacji i wyraźnie narusza pole bramkowe, żeby zatrzymać piłkę. B3 zachowuje się w ten sposób po raz drugi w tym meczu. Prawidłowa decyzja?",
       "rules": "8:7f; 14:1a; 16:1b; Objaśnienia 6a",
@@ -10286,7 +10294,7 @@
       ]
     },
     {
-      "id": 341,
+      "id": 342,
       "orig_id": "_14.11",
       "text": "Kołowy B10 blokuje A2 zgodnie z przepisami. B4 zagrywa piłkę kozłem w wolną przestrzeń tak, żeby B10 mógł ją złapać. Kiedy B10 próbuje ruszyć w stronę piłki A2 zatrzymuje go łapiąc z tyłu za koszulkę. Prawidłowa decyzja?",
       "rules": "8:2c; 14:1a; Objaśnienia 6a",
@@ -10319,7 +10327,7 @@
       ]
     },
     {
-      "id": 342,
+      "id": 343,
       "orig_id": "_14.12",
       "text": "Zawodnik A3 jest w posiadaniu piłki i biegnie w kontrataku na bramkę drużyny B. W momencie, kiedy rzuca w wyskoku na bramkę rozlega się sygnał gwizdkiem z trybun, który rozprasza A3 tak, że ten nie rzuca na bramkę. Zamiast tego zatrzymuje się w polu bramkowym przeciwnika z piłką w ręku. Prawidłowa decyzja?",
       "rules": "14:1c",
@@ -10352,7 +10360,7 @@
       ]
     },
     {
-      "id": 343,
+      "id": 344,
       "orig_id": "_14.13",
       "text": "Drużyny A przeprowadza kontratak przy wyniku 26:26. A5 jest gotowy do oddania rzutu przy linii pola bramkowego drużyny B. W tym momencie rozlega się sygnał gwizdkiem od mierzącego czas, który sygnalizuje koniec meczu. Sędziowie stwierdzają, że do rozegrania pozostało jeszcze 20 sekund meczu. Prawidłowa decyzja?",
       "rules": "2:3; 14:1b; Objaśnienia 6a",
@@ -10380,7 +10388,7 @@
       ]
     },
     {
-      "id": 344,
+      "id": 345,
       "orig_id": "_14.14",
       "text": "Które z poniższych stwierdzeń odnośnie rzutu karnego są prawdziwe?",
       "rules": "14:3; 14:5; 14:8; 14:9",
@@ -10408,7 +10416,7 @@
       ]
     },
     {
-      "id": 345,
+      "id": 346,
       "orig_id": "_14.15",
       "text": "Zawodnik A5 jest w posiadaniu piłki i wyskakuje z narożnika boiska nad pole bramkowe drużyny B. Zderza się z B11, który stoi w polu bramkowymi, około 50 cm wewnątrz pola bramkowego, z rękami uniesionymi do góry. B11 zachowuje się w ten sposób po raz trzeci w tym meczu. Prawidłowa decyzja?",
       "rules": "6:2c; 8:7f; 14:1a; 16:3a",
@@ -10436,7 +10444,7 @@
       ]
     },
     {
-      "id": 346,
+      "id": 347,
       "orig_id": "_14.16",
       "text": "Zawodnik A6 biegnie w kontrataku i jest w sytuacji pewnej do zdobycia bramki, kiedy w hali gaśnie światło. Które z poniższych stwierdzeń są prawdziwe?",
       "rules": "14:1c; Objaśnienia 2a",
@@ -10469,7 +10477,7 @@
       ]
     },
     {
-      "id": 347,
+      "id": 348,
       "orig_id": "_14.17",
       "text": "Zawodnik A3 wykonuje rzut karny. A5 przekracza linię rzutów wolnych po gwizdku sędziego na wykonanie rzutu, ale zanim piłka opuściła rękę wykonującego rzut A3. Bramkarz B1 broni rzut. Prawidłowa decyzja?",
       "rules": "6:4; 12:1; 13:2; 14:7",
@@ -10492,9 +10500,9 @@
       ]
     },
     {
-      "id": 348,
+      "id": 349,
       "orig_id": "_14.18",
-      "text": "Zawodnik A3 jest gotowy do wykonania rzutu karnego. Sędzia z pola gry gwiżdże, ale A2 upuszcza piłkę na parkiet. B3 natychmiast podnosi piłkę i zagrywa nią do B2, który zdobywa bramkę w kontrataku. Prawidłowa decyzja?",
+      "text": "Zawodnik A2 jest gotowy do wykonania rzutu karnego. Sędzia z pola gry gwiżdże, ale A2 upuszcza piłkę na parkiet. B3 natychmiast podnosi piłkę i zagrywa nią do B2, który zdobywa bramkę w kontrataku. Prawidłowa decyzja?",
       "rules": "13:2; 14:4; 15:2",
       "subanswers": [
         {
@@ -10520,7 +10528,7 @@
       ]
     },
     {
-      "id": 349,
+      "id": 350,
       "orig_id": "_14.19",
       "text": "Zawodnik A6 jest w posiadaniu piłki przy linii rzutów wolnych drużyny B i tam jest przewrócony na parkiet przez wyjątkowo bezmyślny faul B5. W tym czasie B8 stoi przy linii pola bramkowego pomiędzy A6 a bramką drużyny B. Prawidłowa decyzja?",
       "rules": "8:5; 13:1b; Objaśnienia 6",
@@ -10548,7 +10556,7 @@
       ]
     },
     {
-      "id": 350,
+      "id": 351,
       "orig_id": "_14.20",
       "text": "Drużyna A gra siedmioma zawodnikami w polu gry (pusta bramka). B8 przechwytuje podanie. B8 kozłuje piłkę i zanim udaje mu się uzyskać pozycję dogodną do rzutu, jest zatrzymany przez A3, któremu udaje się go na krótko złapać. W tym czasie bramkarz A12, po prawidłowej zmianie, zajmuje pozycję w polu bramkowym swojej drużyny. Prawidłowa decyzja?",
       "rules": "8:2; 8:3; Objaśnienia 6c; Nowe Wytyczne",
@@ -10576,7 +10584,7 @@
       ]
     },
     {
-      "id": 351,
+      "id": 352,
       "orig_id": "_14.21",
       "text": "Drużyny A gra siedmioma zawodnikami w polu gry (pusta bramka). B5 przechwytuje ich podanie. B5 natychmiast próbuje wykonać rzut bezpośredni na pustą bramkę. W tym momencie jest pchnięty w plecy przez A6 przez co traci kontrolę nad ciałem i nie trafia do bramki. Prawidłowa decyzja?",
       "rules": "2:8; 8:4e; 14:1; Objaśnienia 6c; Nowe Wytyczne",
@@ -10609,7 +10617,7 @@
       ]
     },
     {
-      "id": 352,
+      "id": 353,
       "orig_id": "_14.22",
       "text": "Drużyny A gra siedmioma zawodnikami w polu gry (pusta bramka). A11 podaje niecelnie i piłka przekracza linię boczną boiska. B9 wykonuje rzut z linii bocznej w kierunku pustej bramki (rzut bezpośredni). Rzut jest zablokowany przez A4, który nie zachowuje odległości 3m od zawodnika wykonującego rzut. Prawidłowa decyzja?",
       "rules": "8:8f; 14:1; Objaśnienia 6c; Nowe Wytyczne",
@@ -10647,9 +10655,9 @@
       ]
     },
     {
-      "id": 353,
+      "id": 354,
       "orig_id": "_14.23",
-      "text": "Drużyny A gra siedmioma zawodnikami w polu gry (pusta bramka). Sędziowie decyduje o faulu w ataku przeciwko zawodnikowi A7. B8 wchodzi w posiadanie piłki i jest gotowy wykonać rzut wolny, jako rzut bezpośredni na pustą bramkę. W trakcie wykonywania rzutu, ale zanim piłka opuściła jego rękę, jest wywrócony przez A7, który pcha go w plecy. Zaraz po tym, po prawidłowej zmianie z A2, bramkarz A16 zajmuje pozycję w polu bramkowym. Prawidłowa decyzja?",
+      "text": "Drużyny A gra siedmioma zawodnikami w polu gry (pusta bramka). Sędziowie decyduje o faulu w ataku przeciwko zawodnikowi A7. B8 wchodzi w posiadanie piłki i jest gotowy wykonać rzut wolny, jako rzut bezpośredni na pustą bramkę. W trakcie wykonywania rzutu, ale zanim piłka opuściła jego rękę, jest trzymany z tyłu i pociągnięty przez A7 tak, że częściowo traci kontrolę nad ciałem. Zaraz po tym, po prawidłowej zmianie z A2, bramkarz A16 zajmuje pozycję w polu bramkowym. Prawidłowa decyzja?",
       "rules": "2:8; 8:4b; 14:1; Objaśnienia 6c; Nowe Wytyczne",
       "subanswers": [
         {
@@ -10685,7 +10693,7 @@
       ]
     },
     {
-      "id": 354,
+      "id": 355,
       "orig_id": "_15.1",
       "text": "Wykonując rzut od bramki, bramkarz A13 trzyma piłkę w taki sposób, że jest ona poza linią bramkową boiska (w bramce). Prawidłowa decyzja?",
       "rules": "12:2; 15:2",
@@ -10713,7 +10721,7 @@
       ]
     },
     {
-      "id": 355,
+      "id": 356,
       "orig_id": "_15.2",
       "text": "Na 20 sekund przed końcem meczu drużyna A prowadzi 20-19. Bramkarz A12 ociąga się z wykonaniem rzutu od bramki, kozłuje piłkę w polu bramkowym. Prawidłowa decyzja?",
       "rules": "5:2; 12:2; 15:5b",
@@ -10746,7 +10754,7 @@
       ]
     },
     {
-      "id": 356,
+      "id": 357,
       "orig_id": "_15.3",
       "text": "Rzut wolny dla drużyny B przy linii rzutów wolnych drużyny A. Po tym, jak zawodnicy zajęli prawidłowe pozycje sędzia dał sygnał gwizdkiem na wznowienie gry. Zanim piłka opuściła rękę zawodnika wykonującego rzut, 2 zawodników tej samej drużyny przekroczyło linię rzutów wolnych drużyny A. Prawidłowa decyzja?",
       "rules": "13:1a; 13:7; 15:7",
@@ -10774,7 +10782,7 @@
       ]
     },
     {
-      "id": 357,
+      "id": 358,
       "orig_id": "_15.4",
       "text": "Bramkarz A12 stoi w polu bramkowym gotowy do wykonania rzutu od bramki. B6 otwartą dłonią wybija piłkę z rąk A12. Prawidłowa decyzja?",
       "rules": "8:8f; 12:1; 12:2; 15:5; 15:9",
@@ -10802,7 +10810,7 @@
       ]
     },
     {
-      "id": 358,
+      "id": 359,
       "orig_id": "_15.5",
       "text": "Rzut z linii bocznej dla drużyny A. Zawodnik A8 wykonuje rzut, jako rzut bezpośredni na bramkę. Piłka odbija się od poprzeczki i wraca w kierunku A8, który łapie ją, rzuca i zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "15:2",
@@ -10830,7 +10838,7 @@
       ]
     },
     {
-      "id": 359,
+      "id": 360,
       "orig_id": "_15.6",
       "text": "Bramkarz B12 obronił rzut na bramkę. Chce natychmiast rozpocząć kontratak, ale upuszcza piłkę w taki sposób, że ta wtacza się do bramki drużyny B. Prawidłowa decyzja?",
       "rules": "12:1; 12:2; 15:2",
@@ -10858,7 +10866,7 @@
       ]
     },
     {
-      "id": 360,
+      "id": 361,
       "orig_id": "_15.7",
       "text": "Zawodnik A6 wykonuje rzut z linii bocznej w kierunku własnego bramkarza. Bramkarz A1 zauważa piłkę zbyt późno i piłka wpada do bramki. Prawidłowa decyzja?",
       "rules": "9:1; 15:2",
@@ -10886,7 +10894,7 @@
       ]
     },
     {
-      "id": 361,
+      "id": 362,
       "orig_id": "_15.8",
       "text": "Zawodnik A7 wykonuje rzut z linii bocznej i piłka uderza w sędziego na boisku. A7 zbiera piłkę i rzuca do bramki drużyny B. Prawidłowa decyzja?",
       "rules": "7:9; 13:1a; 15:2",
@@ -10919,7 +10927,7 @@
       ]
     },
     {
-      "id": 362,
+      "id": 363,
       "orig_id": "_15.9",
       "text": "Rzut wolny dla drużyny A. Wszyscy zajmują prawidłowe pozycje, A10 odkłada piłkę na parkiet i udziela instrukcji koledze z zespołu. B7 zbiera piłkę i rozpoczyna kontratak. Prawidłowa decyzja?",
       "rules": "15:2",
@@ -10947,7 +10955,7 @@
       ]
     },
     {
-      "id": 363,
+      "id": 364,
       "orig_id": "_15.10",
       "text": "Zawodnik B9 chce wykonać rzut wolny, ale A11 nie zachowuje odległości 3m od piłki i próbuje opóźnić wykonanie rzutu. Prawidłowa decyzja?",
       "rules": "15:5b; 15:9; 16:1a; 16:3b",
@@ -10975,7 +10983,7 @@
       ]
     },
     {
-      "id": 364,
+      "id": 365,
       "orig_id": "_15.11",
       "text": "Rzut wolny dla drużyny B przed linią rzutów wolnych drużyny A. Sędziowie orientują się, że B8 zajmuje pozycję między linią rzutów wolnych a linią pola bramkowego drużyny A. B8 otrzymuje piłkę i zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "13:7; 15:5b; 15:7",
@@ -11003,7 +11011,7 @@
       ]
     },
     {
-      "id": 365,
+      "id": 366,
       "orig_id": "_15.12",
       "text": "Bramkarz B12 wykonuje rzut od bramki w kierunku bramki drużyny A. Piłka nie dotyka żadnego zawodnika na boisku i wpada do bramki drużyny A. Prawidłowa decyzja?",
       "rules": "15:2",
@@ -11031,7 +11039,7 @@
       ]
     },
     {
-      "id": 366,
+      "id": 367,
       "orig_id": "_15.13",
       "text": "Zawodnik A5 był już ukarany upomnieniem i dwukrotnie 2-minutowym wykluczeniem. Kiedy drużyna B wykonuje rzut wolny, przeszkadza nie zachowując 3m odległości. Jest to pierwszy raz, kiedy to robi. Prawidłowa decyzja?",
       "rules": "8:7c; 15:4; 15:9; 16:3d; 16:5; 16:6d",
@@ -11054,7 +11062,7 @@
       ]
     },
     {
-      "id": 367,
+      "id": 368,
       "orig_id": "_15.14",
       "text": "Na krótko przed końcem meczu drużyna A prowadzi 24:23. Sędziowie decydują o rzucie wolnym dla drużyny A przy linii rzutów wolnych drużyny B. Wszyscy zawodnicy zajmują poprawne pozycje i sędziowie dają sygnał gwizdkiem na wykonanie rzutu wolnego. Wykonujący rzut A10 robi krok w przód z piłką w ręce. Prawidłowa decyzja?",
       "rules": "13:7; 15:7",
@@ -11082,7 +11090,7 @@
       ]
     },
     {
-      "id": 368,
+      "id": 369,
       "orig_id": "_15.15",
       "text": "Zawodnik A14 chce wykonać rzut wolny, bez sygnału gwizdkiem, przy linii rzutów wolnych drużyny B. On i zawodnicy z jego drużyny zajmują poprawne pozycje. Zanim piłka opuściła rękę A14, A13 i A15 przebiegają przez linię rzutów wolnych w kierunku pola bramkowego przeciwnika. Prawidłowa decyzja?",
       "rules": "13:3; 15:1; 15:7",
@@ -11110,7 +11118,7 @@
       ]
     },
     {
-      "id": 369,
+      "id": 370,
       "orig_id": "_15.16",
       "text": "Bramkarz B1 wykonuje rzut od bramki. Piłka odbija się od sędziego i wraca do B1, który w tym czasie opuścił pole bramkowe. Prawidłowa decyzja?",
       "rules": "12:2; 13:1a; 15:2",
@@ -11138,7 +11146,7 @@
       ]
     },
     {
-      "id": 370,
+      "id": 371,
       "orig_id": "_15.17",
       "text": "W trakcie wykonywania rzutu wolnego B11 odprowadza rękę tak daleko, że piłka w całości wychodzi poza linię boczną boiska. Prawidłowa decyzja?",
       "rules": "15:1; 15:2",
@@ -11166,7 +11174,7 @@
       ]
     },
     {
-      "id": 371,
+      "id": 372,
       "orig_id": "_15.18",
       "text": "Bramkarz A1 zatrzymuje piłkę przed linią bramkową. Kiedy próbuje podać do A4, piłka wypada mu z ręki i wpada do jego bramki. Prawidłowa decyzja?",
       "rules": "6:4; 12:1; 12:2; 15:2",
@@ -11194,7 +11202,7 @@
       ]
     },
     {
-      "id": 372,
+      "id": 373,
       "orig_id": "_15.19",
       "text": "Drużyna A wykonuje rzut rozpoczynający grę. Sędzia z pola gry daje sygnał gwizdkiem na jego wykonanie. Zawodnik A13 bierze piłkę z rąk A9, który stoi gotowy do wykonania rzutu. A13 dostrzegł A7 i A3, którzy wbiegli na połowę przeciwnika i zajmują bardzo dobre pozycje do ataku. A13 podaje piłkę do A7, który zdobywa bramkę. Prawidłowa decyzja?",
       "rules": "15:2; 15:7",
@@ -11227,7 +11235,7 @@
       ]
     },
     {
-      "id": 373,
+      "id": 374,
       "orig_id": "_15.20",
       "text": "Na 4 sekundy przed końcem meczu jest remis 30:30. Drużyny A zdobywa bramkę na 31:30. Drużyny B chce szybko wykonać rzut rozpoczynający grę. B10 stoi jedną stopą za linią środkową boiska i drugą stopą przed tą linią. Bez sygnału gwizdkiem sędziego rzuca piłkę do bramki drużyny A. Zaraz potem rozlega się automatyczny sygnał kończący. Prawidłowa decyzja?",
       "rules": "2:3; 2:4; 15:5a",
@@ -11260,7 +11268,7 @@
       ]
     },
     {
-      "id": 374,
+      "id": 375,
       "orig_id": "_15.21",
       "text": "Rzut wolny dla drużyny A przed linią rzutów wolnych drużyny B. A7 i zawodnicy z jego drużyny zajmują poprawne pozycje. Rzut wolny jest wykonywany bez sygnału gwizdkiem, ale zanim piłka opuszcza rękę A7 obaj A9 i A18 przekraczają linię rzutów wolnych w kierunku bramki przeciwnika. Prawidłowa decyzja?",
       "rules": "13:7; 15:1; 15:5; 15:6; 15:7 drugi akapit",
@@ -11288,7 +11296,7 @@
       ]
     },
     {
-      "id": 375,
+      "id": 376,
       "orig_id": "_15.22",
       "text": "Którym rzutem nie da się zdobyć bramki samobójczej?",
       "rules": "12:2; 15:2",
@@ -11316,7 +11324,7 @@
       ]
     },
     {
-      "id": 376,
+      "id": 377,
       "orig_id": "_15.23",
       "text": "Zawodnik B4 zajmuje prawidłową pozycję i jest gotowy do wykonania rzutu z linii bocznej. Ponieważ nie widzi możliwości podania do żadnego zawodnika ze swojej drużyny, kozłuje piłkę przed sobą. Prawidłowa decyzja?",
       "rules": "15:2; 15:7: 15:8",
@@ -11344,7 +11352,7 @@
       ]
     },
     {
-      "id": 377,
+      "id": 378,
       "orig_id": "_15.24",
       "text": "Drużyny A wykonuje rzut wolny. A9 chce szybko wykonać rzut i nie czekając na gwizdek sędziów wykonuje go w wyskoku. Piłka trafia do A4, który jest w sytuacji pewnej do zdobycia bramki. Prawidłowa decyzja?",
       "rules": "15:5b; 15:7",
@@ -11367,7 +11375,7 @@
       ]
     },
     {
-      "id": 378,
+      "id": 379,
       "orig_id": "_15.25",
       "text": "Drużyny A wykonuje rzut wolny. A5 chce szybko wykonać rzut i nie czekając na gwizdek sędziów wykonuje go w biegu. A5 podaje piłkę do A4. B4 udaje się przechwycić podanie i teraz on znajduje się w sytuacji pewnej do zdobycia bramki. Prawidłowa decyzja?",
       "rules": "13:2; 15:7 drugi akapit",
@@ -11390,10 +11398,10 @@
       ]
     },
     {
-      "id": 379,
-      "orig_id": "_15.6",
+      "id": 380,
+      "orig_id": "_15.26",
       "text": "Drużyna B jest gotowa do wykonania rzutu wolnego bez sygnału gwizdka. Zawodnik B8 wykonuje rzut obiema stopami i lewą ręką w kontakcie z podłogą. B6 otrzymuje piłkę i zdobywa bramkę. Jaka jest właściwa decyzja?",
-      "rules": "12:1; 12:2; 15:2",
+      "rules": "15:1, NOTE",
       "subanswers": [
         {
           "orig_id": "a)",
@@ -11413,7 +11421,7 @@
       ]
     },
     {
-      "id": 380,
+      "id": 381,
       "orig_id": "_16.1",
       "text": "Osoba towarzysząca drużynie A komentowała decyzje sędziów, za co została ukarana 2 - minutowym wykluczeniem. Zanim gra została wznowiona, protestuje w taki sposób, że zostaje ukarana dyskwalifikacją. Prawidłowa decyzja?",
       "rules": "16:9",
@@ -11436,7 +11444,7 @@
       ]
     },
     {
-      "id": 381,
+      "id": 382,
       "orig_id": "_16.2",
       "text": "Zawodnik A8 zostaje ukarany 2-minutowym wykluczeniem za popychanie przeciwnika. Podchodzi do sędziego i ubliża mu słowami: „Jesteś głupi, jesteś idiotą, nigdy się nie nauczysz!”. Przed opuszczeniem boiska spluwa w twarz sędziego. Prawidłowa decyzja?",
       "rules": "8:10a; 16:6b; 16:9c",
@@ -11464,7 +11472,7 @@
       ]
     },
     {
-      "id": 382,
+      "id": 383,
       "orig_id": "_16.3",
       "text": "Jak jest maksymalna liczba upomnień, którymi mogą być ukarane osoby towarzyszące drużynie?",
       "rules": "16:1 komentarz",
@@ -11492,7 +11500,7 @@
       ]
     },
     {
-      "id": 383,
+      "id": 384,
       "orig_id": "_16.4",
       "text": "Kiedy zaczyna się liczyć czas odbywania kary wykluczenia?",
       "rules": "16:5",
@@ -11520,7 +11528,7 @@
       ]
     },
     {
-      "id": 384,
+      "id": 385,
       "orig_id": "_16.5",
       "text": "Komu sędziowie muszą pokazać karę wykluczenia nałożoną na zawodnika?",
       "rules": "16:4",
@@ -11548,7 +11556,7 @@
       ]
     },
     {
-      "id": 385,
+      "id": 386,
       "orig_id": "_16.6",
       "text": "Zawodnik B5 był wcześniej w meczu dwukrotnie ukarany 2-minutowym wykluczeniem. Raz za faul karany progresywnie i raz za odrzucenie piłki po podyktowaniu przez sędziów rzutu wolnego dla przeciwnika. Teraz popełnia błąd zmiany (drugi błąd zmiany jego drużyny) i zanim gra zostaje wznowiona dopuszcza się wybitnie niesportowego zachowania. Prawidłowa decyzja?",
       "rules": "4:5; 8:10a; 16:3a; 16:6b; 16:6d; 16:9b",
@@ -11571,7 +11579,7 @@
       ]
     },
     {
-      "id": 386,
+      "id": 387,
       "orig_id": "_16.7",
       "text": "Zawodnik A5 zostaje ukarany 2-minutowym wykluczeniem za faul. Opuszczając boisko ubliża sędziemu i zostaje zdyskwalifikowany. A5 jest tak zdenerwowany, że uderza jednego z sędziów. Prawidłowa decyzja?",
       "rules": "8:10a; 16:6b; 16:9c",
@@ -11599,7 +11607,7 @@
       ]
     },
     {
-      "id": 387,
+      "id": 388,
       "orig_id": "_16.8",
       "text": "Zawodnik A7 został ukarany 2-minutowym wykluczeniem za niesportowe zachowanie. Zanim gra jest wznowiona, zwraca się do sędziów słowami: „Musisz być ślepy idioto!”. Prawidłowa decyzja?",
       "rules": "8:10a; 16:6b; 16:9c",
@@ -11632,7 +11640,7 @@
       ]
     },
     {
-      "id": 388,
+      "id": 389,
       "orig_id": "_16.9",
       "text": "Zawodnik A3 został ukarany 2-minutowym wykluczeniem. Po opuszczeniu boiska, ale przed wznowieniem gry, A3 dopuszcza się szczególnie niesportowego zachowania wobec osoby towarzyszącej „B” z drużyny B. Krótko przed tym, osoba towarzysząca “B” z drużyny B wbiegła na boisko bez zezwolenia sędziów. Do tej pory, żadna osoba towarzysząca drużynie B nie została ukarana. Prawidłowa decyzja?",
       "rules": "4:2; 8:9; 16:1b; 16:6b; 16:9c",
@@ -11660,7 +11668,7 @@
       ]
     },
     {
-      "id": 389,
+      "id": 390,
       "orig_id": "_16.10",
       "text": "Kiedy zawodnik jest zdyskwalifikowany, drużyna będzie grała na boisku w składzie pomniejszonym o 1 zawodnika przez 2 minuty, poza dyskwalifikacją udzieloną za:",
       "rules": "16:11b",
@@ -11688,7 +11696,7 @@
       ]
     },
     {
-      "id": 390,
+      "id": 391,
       "orig_id": "_16.11",
       "text": "W trakcie przerwy w spotkaniu, będąc jeszcze na boisku, A7 znieważa bramkarza B12. Prawidłowa decyzja?",
       "rules": "8:6; 16:6a; 16:10; 17:10",
@@ -11711,7 +11719,7 @@
       ]
     },
     {
-      "id": 391,
+      "id": 392,
       "orig_id": "_16.12",
       "text": "W trakcie przerwy w meczu, w drodze do szatni B7 ubliża sędziemu. Prawidłowa decyzja?",
       "rules": "8:10a; 16:6b; 16:10; 17:10",
@@ -11739,7 +11747,7 @@
       ]
     },
     {
-      "id": 392,
+      "id": 393,
       "orig_id": "_16.13",
       "text": "Po gwizdku na przerwę w spotkaniu B5 z A9 zderzają się na boisku. Obaj zaczynają na siebie krzyczeć. A9 uderza B5 obiema rękoma w klatkę piersiową tak, że B5 prawie traci kontrolę nad ciałem. Prawidłowa decyzja?",
       "rules": "8:9; 16:6b; 16:10",
@@ -11767,7 +11775,7 @@
       ]
     },
     {
-      "id": 393,
+      "id": 394,
       "orig_id": "_16.14",
       "text": "Po meczu A10 krzyczy na sędziów „Przegwizdaliście ten mecz, idioci!”. Prawidłowa decyzja?",
       "rules": "16:11c",
@@ -11795,7 +11803,7 @@
       ]
     },
     {
-      "id": 394,
+      "id": 395,
       "orig_id": "_16.15",
       "text": "W trakcie przerwy w meczu A9, będąc na boisku, dopuszcza się znieważenia osoby towarzyszącej drużynie B, która w konsekwencji ubliża A9. Prawidłowa decyzja?",
       "rules": "8:10a; 16:6; 16:10",
@@ -11823,7 +11831,7 @@
       ]
     },
     {
-      "id": 395,
+      "id": 396,
       "orig_id": "_16.16",
       "text": "Zawodnik A7 zostaje ukarany dyskwalifikacją z powodu trzeciej kary 2-minutowego wykluczenia. Próbuje kłócić się z sędziami i nie opuszcza boiska. Prawidłowa decyzja?",
       "rules": "16:9b",
@@ -11846,7 +11854,7 @@
       ]
     },
     {
-      "id": 396,
+      "id": 397,
       "orig_id": "_16.17",
       "text": "Zawodnik A11 został ukarany upomnieniem w I połowie meczu. W trakcie przerwy w meczu dopuszcza się niesportowego zachowania. Drużyna A grała w pełnym składzie na boisku w momencie zakończenia I połowy. Prawidłowa decyzja?",
       "rules": "16:3d; 16:5; 16:10",
@@ -11879,7 +11887,7 @@
       ]
     },
     {
-      "id": 397,
+      "id": 398,
       "orig_id": "_16.18",
       "text": "Zawodnik A4 jest kontuzjowany. Sędziowie zatrzymują czas gry i zezwalają dwóm osobom z jego drużyny na wejście na boisko. Osoby towarzyszące „A” i „B” z drużyny A, a także osoba towarzysząca „D” z drużyny B wchodzą na boisko. Osoba towarzysząca „D” z drużyny B otrzymała już w tym meczu upomnienie. Prawidłowa decyzja?",
       "rules": "4:11; 16:3e; 16:3 komentarz; Objaśnienia 8c",
@@ -11917,7 +11925,7 @@
       ]
     },
     {
-      "id": 398,
+      "id": 399,
       "orig_id": "_16.19",
       "text": "Zawodnik B9 został ukarany dyskwalifikacją z powodu brutalnego faulu na A9. Zanim gra została wznowiona, B9 uderza w twarz osobę towarzyszącą „A” z drużyny A. Prawidłowa decyzja?",
       "rules": "8:10a; 16:9d",
@@ -11950,7 +11958,7 @@
       ]
     },
     {
-      "id": 399,
+      "id": 400,
       "orig_id": "_16.20",
       "text": "Zawodnik B8 został ukarany trzecim 2-minutowym wykluczeniem. Zaraz po gwizdku na zatrzymanie czasu gry, opuszczając boisko, zwraca się do sędziów w niesportowy sposób. Prawidłowa decyzja?",
       "rules": "8:7a; 16:3d; 16:9a",
@@ -11978,7 +11986,7 @@
       ]
     },
     {
-      "id": 400,
+      "id": 401,
       "orig_id": "_16.21",
       "text": "W których sytuacjach skład drużyny na boisku musi być pomniejszony o 1 zawodnika przez 4 minuty?",
       "rules": "16:9",
@@ -11999,13 +12007,8 @@
           "correctness": 1
         },
         {
-          "orig_id": "c)",
-          "text": "Zawodnik zostaje ukarany 2-minutowym wykluczeniem za niesportowe zachowanie wobec",
-          "correctness": 1
-        },
-        {
           "orig_id": "d)",
-          "text": "przeciwnika. Po opuszczeniu boiska przez linię boczną, wraca na boisko i protestuje w taki sposób, że zostaje ukarany dodatkową karą 2-minutowego wykluczenia.",
+          "text": "Zawodnik zostaje ukarany 2-minutowym wykluczeniem za niesportowe zachowanie wobec przeciwnika. Po opuszczeniu boiska przez linię boczną, wraca na boisko i protestuje w taki sposób, że zostaje ukarany dodatkową karą 2-minutowego wykluczenia.",
           "correctness": 1
         },
         {
@@ -12021,7 +12024,7 @@
       ]
     },
     {
-      "id": 401,
+      "id": 402,
       "orig_id": "_16.22",
       "text": "Zawodnik A5 zostaje ukarany 2-minutowym wykluczeniem w 7 minucie meczu. Komentuje decyzje sędziów i zanim gra zostaje wznowiona, otrzymuje dodatkową karę 2-minutowego wykluczenia. Dokładnie minutę później wbiega na boisko ze strefy zmian i mierzący czas sygnalizuje wejście dodatkowego zawodnika na boisko. A5 zostaje zdyskwalifikowany. Z tego powodu ubliża sędziom. Prawidłowa decyzja?",
       "rules": "8:10a; 16:3a; 16:6d; 16:9d",
@@ -12054,7 +12057,7 @@
       ]
     },
     {
-      "id": 402,
+      "id": 403,
       "orig_id": "_16.23",
       "text": "Osoba towarzysząca „C” z drużyny A z powodu niesportowego zachowania została ukarana upomnieniem w I połowie. W 35:50 osoba towarzysząca „B” z drużyny A obraźliwą gestykulacją demonstruje, że nie zgadza się z decyzją sędziów. Z tego powodu zostaje ukarana 2-minutowym wykluczeniem. 3 minuty przed końcem meczu osoba towarzysząca \"A” z drużyny A wchodzi na boisko bez pozwolenia sędziów. Prawidłowa decyzja?",
       "rules": "16:6c",
@@ -12087,7 +12090,7 @@
       ]
     },
     {
-      "id": 403,
+      "id": 404,
       "orig_id": "_17.1",
       "text": "Sędziowie sygnalizują rzut z linii bocznej, ale ich sygnalizacje wskazujące na to, która drużyna powinna wznowić grę, są rozbieżne. Prawidłowa decyzja?",
       "rules": "2:8d; 17:7",
@@ -12120,7 +12123,7 @@
       ]
     },
     {
-      "id": 404,
+      "id": 405,
       "orig_id": "_17.2",
       "text": "Automatyczny sygnał kończący grę nie działa. Mierzący czas nie zauważa tego, przez co nie reaguje, kiedy czas gry dobiega końca. Kto powinien dać sygnał na zakończenie meczu?",
       "rules": "2:3; 17:9",
@@ -12158,7 +12161,7 @@
       ]
     },
     {
-      "id": 405,
+      "id": 406,
       "orig_id": "_17.3",
       "text": "Zawodnik B2 naruszył przepisy. Sędzia z pola gry decyduje o dyskwalifikacji dla B2 (czerwona kartka pokazana przez sędziów) i rzucie wolnym dla drużyny A. Sędzia bramkowy decyduje o 2- minutowym wykluczeniu dla B2 i rzucie karnym dla drużyny A. W jaki sposób będzie ukarany B2 i jak gra będzie wznowiona?",
       "rules": "17:6",
@@ -12186,7 +12189,7 @@
       ]
     },
     {
-      "id": 406,
+      "id": 407,
       "orig_id": "_17.4",
       "text": "Kto w razie wątpliwości decyduje o prawidłowości pomiaru czasu gry?",
       "rules": "17:9",
@@ -12214,7 +12217,7 @@
       ]
     },
     {
-      "id": 407,
+      "id": 408,
       "orig_id": "_17.5",
       "text": "Które kary muszą być opisane w protokole?",
       "rules": "8:5; 8:10a-d; 16:6; 17:10",
@@ -12252,7 +12255,7 @@
       ]
     },
     {
-      "id": 408,
+      "id": 409,
       "orig_id": "_17.6",
       "text": "Kto jest uprawniony do komunikowania się z sędziami w trakcie meczu?",
       "rules": "4:2; 17:11",
@@ -12280,7 +12283,7 @@
       ]
     },
     {
-      "id": 409,
+      "id": 410,
       "orig_id": "_17.7",
       "text": "Sędziowie mają różne zdanie na temat pozostałego czasu gry. Sędzia bramkowy (wymieniony jako pierwszy w protokole) twierdzi, że pozostało jeszcze 50 sekund meczu, sędzia z pola gry uważa, że 42 sekundy. Prawidłowa decyzja?",
       "rules": "17:9",
@@ -12308,7 +12311,7 @@
       ]
     },
     {
-      "id": 410,
+      "id": 411,
       "orig_id": "_17.8",
       "text": "Który z sędziów rozpoczyna spotkanie jako sędzia z pola gry, a który jako sędzia bramkowy?",
       "rules": "17:1",
@@ -12336,7 +12339,7 @@
       ]
     },
     {
-      "id": 411,
+      "id": 412,
       "orig_id": "_17.9",
       "text": "Po kolizji dwóch zawodników sędziowie równocześnie gwiżdżą. Sędzia z pola gry sygnalizuje faul w ataku, a sędzia bramkowy wskazuje przewinienie obrońcy. Prawidłowa decyzja?",
       "rules": "17:7",
@@ -12374,7 +12377,7 @@
       ]
     },
     {
-      "id": 412,
+      "id": 413,
       "orig_id": "_18.1",
       "text": "Jakie przepisy opisują podział obowiązków między mierzącym czas a sekretarzem?",
       "rules": "18:1; 18:2",
@@ -12407,7 +12410,7 @@
       ]
     },
     {
-      "id": 413,
+      "id": 414,
       "orig_id": "_18.2",
       "text": "Skrzydłowy A5 ma sytuację pewną do zdobycia bramki. Osoba towarzysząca „A” z drużyny A ubliża mierzącemu czas. Mierzący czas gwiżdże w momencie, kiedy A5 jest gotowy oddać rzut na bramkę. Świadkiem zdarzenia z osobą towarzyszącą drużynie A był tylko mierzący czas. Prawidłowa decyzja?",
       "rules": "Objaśnienia 7",
@@ -12440,7 +12443,7 @@
       ]
     },
     {
-      "id": 414,
+      "id": 415,
       "orig_id": "_18.3",
       "text": "Osoba odpowiedzialna za drużynę A ubliża sekretarzowi, nie zauważają tego ani sędziowie, ani delegat. W trakcie następnej przerwy w grze sekretarz informuje sędziów o zaistniałej sytuacji. Prawidłowa decyzja?",
       "rules": "18:1; Objaśnienia 7Ba",
@@ -12473,7 +12476,7 @@
       ]
     },
     {
-      "id": 415,
+      "id": 416,
       "orig_id": "_18.4",
       "text": "Drużyny A jest w posiadaniu piłki przy linii rzutów wolnych drużyny B. Delegat przerywa grę i informuje sędziów, że osoba towarzysząca „A” z drużyny B ubliża mu. Prawidłowa decyzja?",
       "rules": "8:10a; 13:6; 16:6b; Objaśnienia 7Bb; Reg. strefy zmian 5",
@@ -12501,7 +12504,7 @@
       ]
     },
     {
-      "id": 416,
+      "id": 417,
       "orig_id": "_18.5",
       "text": "Drużyny A jest w posiadaniu piłki przy linii rzutów wolnych drużyny B. Mierzący czas przerywa grę i informuje sędziów, że osoba towarzysząca „A” z drużyny A ubliża mu. To zachowanie zaobserwował tylko mierzący czas. Prawidłowa decyzja?",
       "rules": "13:4a; Objaśnienia 7Ba",
@@ -12529,7 +12532,7 @@
       ]
     },
     {
-      "id": 417,
+      "id": 418,
       "orig_id": "_18.6",
       "text": "W trakcie meczu, osoba towarzysząca „A” z drużyny A wielokrotnie podchodzi do stolika sędziowskiego i z tego miejsca wydaje instrukcje zawodnikom. Robiąc to komentuje także decyzje sędziów. Sędziowie nie zauważają tego, z powodu hałasu na hali. Prawidłowa decyzja?",
       "rules": "Objaśnienia 7B; Regulamin strefy zmian 5",
@@ -12557,7 +12560,7 @@
       ]
     },
     {
-      "id": 418,
+      "id": 419,
       "orig_id": "_18.7",
       "text": "W którym momencie mierzący czas/sekretarz powinien poinformować sędziów o naruszeniu regulaminu strefy zmian?",
       "rules": "Objaśnienia 7Ba",
@@ -12575,7 +12578,7 @@
       ]
     },
     {
-      "id": 419,
+      "id": 420,
       "orig_id": "_18.8",
       "text": "Jeśli delegat przerwie grę z powodu naruszenia przepisów przez drużynę A to czy gra będzie wznowiona przez drużynę B?",
       "rules": "Objaśnienia 7Bb",
@@ -12593,7 +12596,7 @@
       ]
     },
     {
-      "id": 420,
+      "id": 421,
       "orig_id": "_RSZ.1",
       "text": "W jakiej odległości od linii środkowej boiska powinny się rozpoczynać ławki zmian?",
       "rules": "Regulamin strefy zmian 1",
@@ -12621,7 +12624,7 @@
       ]
     },
     {
-      "id": 421,
+      "id": 422,
       "orig_id": "_RSZ.2",
       "text": "Osoba towarzysząca “A” z drużyny A, przebywająca w strefie zmian, otrzymała już w trakcie meczu karę upomnienia. Po opuszczeniu strefy zmian zajmuje miejsce na trybunach. Z tego miejsca protestuje przeciwko decyzjom sędziów. Prawidłowa decyzja?",
       "rules": "8:7a; 16:3e; Regulamin strefy zmian 5+6",
@@ -12648,7 +12651,7 @@
         },
         {
           "orig_id": "e)",
-          "text": "Drużyna A będzie grała na boisku w składzie pomniejszonym o 1 zawodnika przez 2 minuty 7a; 16:3e; Regulamin strefy zmian 5+6",
+          "text": "Drużyna A będzie grała na boisku w składzie pomniejszonym o 1 zawodnika przez 2 minuty",
           "correctness": 1
         }
       ]
